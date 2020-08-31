@@ -40,7 +40,14 @@
                     <td><?= $this->Number->format($nutrition->nutrition_sat_fat) ?></td>
                     <td><?= $this->Number->format($nutrition->nutrition_fiber) ?></td>
                     <td><?= $this->Number->format($nutrition->nutrition_carbs) ?></td>
-                    <td><?= $this->Number->format($nutrition->nutrition_is_veg) ?></td>
+                    <td><?php
+                        if($this->Number->format($nutrition->nutrition_is_veg)==0){
+                            echo "Is Veg";
+                        }
+                        else{
+                            echo "Not Veg";
+                        }
+                        ?></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>

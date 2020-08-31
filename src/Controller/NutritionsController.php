@@ -27,12 +27,13 @@ class NutritionsController extends AppController
     public function nutritionList()
     {
         $filter = $this->request->getQuery('filter');
-        $nutritions = $this->Nutritions->find('all');
         if($filter=="healthy"){
-
+            $nutritions = $this->Nutritions->find('all')
+                ->where(['nutrition_sat_fat <' => 5, 'nutrition_is_veg' => '0']);
         }
         if($filter=="unhealthy"){
-
+            $nutritions = $this->Nutritions->find('all')
+                ->where(['nutrition_sat_fat >' => 16, 'nutrition_is_veg' => '1']);
         }
         else{
             $nutritions = $this->Nutritions->find('all');
