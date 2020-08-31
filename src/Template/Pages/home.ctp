@@ -37,9 +37,9 @@ use Cake\Http\Exception\NotFoundException;
             <div id="select-div">
                 <span>Are you</span>
                 <select class="form-control">
-                    <option>Concern about having CHD</option>
+                    <option>Having concerns about CHD</option>
                     <option>Currently having CHD</option>
-                    <option>Concern for someone else</option>
+                    <option>Concerned for someone else having CHD</option>
                 </select>
                 <a type="submit" class="btn btn-red">Submit</a>
 
@@ -51,61 +51,91 @@ use Cake\Http\Exception\NotFoundException;
     <h1>Chronic Heart Disease Kills</h1>
 
     <div class="row content">
-
-        <div class="col-md-6 col-lg-6">
+        <div class="col-md-3 col-lg-3">
             Chronic Heart Disease Ranked No 1 in leading single cause of death in Australia.
 
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac iaculis diam, a commodo eros. Curabitur non volutpat justo, sed lobortis dui. Maecenas ex turpis, volutpat ac mollis id, porta consectetur tortor. Duis iaculis, purus at aliquam laoreet, massa tellus maximus enim, ac rhoncus dui eros non felis. Donec rhoncus eros quam, sit amet maximus lectus rutrum in. Maecenas finibus dui a tincidunt posuere. Sed faucibus dignissim erat quis volutpat. In venenatis odio quis bibendum ullamcorper. Sed id nisl porttitor, porta dui vitae, semper nibh. Duis ut diam porta, eleifend mi sit amet, auctor neque. Fusce et ultrices mauris, eu hendrerit risus. Ut odio nibh, aliquet vel faucibus vel, imperdiet sit amet dolor. Curabitur congue ex neque, in euismod justo interdum sit amet. Vestibulum condimentum ullamcorper nisi at interdum.
 
-            Phasellus rhoncus, nunc sed viverra congue, arcu nisi ultrices sem, a porta arcu orci sit amet dui. Sed ut augue sit amet massa cursus cursus eget nec lectus. Proin bibendum sem vitae orci feugiat egestas. Donec sem urna, feugiat ac maximus nec, fringilla quis nisi. Sed elementum quam sed lectus egestas vulputate. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam tristique facilisis nunc, a vulputate est semper nec. Nulla pellentesque orci et gravida tincidunt. Donec nec sagittis justo, congue gravida sapien. Donec purus purus, porta luctus maximus vitae, interdum lobortis purus. Mauris orci ipsum, auctor eget sodales eget, placerat quis ipsum. Duis vitae ex nunc. Donec eleifend, elit ac facilisis laoreet, tortor erat semper nunc, in molestie ex erat semper urna. In dictum congue urna, et pulvinar elit porta quis. Aenean vel felis tristique, faucibus est vel, tincidunt nisi.
         </div>
-        <div class="col-md-6 col-lg-6">
-            <canvas id="myChart" width="400" height="400"></canvas>
+        <div class="col-md-9 col-lg-9">
+            <div id="myChart" style="width: 500px; height: 500px;"></div>
 
         </div>
     </div>
 </div>
 
+
+
+
+
 </body>
 
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 <script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
+    // var ctx = document.getElementById('myChart').getContext('2d');
+    // var myChart = new Chart(ctx, {
+    //     type: 'bar',
+    //     data: {
+    //         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    //         datasets: [{
+    //             label: '# of Votes',
+    //             data: [12, 19, 3, 5, 2, 3],
+    //             backgroundColor: [
+    //                 'rgba(255, 99, 132, 0.2)',
+    //                 'rgba(54, 162, 235, 0.2)',
+    //                 'rgba(255, 206, 86, 0.2)',
+    //                 'rgba(75, 192, 192, 0.2)',
+    //                 'rgba(153, 102, 255, 0.2)',
+    //                 'rgba(255, 159, 64, 0.2)'
+    //             ],
+    //             borderColor: [
+    //                 'rgba(255, 99, 132, 1)',
+    //                 'rgba(54, 162, 235, 1)',
+    //                 'rgba(255, 206, 86, 1)',
+    //                 'rgba(75, 192, 192, 1)',
+    //                 'rgba(153, 102, 255, 1)',
+    //                 'rgba(255, 159, 64, 1)'
+    //             ],
+    //             borderWidth: 1
+    //         }]
+    //     },
+    //     options: {
+    //         scales: {
+    //             yAxes: [{
+    //                 ticks: {
+    //                     beginAtZero: true
+    //                 }
+    //             }]
+    //         }
+    //     }
+    // });
+</script>
+<script>
+    google.charts.load('current', {'packages':['bar']});
+    google.charts.setOnLoadCallback(drawStuff);
+
+    function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+            ['Major causes of CVD', 'Male', 'Female'],
+            <?php
+            foreach ($mortalityRecords as $mortalityRecord){
+                echo "['".$mortalityRecord->cause."', ".$mortalityRecord->male_death.", ".$mortalityRecord->female_death."],";
             }
-        }
-    });
+            ?>
+        ]);
+
+        var options = {
+            width: 850,
+            chart: {
+                title: 'CVD Mortality Rate',
+                subtitle: 'male on the left, female on the right'
+            },
+            bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('myChart'));
+        chart.draw(data, options);
+    };
 </script>
 </html>
