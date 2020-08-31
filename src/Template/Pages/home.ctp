@@ -66,6 +66,60 @@ use Cake\Http\Exception\NotFoundException;
     </div>
 </div>
 
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h6>About</h6>
+                <p class="text-justify">Heart KSDS Tech provides information and suggestions on Chronic Heart Disease
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac iaculis diam, a commodo eros. Curabitur non volutpat justo, sed lobortis dui. Maecenas ex turpis, volutpat ac mollis id, porta consectetur tortor. Duis iaculis, purus at aliquam laoreet, massa tellus maximus enim, ac rhoncus dui eros non felis. Donec rhoncus eros quam, sit amet maximus lectus rutrum in. Maecenas finibus dui a tincidunt posuere. Sed faucibus dignissim erat quis volutpat. In venenatis odio quis bibendum ullamcorper. Sed id nisl porttitor, porta dui vitae, semper nibh. Duis ut diam porta, eleifend mi sit amet, auctor neque. Fusce et ultrices mauris, eu hendrerit risus. Ut odio nibh, aliquet vel faucibus vel, imperdiet sit amet dolor. Curabitur congue ex neque, in euismod justo interdum sit amet. Vestibulum condimentum ullamcorper nisi at interdum.
+                </p>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Categories</h6>
+                <ul class="footer-links">
+                    <li><a href="#">Exercises</a></li>
+                    <li><a href="#">Nutrition</a></li>
+                    <li><a href="#">Meals</a></li>
+                    <li><a href="#">Feature</a></li>
+                    <li><a href="#">Feature</a></li>
+                </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Contribute</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by
+                    <a href="#">Heart KSDS Tech</a>.
+                </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="social-icons">
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
 </body>
 
 
