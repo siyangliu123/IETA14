@@ -73,7 +73,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     </ol>
                 </li>
                 <li class="menu-item" aria-haspopup="true">
-                    <a href="#0">Diets</a>
+                    <a href="#0">Nutritions</a>
                     <ol class="sub-menu" aria-label="submenu">
                         <li class="menu-item"><a href="#0">Item1</a></li>
                         <li class="menu-item"><a href="#0">Item2</a></li>
