@@ -4,35 +4,31 @@
  * @var \App\Model\Entity\Nutrition[]|\Cake\Collection\CollectionInterface $nutritions
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Nutrition'), ['action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="nutritions index large-9 medium-8 columns content">
-    <h3><?= __('Nutritions') ?></h3>
-    <table cellpadding="0" cellspacing="0">
+<?= $this->Html->css('nutritions.css'); ?>
+
+<h1><?= __('Nutritions') ?></h1>
+<div class="nutritions-list-container">
+    <?= $this->Html->link(__('+ New Nutrition'), ['action' => 'add'], ['class' => 'btn btn-success']) ?>
+
+    <table cellpadding="0" cellspacing="0" id="nutritionTable">
         <thead>
-            <tr>
-                <th scope="col"><?= $this->Paginator->sort('nutrition_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('nutrition_name') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('nutrition_measure') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('nutrition_grams') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('nutrition_calories') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('nutrition_protein') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('nutrition_fat') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('nutrition_sat_fat') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('nutrition_fiber') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('nutrition_carbs') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('nutrition_is_veg') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
+        <tr>
+            <th scope="col">Nutrition Name</th>
+            <th scope="col">Measure</th>
+            <th scope="col">Grams</th>
+            <th scope="col">Calories</th>
+            <th scope="col">Protein</th>
+            <th scope="col">Fat</th>
+            <th scope="col">Saturated Fat</th>
+            <th scope="col">Fiber</th>
+            <th scope="col">Carbs</th>
+            <th scope="col">Is Veg</th>
+            <th scope="col" class="actions" style="width: 150px;"><?= __('Actions') ?></th>
+        </tr>
         </thead>
         <tbody>
-            <?php foreach ($nutritions as $nutrition): ?>
+        <?php foreach ($nutritions as $nutrition): ?>
             <tr>
-                <td><?= $this->Number->format($nutrition->nutrition_id) ?></td>
                 <td><?= h($nutrition->nutrition_name) ?></td>
                 <td><?= h($nutrition->nutrition_measure) ?></td>
                 <td><?= h($nutrition->nutrition_grams) ?></td>
@@ -49,17 +45,11 @@
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $nutrition->nutrition_id], ['confirm' => __('Are you sure you want to delete # {0}?', $nutrition->nutrition_id)]) ?>
                 </td>
             </tr>
-            <?php endforeach; ?>
+        <?php endforeach; ?>
         </tbody>
     </table>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
-        </ul>
-        <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
-    </div>
+
 </div>
+<script>
+    $("#nutritionTable").DataTable();
+</script>

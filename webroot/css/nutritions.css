@@ -1,0 +1,17 @@
+h1 {
+    padding-top: 25px;
+}
+
+.nutritions-list-container{
+    padding: 10px 25px;
+}
+
+.nutritions-list-container .btn-success{
+    float: right;
+    margin: 5px 20px;
+}
+
+#nutritionTable_filter input{
+    text-align: left;
+    padding: 5px;
+}

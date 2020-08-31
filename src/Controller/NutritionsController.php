@@ -19,7 +19,7 @@ class NutritionsController extends AppController
      */
     public function index()
     {
-        $nutritions = $this->paginate($this->Nutritions);
+        $nutritions = $this->Nutritions->find('all');
 
         $this->set(compact('nutritions'));
     }
