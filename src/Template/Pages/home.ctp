@@ -37,9 +37,9 @@ use Cake\Http\Exception\NotFoundException;
             <div id="select-div">
                 <span>Are you</span>
                 <select class="form-control">
-                    <option>Concern about having CHD</option>
+                    <option>Having concerns about CHD</option>
                     <option>Currently having CHD</option>
-                    <option>Concern for someone else</option>
+                    <option>Concerned for someone else having CHD</option>
                 </select>
                 <a type="submit" class="btn btn-red">Submit</a>
 
