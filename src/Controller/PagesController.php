@@ -12,12 +12,14 @@
  * @since     0.2.9
  * @license   https://opensource.org/licenses/mit-license.php MIT License
  */
+
 namespace App\Controller;
 
 use Cake\Core\Configure;
 use Cake\Http\Exception\ForbiddenException;
 use Cake\Http\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
+use Cake\ORM\TableRegistry;
 
 /**
  * Static content controller
@@ -40,6 +42,14 @@ class PagesController extends AppController
      */
     public function display(...$path)
     {
+        $mortalityRecordTable = $this->loadModel('mortality_record');
+        $query = $mortalityRecordTable->find('all');
+        $results = $query->all();
+        $mortalityRecords = $results->toList();
+        $this->set('mortalityRecords', $mortalityRecords);
+
+
+
         if (!$path) {
             return $this->redirect('/');
         }
