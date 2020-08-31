@@ -25,6 +25,8 @@ body {
     z-index: 100;
 }
 
+
+
 .top-nav div {
     padding: 0;
 }
@@ -210,6 +212,7 @@ body {
 }
 
 @media (min-width: 600px) {
+
     a:focus,
     a:hover {
         position: relative;
@@ -471,6 +474,9 @@ body {
 }
 @media (max-width:767px)
 {
+    .container{
+        margin-top: 40vh;
+    }
     .site-footer
     {
         padding-bottom:0
