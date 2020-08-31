@@ -1,3 +1,12 @@
+.nutritions-container{
+    background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url("../img/nutrition.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 75vh;
+}
+
 h1 {
     padding-top: 25px;
 }
@@ -11,7 +20,20 @@ h1 {
     margin: 5px 20px;
 }
 
+#nutritionTable{
+    background: white;
+}
+
 #nutritionTable_filter input{
     text-align: left;
     padding: 5px;
+}
+
+.filter-group .filter-label{
+    font-size: large;
+    font-weight: bold;
+}
+
+.filter-group input{
+    width: 50px;
 }

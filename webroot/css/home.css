@@ -4,6 +4,10 @@
     /*outline: solid #f00 1px !important;*/
 }
 
+input{
+    text-align: start;
+}
+
 body {
     width: 100vw;
     margin: 0;
@@ -645,5 +649,5 @@ body {
 }
 
 .content div{
-    padding: 50px;
+    padding: 20px;
 }

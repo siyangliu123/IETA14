@@ -24,6 +24,24 @@ class NutritionsController extends AppController
         $this->set(compact('nutritions'));
     }
 
+    public function nutritionList()
+    {
+        $filter = $this->request->getQuery('filter');
+        $nutritions = $this->Nutritions->find('all');
+        if($filter=="healthy"){
+
+        }
+        if($filter=="unhealthy"){
+
+        }
+        else{
+            $nutritions = $this->Nutritions->find('all');
+
+        }
+
+        $this->set(compact('nutritions'));
+    }
+
     /**
      * View method
      *

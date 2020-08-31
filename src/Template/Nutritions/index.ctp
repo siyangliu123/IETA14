@@ -5,11 +5,13 @@
  */
 ?>
 <?= $this->Html->css('nutritions.css'); ?>
+<div class="nutritions-container">
+
 
 <h1><?= __('Nutritions') ?></h1>
 <div class="nutritions-list-container">
-    <?= $this->Html->link(__('+ New Nutrition'), ['action' => 'add'], ['class' => 'btn btn-success']) ?>
 
+    <div><?= $this->Html->link(__('+ New Nutrition'), ['action' => 'add'], ['class' => 'btn btn-success']) ?></div>
     <table cellpadding="0" cellspacing="0" id="nutritionTable">
         <thead>
         <tr>
@@ -49,6 +51,7 @@
         </tbody>
     </table>
 
+</div>
 </div>
 <script>
     $("#nutritionTable").DataTable();
