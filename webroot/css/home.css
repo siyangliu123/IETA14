@@ -283,10 +283,12 @@ body {
 @media (min-width: 775px) {
     .menu > ol > li {
         width: 125px;
+        padding-right: 5px;
     }
 
     .menu > ol > li a:not(:last-child):before {
-        right: 15px;
+        top: 5px;
+        right: 5px;
     }
 }
 
@@ -654,6 +656,7 @@ body {
     padding: 25px;
 }
 
-.content div{
-    padding: 20px;
+.content .col-md-3 div{
+    padding: 5px 20px;
+    text-align: left;
 }

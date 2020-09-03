@@ -63,15 +63,25 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <div class="col-md-6 col-lg-6">
         <nav class="menu" role='navigation'>
             <ol>
-                <li class="menu-item"><a href="#0">Home</a></li>
+                <li class="menu-item"><?php
+                    echo $this->Html->link("Home", ['controller' => 'pages', 'action' => 'display']);
+                    ?></li>
                 <li class="menu-item" aria-haspopup="true">
-                    <a href="#0">Exercises</a>
+                    <a href="#0">About CHD</a>
                     <ol class="sub-menu" aria-label="submenu">
-                        <li class="menu-item"><a href="#0">Item1</a></li>
-                        <li class="menu-item"><a href="#0">Item2</a></li>
-                        <li class="menu-item"><a href="#0">Item3</a></li>
+                        <li class="menu-item"><a href="#0">CHD Mortality Rate</a></li>
+                        <li class="menu-item"><a href="#0">Smoking & CHD</a></li>
                     </ol>
                 </li>
+<!--                <li class="menu-item" aria-haspopup="true">-->
+<!--                    <a href="#0">Exercises</a>-->
+<!--                    <ol class="sub-menu" aria-label="submenu">-->
+<!--                        <li class="menu-item"><a href="#0">Item1</a></li>-->
+<!--                        <li class="menu-item"><a href="#0">Item2</a></li>-->
+<!--                        <li class="menu-item"><a href="#0">Item3</a></li>-->
+<!--                    </ol>-->
+<!--                </li>-->
+
                 <li class="menu-item" aria-haspopup="true">
                     <a href="#">Nutrition</a>
                     <ol class="sub-menu" aria-label="submenu">
@@ -93,13 +103,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     </ol>
                 </li>
                 <li class="menu-item"><a href="#0">Contact</a></li>
-                <li class="menu-item" aria-haspopup="true">
-                    <a href="#0">Account</a>
-                    <ol class="sub-menu" aria-label="submenu">
-                        <li class="menu-item"><a href="#0">Log in</a></li>
-                        <li class="menu-item"><a href="#0">Sign Up</a></li>
-                    </ol>
-                </li>
+<!--                <li class="menu-item" aria-haspopup="true">-->
+<!--                    <a href="#0">Account</a>-->
+<!--                    <ol class="sub-menu" aria-label="submenu">-->
+<!--                        <li class="menu-item"><a href="#0">Log in</a></li>-->
+<!--                        <li class="menu-item"><a href="#0">Sign Up</a></li>-->
+<!--                    </ol>-->
+<!--                </li>-->
             </ol>
         </nav>
     </div>
