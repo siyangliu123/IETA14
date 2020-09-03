@@ -52,10 +52,11 @@ use Cake\Http\Exception\NotFoundException;
 
     <div class="row content">
         <div class="col-md-3 col-lg-3">
-            Chronic Heart Disease Ranked No 1 in leading single cause of death in Australia.
-
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac iaculis diam, a commodo eros. Curabitur non volutpat justo, sed lobortis dui. Maecenas ex turpis, volutpat ac mollis id, porta consectetur tortor. Duis iaculis, purus at aliquam laoreet, massa tellus maximus enim, ac rhoncus dui eros non felis. Donec rhoncus eros quam, sit amet maximus lectus rutrum in. Maecenas finibus dui a tincidunt posuere. Sed faucibus dignissim erat quis volutpat. In venenatis odio quis bibendum ullamcorper. Sed id nisl porttitor, porta dui vitae, semper nibh. Duis ut diam porta, eleifend mi sit amet, auctor neque. Fusce et ultrices mauris, eu hendrerit risus. Ut odio nibh, aliquet vel faucibus vel, imperdiet sit amet dolor. Curabitur congue ex neque, in euismod justo interdum sit amet. Vestibulum condimentum ullamcorper nisi at interdum.
-
+            <div>Chronic Heart Disease Ranked No 1 in leading single cause of death in Australia.</div>
+            <div>CHD can cause a stroke. Angina pectoris, myocardial infarction, arrhythmia, and heart failure. They are the main causes of sudden death in patients with CHD.</div>
+            <div>According to research,  the main factors for CHD are smoking, age, and gender.</div>
+            <div>Compared with non-smokers, smoking more than 25 cigarettes a day increased the risk of more than fivefold. Also, the number of smokers between 45 to 60 years of age smoked a lot which accounted for 16% of the total population in 2019.</div>
+            <div>The proportion of patients generally increases with age. The number of patients is also increasing year by year in Australia.</div>
         </div>
         <div class="col-md-9 col-lg-9">
             <div id="myChart" style="width: 500px; height: 500px;"></div>
@@ -69,9 +70,7 @@ use Cake\Http\Exception\NotFoundException;
         <div class="row">
             <div class="col-sm-12 col-md-6">
                 <h6>About</h6>
-                <p class="text-justify">Heart KSDS Tech provides information and suggestions on Chronic Heart Disease
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac iaculis diam, a commodo eros. Curabitur non volutpat justo, sed lobortis dui. Maecenas ex turpis, volutpat ac mollis id, porta consectetur tortor. Duis iaculis, purus at aliquam laoreet, massa tellus maximus enim, ac rhoncus dui eros non felis. Donec rhoncus eros quam, sit amet maximus lectus rutrum in. Maecenas finibus dui a tincidunt posuere.
-                </p>
+                <p class="text-justify">Heart KSDS Tech provides information and suggestions on Chronic Heart Disease</p>
             </div>
 
             <div class="col-xs-6 col-md-3">
@@ -179,7 +178,6 @@ use Cake\Http\Exception\NotFoundException;
             width: 850,
             chart: {
                 title: 'CVD Mortality Rate',
-                subtitle: 'male on the left, female on the right'
             },
             bars: 'horizontal' // Required for Material Bar Charts.
         };
