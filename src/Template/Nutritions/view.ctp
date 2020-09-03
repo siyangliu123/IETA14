@@ -21,12 +21,12 @@
             <td><?= h($nutrition->nutrition_name) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Nutrition Measure') ?></th>
-            <td><?= h($nutrition->nutrition_measure) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Nutrition Grams') ?></th>
             <td><?= h($nutrition->nutrition_grams) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Nutrition Categories') ?></th>
+            <td><?= h($nutrition->nutrition_categories) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Nutrition Id') ?></th>
