@@ -28,98 +28,55 @@ use Cake\Http\Exception\NotFoundException;
 <div class="home-container">
 
     <div class="photo-container">
-        <form class="chd-form">
-            <div class="speech-bubble">
-                <div>Having difficulties reading?</div>
-                <div> Browse <a href="#" class="btn btn-primary">Simplified</a> Version</div>
-            </div>
+
+        <?php echo $this->Form->create(null, ['type' => 'post', 'controller' => 'pages', 'action' => 'redirection']); ?>
+        <!--            <div class="speech-bubble">-->
+            <!--                <div>Having difficulties reading?</div>-->
+            <!--                <div> Browse <a href="#" class="btn btn-primary">Simplified</a> Version</div>-->
+            <!--            </div>-->
 
             <div id="select-div">
                 <span>Are you</span>
-                <select class="form-control">
-                    <option>Having concerns about CHD</option>
-                    <option>Currently having CHD</option>
-                    <option>Concerned for someone else having CHD</option>
+                <select class="form-control" name="selection">
+                    <option value="1" disabled>Having concerns about CHD</option>
+                    <option value="2">Currently having CHD</option>
+                    <option value="3" disabled>Concerned for someone else having CHD</option>
                 </select>
                 <a type="submit" class="btn btn-red">Submit</a>
-
             </div>
 
-        </form>
+       <?php echo $this->Form->end(); ?>
 
     </div>
-    <h1>Chronic Heart Disease Kills</h1>
+
 
     <div class="row content">
         <div class="col-md-3 col-lg-3">
-            <div>Chronic Heart Disease Ranked No 1 in leading single cause of death in Australia.</div>
-            <div>CHD can cause a stroke. Angina pectoris, myocardial infarction, arrhythmia, and heart failure. They are the main causes of sudden death in patients with CHD.</div>
-            <div>According to research,  the main factors for CHD are smoking, age, and gender.</div>
-            <div>Compared with non-smokers, smoking more than 25 cigarettes a day increased the risk of more than fivefold. Also, the number of smokers between 45 to 60 years of age smoked a lot which accounted for 16% of the total population in 2019.</div>
-            <div>The proportion of patients generally increases with age. The number of patients is also increasing year by year in Australia.</div>
+            <div class="section" style="font-weight: bold"><p>Chronic Heart Disease (CHD) Ranked <span
+                            style="font-size: xx-large">No.1</span> in leading single cause of death in Australia.</p>
+            </div>
+            <div class="section"><p>CHD can cause <b style="text-transform: capitalize">stroke, angina pectoris,
+                        myocardial infarction, arrhythmia, and heart failure</b>. They are the main causes of sudden
+                    death in patients with CHD.</p></div>
+            <div class="section">
+                <p>According to research, the main factors for CHD are <b style="text-transform: capitalize">smoking,
+                        age, and gender.</b></p>
+                <?php
+                echo $this->Html->link("Read More", ['controller' => 'pages', 'action' => 'smoke_visualisation'], ['class' => 'btn btn-info']);
+                ?>
+            </div>
         </div>
         <div class="col-md-9 col-lg-9">
-            <div id="myChart" style="width: 500px; height: 500px;"></div>
+            <h1>Chronic Heart Disease Kills</h1>
+            <div id="myChart" style="height: 500px;"></div>
 
         </div>
     </div>
 </div>
 
-<footer class="site-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-6">
-                <h6>About</h6>
-                <p class="text-justify">Heart KSDS Tech provides information and suggestions on Chronic Heart Disease</p>
-            </div>
-
-            <div class="col-xs-6 col-md-3">
-                <h6>Categories</h6>
-                <ul class="footer-links">
-                    <li><a href="#">Exercises</a></li>
-                    <li><a href="#">Nutrition</a></li>
-                    <li><a href="#">Meals</a></li>
-                    <li><a href="#">Feature</a></li>
-                    <li><a href="#">Feature</a></li>
-                </ul>
-            </div>
-
-            <div class="col-xs-6 col-md-3">
-                <h6>Quick Links</h6>
-                <ul class="footer-links">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Contribute</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-        </div>
-        <hr>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-sm-6 col-xs-12">
-                <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by
-                    <a href="#">Heart KSDS Tech</a>.
-                </p>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <ul class="social-icons">
-                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
-
-
 
 </body>
 
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 <script>
     // var ctx = document.getElementById('myChart').getContext('2d');
@@ -161,15 +118,15 @@ use Cake\Http\Exception\NotFoundException;
     // });
 </script>
 <script>
-    google.charts.load('current', {'packages':['bar']});
+    google.charts.load('current', {'packages': ['bar']});
     google.charts.setOnLoadCallback(drawStuff);
 
     function drawStuff() {
         var data = new google.visualization.arrayToDataTable([
             ['Major causes of CVD', 'Male', 'Female'],
             <?php
-            foreach ($mortalityRecords as $mortalityRecord){
-                echo "['".$mortalityRecord->cause."', ".$mortalityRecord->male_death.", ".$mortalityRecord->female_death."],";
+            foreach ($mortalityRecords as $mortalityRecord) {
+                echo "['" . $mortalityRecord->cause . "', " . $mortalityRecord->male_death . ", " . $mortalityRecord->female_death . "],";
             }
             ?>
         ]);
@@ -185,5 +142,8 @@ use Cake\Http\Exception\NotFoundException;
         var chart = new google.charts.Bar(document.getElementById('myChart'));
         chart.draw(data, options);
     };
+    $(".btn-red").click(function () {
+        window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'nutritions', 'action' => 'healthy_nutrition']) ?>"
+    });
 </script>
 </html>

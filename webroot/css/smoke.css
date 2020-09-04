@@ -1,0 +1,33 @@
+.smoke-visualisation-container {
+    background: #3c3c3c no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    padding: 50px 0;
+}
+
+.inner{
+    background: white;
+    margin: 5vh 7vw;
+    border-radius: 25px;
+    font-size: larger;
+}
+
+
+.smoke-visualisation-container h1 {
+    padding-top: 35px;
+}
+
+.smoke-visualisation-container .section{
+    padding: 3vw 10vw;
+    margin: 0 5vw;
+    border-bottom: 1px solid silver;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+

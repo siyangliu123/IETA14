@@ -8,7 +8,6 @@ use Cake\ORM\Entity;
  *
  * @property int $nutrition_id
  * @property string $nutrition_name
- * @property string $nutrition_measure
  * @property string $nutrition_grams
  * @property int $nutrition_calories
  * @property int|null $nutrition_protein
@@ -17,6 +16,7 @@ use Cake\ORM\Entity;
  * @property int $nutrition_fiber
  * @property int $nutrition_carbs
  * @property int $nutrition_is_veg
+ * @property string $nutrition_categories
  */
 class Nutrition extends Entity
 {
@@ -31,7 +31,6 @@ class Nutrition extends Entity
      */
     protected $_accessible = [
         'nutrition_name' => true,
-        'nutrition_measure' => true,
         'nutrition_grams' => true,
         'nutrition_calories' => true,
         'nutrition_protein' => true,
@@ -40,5 +39,6 @@ class Nutrition extends Entity
         'nutrition_fiber' => true,
         'nutrition_carbs' => true,
         'nutrition_is_veg' => true,
+        'nutrition_categories' => true,
     ];
 }

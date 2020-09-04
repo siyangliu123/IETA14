@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller;
 
 use App\Controller\AppController;
@@ -27,21 +28,52 @@ class NutritionsController extends AppController
     public function nutritionList()
     {
         $filter = $this->request->getQuery('filter');
-        if($filter=="healthy"){
+        if ($filter == "seeds") {
             $nutritions = $this->Nutritions->find('all')
-                ->where(['nutrition_sat_fat <' => 5, 'nutrition_is_veg' => '0']);
-        }
-        if($filter=="unhealthy"){
+                ->where([
+                    'nutrition_sat_fat >' => 0,
+                    'nutrition_is_veg' => '0',
+                    'nutrition_categories LIKE' => '%seeds%'
+                ]);
+        } else if ($filter == "unhealthy") {
             $nutritions = $this->Nutritions->find('all')
                 ->where(['nutrition_sat_fat >' => 16, 'nutrition_is_veg' => '1']);
-        }
-        else{
+        } else if ($filter == "alcohol") {
+            $nutritions = $this->Nutritions->find('all')
+                ->where([
+                    'nutrition_is_veg' => '0',
+                    'nutrition_categories LIKE' => '%alcohol%'
+                ]);
+        } else {
             $nutritions = $this->Nutritions->find('all');
-
         }
 
         $this->set(compact('nutritions'));
     }
+
+    public function healthyNutrition()
+    {
+        $nutritions1 = $this->Nutritions->find('all')
+            ->where([
+                'nutrition_sat_fat >' => 0,
+                'nutrition_is_veg' => '0',
+                'nutrition_categories LIKE' => '%seeds%'
+            ]);
+        $this->set(compact('nutritions1'));
+
+        $nutritions2 = $this->Nutritions->find('all')
+            ->where([
+                'nutrition_is_veg' => '0',
+                'nutrition_categories LIKE' => '%alcohol%'
+
+            ]);
+        $this->set(compact('nutritions2'));
+
+        $nutritions3 = $this->Nutritions->find('all')
+            ->where(['nutrition_sat_fat >' => 16, 'nutrition_is_veg' => '1']);
+        $this->set(compact('nutritions3'));
+    }
+
 
     /**
      * View method

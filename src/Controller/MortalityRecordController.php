@@ -24,6 +24,14 @@ class MortalityRecordController extends AppController
         $this->set(compact('mortalityRecord'));
     }
 
+    public function visualisation()
+    {
+        $query = $this->MortalityRecord->find('all');
+        $results = $query->all();
+        $mortalityRecords = $results->toList();
+        $this->set('mortalityRecords', $mortalityRecords);
+    }
+
     /**
      * View method
      *

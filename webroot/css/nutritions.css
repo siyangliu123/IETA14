@@ -1,39 +1,85 @@
-.nutritions-container{
-    background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url("../img/nutrition.jpg") no-repeat center center fixed;
+.nutritions-container {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../img/nutrition.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 75vh;
+    height: 100%;
+    padding: 50px 0;
 }
 
 h1 {
     padding-top: 25px;
 }
 
-.nutritions-list-container{
-    padding: 10px 25px;
+.nutritions-list-container {
+    padding: 0 25px;
+    margin: 0 100px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 25px;
 }
 
-.nutritions-list-container .btn-success{
+.nutritions-list-container .btn-success {
     float: right;
     margin: 5px 20px;
 }
 
-#nutritionTable{
+#nutritionTable {
     background: white;
 }
 
-#nutritionTable_filter input{
+#nutritionTable_filter input {
     text-align: left;
     padding: 5px;
 }
 
-.filter-group .filter-label{
+.filter-group .filter-label {
     font-size: large;
     font-weight: bold;
 }
 
-.filter-group input{
+.filter-group input {
     width: 50px;
+}
+
+.nutrition-inner {
+    background: white;
+    margin: 0 10vw;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.nutrition-inner div {
+    text-align: left;
+    padding: 20px 50px;
+}
+
+.section {
+    border-bottom: silver 1px solid;
+
+}
+
+.nutrition-inner p {
+    text-align: left;
+}
+
+.nutrition-inner ul {
+    padding: 20px 0;
+}
+
+.nutrition-inner li {
+    text-align: left;
+}
+
+.nutrition-inner li:first-letter {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.nutrition-inner .section .col-lg-6,.col-md-6 {
+    padding: 25px 50px;
+}
+
+.nutrition-inner{
+    font-size: larger;
 }
