@@ -83,3 +83,30 @@ h1 {
 .nutrition-inner{
     font-size: larger;
 }
+
+#nuts-image{
+    width: 40vw;
+    margin-top: 5vh;
+}
+
+#eat-image{
+    width: 60vw;
+}
+
+.meats{
+    background-color: rgba(255, 255, 255, 0.6);
+
+}
+
+#alcohol-image{
+    width: 30vw;
+    margin-top: 5vh;
+}
+
+.content-image {
+    transition-duration: 2s;
+}
+
+.content-image:hover{
+    transform: scale(1.2);
+}

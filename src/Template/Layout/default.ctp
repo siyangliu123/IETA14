@@ -55,22 +55,22 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('script') ?>
 </head>
 <body>
-<button id="scrollTop" class="btn btn-primary">Back to Top</button>
+<button id="scrollTop" class="btn btn-primary"><i class="fas fa-arrow-up fa-lg"></i></button>
 <div class="top-nav row">
     <div class="col-md-3 col-lg-3">
-        <?php echo $this->Html->image('logo-transparent', ['id' => 'logo', 'url' => [
+        <?php echo $this->Html->image('logo-transparent.png', ['id' => 'logo', 'url' => [
             'controller' => 'Pages',
             'action' => 'display']
         ]); ?>
     </div>
-    <div class="col-md-6 col-lg-6">
+    <div class="col-md-9 col-lg-9">
         <nav class="menu" role='navigation'>
             <ol>
                 <li class="menu-item"><?php
                     echo $this->Html->link("Home", ['controller' => 'pages', 'action' => 'display']);
                     ?></li>
                 <li class="menu-item" aria-haspopup="true">
-                    <a href="#0">Visualisation</a>
+                    <a href="#0">CHD Numbers</a>
                     <ol class="sub-menu" aria-label="submenu">
                         <li class="menu-item"><?php
                             echo $this->Html->link("CHD Mortality Rate", ['controller' => 'mortality_record', 'action' => 'visualisation']);

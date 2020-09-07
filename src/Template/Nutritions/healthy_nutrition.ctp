@@ -20,7 +20,7 @@
                 from seeds and plants (such as extra virgin olive oil, avocado, sunflower, canola, safflower, peanut,
                 soybean and sesame) and foods such as nuts, seeds, avocado, olives and soy.</p>
 
-            <ul class="col-md-5 col-lg-5">
+            <ul class="col-md-4 col-lg-4">
                 <?php foreach ($nutritions1 as $nutrition1): ?>
                     <li>
                         <?= h($nutrition1->nutrition_name) ?>
@@ -31,8 +31,8 @@
                 echo $this->Html->link(" View ingredients in detail", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'seeds'], ['class' => 'btn btn-primary']);
                 ?>
             </ul>
-            <div class="col-md-7 col-lg-7">
-                asdassd
+            <div class="col-md-8 col-lg-8">
+                <?php echo $this->Html->image('nuts.jpg', ['id' => 'nuts-image','class'=>'content-image']); ?>
             </div>
         </div>
 
@@ -43,9 +43,9 @@
                 salami
                 and prosciutto).</p>
             <div class="col-md-7 col-lg-7">
-                asdas
+                <?php echo $this->Html->image('eat.jpg', ['id' => 'eat-image']); ?>
             </div>
-            <ul class="col-md-5 col-lg-5">
+            <ul class="col-md-5 col-lg-5 meats">
                 <?php foreach ($nutritions3 as $nutrition3): ?>
                     <li>
                         <?= h($nutrition3->nutrition_name) ?>
@@ -82,7 +82,8 @@
                 ?>
             </ul>
             <div class="col-md-6 col-lg-6">
-                asdas
+                <?php echo $this->Html->image('alcohol.jpg', ['id' => 'alcohol-image','class'=>'content-image']); ?>
+
             </div>
         </div>
 

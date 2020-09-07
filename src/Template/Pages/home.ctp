@@ -31,92 +31,76 @@ use Cake\Http\Exception\NotFoundException;
 
         <?php echo $this->Form->create(null, ['type' => 'post', 'controller' => 'pages', 'action' => 'redirection']); ?>
         <!--            <div class="speech-bubble">-->
-            <!--                <div>Having difficulties reading?</div>-->
-            <!--                <div> Browse <a href="#" class="btn btn-primary">Simplified</a> Version</div>-->
-            <!--            </div>-->
+        <!--                <div>Having difficulties reading?</div>-->
+        <!--                <div> Browse <a href="#" class="btn btn-primary">Simplified</a> Version</div>-->
+        <!--            </div>-->
+        <h2>Save more <i class="fas fa-heart" style="color: red"></i> Hearts <i class="fas fa-heart" style="color: red"></i> from <br/><span>chronary heart diseases</span></h2>
+        <div id="select-div">
+            <span>Are you</span>
+            <select class="form-control" name="selection">
+                <option value="1" disabled>Having concerns about CHD</option>
+                <option value="2">Currently having CHD</option>
+                <option value="3" disabled>Concerned for someone else having CHD</option>
+            </select>
+            <a type="submit" class="btn btn-red">Submit</a>
+        </div>
 
-            <div id="select-div">
-                <span>Are you</span>
-                <select class="form-control" name="selection">
-                    <option value="1" disabled>Having concerns about CHD</option>
-                    <option value="2">Currently having CHD</option>
-                    <option value="3" disabled>Concerned for someone else having CHD</option>
-                </select>
-                <a type="submit" class="btn btn-red">Submit</a>
-            </div>
-
-       <?php echo $this->Form->end(); ?>
+        <?php echo $this->Form->end(); ?>
 
     </div>
 
 
-    <div class="row content">
-        <div class="col-md-3 col-lg-3">
-            <div class="section" style="font-weight: bold"><p>Chronic Heart Disease (CHD) Ranked <span
-                            style="font-size: xx-large">No.1</span> in leading single cause of death in Australia.</p>
+    <div class="content">
+        <div class="row" style="font-weight: bold"><h2>Chronary Heart Disease (CHD) Ranked <span
+                        style="font-size: 10vh">No.1</span> in leading single cause of death in Australia.</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-3">
+                <div class="section"><p>CHD can cause <b style="text-transform: capitalize">stroke, angina pectoris,
+                            myocardial infarction, arrhythmia, and heart failure</b>. They are the main causes of sudden
+                        death in patients with CHD.</p></div>
+                <div class="section">
+                    <p>According to research, the main factors for CHD are <b style="text-transform: capitalize">smoking,
+                            age, and gender.</b></p>
+                    <br />
+                    <?php
+                    echo $this->Html->link("Read More", ['controller' => 'pages', 'action' => 'smoke_visualisation'], ['class' => 'btn btn-info']);
+                    ?>
+                    <br />
+                </div>
             </div>
-            <div class="section"><p>CHD can cause <b style="text-transform: capitalize">stroke, angina pectoris,
-                        myocardial infarction, arrhythmia, and heart failure</b>. They are the main causes of sudden
-                    death in patients with CHD.</p></div>
-            <div class="section">
-                <p>According to research, the main factors for CHD are <b style="text-transform: capitalize">smoking,
-                        age, and gender.</b></p>
-                <?php
-                echo $this->Html->link("Read More", ['controller' => 'pages', 'action' => 'smoke_visualisation'], ['class' => 'btn btn-info']);
-                ?>
+            <div class="col-md-9 col-lg-9">
+                <h1>Chronic Heart Disease Kills</h1>
+                <div id="myChart" style="height: 500px;"></div>
+
             </div>
         </div>
-        <div class="col-md-9 col-lg-9">
-            <h1>Chronic Heart Disease Kills</h1>
-            <div id="myChart" style="height: 500px;"></div>
+        <div class="row">
+            <div class="col-md-5 col-lg-5 section card one">
+                <h5>Nutrition Advice</h5>
+                <button class="btn btn-info">Read More</button>
+            </div>
+            <div class="col-md-5 col-lg-5 section card two">
+                <h5>Exercise Advice</h5>
+                <button class="btn btn-info">Read More</button>
 
+            </div>
+            <div class="col-md-5 col-lg-5 section card three">
+                <h5>CHD Statistics</h5>
+                <button class="btn btn-info">Read More</button>
+
+            </div>
+            <div class="col-md-5 col-lg-5 section card four">
+                <h5>Daily Reminder</h5>
+                <button class="btn btn-info">Read More</button>
+
+            </div>
         </div>
     </div>
-</div>
 
 
 </body>
 
-
-<script>
-    // var ctx = document.getElementById('myChart').getContext('2d');
-    // var myChart = new Chart(ctx, {
-    //     type: 'bar',
-    //     data: {
-    //         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    //         datasets: [{
-    //             label: '# of Votes',
-    //             data: [12, 19, 3, 5, 2, 3],
-    //             backgroundColor: [
-    //                 'rgba(255, 99, 132, 0.2)',
-    //                 'rgba(54, 162, 235, 0.2)',
-    //                 'rgba(255, 206, 86, 0.2)',
-    //                 'rgba(75, 192, 192, 0.2)',
-    //                 'rgba(153, 102, 255, 0.2)',
-    //                 'rgba(255, 159, 64, 0.2)'
-    //             ],
-    //             borderColor: [
-    //                 'rgba(255, 99, 132, 1)',
-    //                 'rgba(54, 162, 235, 1)',
-    //                 'rgba(255, 206, 86, 1)',
-    //                 'rgba(75, 192, 192, 1)',
-    //                 'rgba(153, 102, 255, 1)',
-    //                 'rgba(255, 159, 64, 1)'
-    //             ],
-    //             borderWidth: 1
-    //         }]
-    //     },
-    //     options: {
-    //         scales: {
-    //             yAxes: [{
-    //                 ticks: {
-    //                     beginAtZero: true
-    //                 }
-    //             }]
-    //         }
-    //     }
-    // });
-</script>
 <script>
     google.charts.load('current', {'packages': ['bar']});
     google.charts.setOnLoadCallback(drawStuff);
@@ -132,7 +116,7 @@ use Cake\Http\Exception\NotFoundException;
         ]);
 
         var options = {
-            width: 850,
+            width: 600,
             chart: {
                 title: 'CVD Mortality Rate',
             },
