@@ -34,7 +34,7 @@ use Cake\Http\Exception\NotFoundException;
         <!--                <div>Having difficulties reading?</div>-->
         <!--                <div> Browse <a href="#" class="btn btn-primary">Simplified</a> Version</div>-->
         <!--            </div>-->
-        <h2>Save more <i class="fas fa-heart" style="color: red"></i> Hearts <i class="fas fa-heart" style="color: red"></i> from <br/><span>chronary heart diseases</span></h2>
+        <h2>Save more Hearts from <br/><span>chronary heart diseases</span></h2>
         <div id="select-div">
             <span>Are you</span>
             <select class="form-control" name="selection">
