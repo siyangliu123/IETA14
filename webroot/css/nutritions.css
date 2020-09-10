@@ -49,15 +49,11 @@ h1 {
     border-radius: 25px;
 }
 
-.nutrition-inner div {
+.nutrition-inner .row {
     text-align: left;
     padding: 20px 50px;
 }
 
-.section {
-    border-bottom: silver 1px solid;
-
-}
 
 .nutrition-inner p {
     text-align: left;
@@ -76,16 +72,23 @@ h1 {
     text-transform: uppercase;
 }
 
-.nutrition-inner .section .col-lg-6,.col-md-6 {
-    padding: 25px 50px;
+
+
+.nutrition-inner h2{
+    text-align: left;
+    margin-left: 5vw;
+    padding-top: 5vh;
+    border-top: 1px silver solid;
 }
 
-.nutrition-inner{
-    font-size: larger;
+
+.right ul{
+    padding: 0 5vw;
+    border-left: 1px solid silver;
 }
 
 #nuts-image{
-    width: 40vw;
+    width: 30vw;
     margin-top: 5vh;
 }
 
@@ -94,8 +97,25 @@ h1 {
 }
 
 .meats{
-    background-color: rgba(255, 255, 255, 0.6);
+    border-left: 1px solid silver;
+}
 
+.meat-inner{
+    margin-left: 5vw;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../img/ham.jpg");
+    background-size: cover;
+    border-radius: 25px;
+}
+
+.meat-list{
+    background: rgba(255, 255, 255, 0.6);
+    padding-left: 30px;
+    margin-left: 10vw;
+    border-radius: 50px;
+}
+
+.nutrition-inner .col-md-6,.col-lg-6{
+    padding: 2vw;
 }
 
 #alcohol-image{
@@ -110,3 +130,4 @@ h1 {
 .content-image:hover{
     transform: scale(1.2);
 }
+
