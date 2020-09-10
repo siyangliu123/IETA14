@@ -28,162 +28,155 @@ use Cake\Http\Exception\NotFoundException;
 <div class="home-container">
 
     <div class="photo-container">
-        <form class="chd-form">
-            <div class="speech-bubble">
-                <div>Having difficulties reading?</div>
-                <div> Browse <a href="#" class="btn btn-primary">Simplified</a> Version</div>
-            </div>
 
-            <div id="select-div">
-                <span>Are you</span>
-                <select class="form-control">
-                    <option>Having concerns about CHD</option>
-                    <option>Currently having CHD</option>
-                    <option>Concerned for someone else having CHD</option>
-                </select>
-                <a type="submit" class="btn btn-red">Submit</a>
+        <?php echo $this->Form->create(null, ['type' => 'post', 'controller' => 'pages', 'action' => 'redirection']); ?>
+        <!--            <div class="speech-bubble">-->
+        <!--                <div>Having difficulties reading?</div>-->
+        <!--                <div> Browse <a href="#" class="btn btn-primary">Simplified</a> Version</div>-->
+        <!--            </div>-->
+        <h1 class="ml10">
+  <span class="text-wrapper">
+    <span class="letters">Save more hearts from</span>
+  </span>
+        </h1>
+        <h1 class="ml12">Coronary Heart Disease</h1>
+        <div id="select-div">
+            <span>Are you</span>
+            <select class="form-control" id="selection" name="selection">
+                <option value="1">Having concerns about develop CHD</option>
+                <option value="2">Currently having CHD </option>
+                <option value="3">Concerned for someone else will develop CHD</option>
+                <option value="4">Someone else is currently having CHD </option>
+            </select>
+            <a type="submit" class="btn btn-red">Submit</a>
+        </div>
 
-            </div>
-
-        </form>
+        <?php echo $this->Form->end(); ?>
 
     </div>
-    <h1>Chronic Heart Disease Kills</h1>
 
-    <div class="row content">
-        <div class="col-md-3 col-lg-3">
-            <div>Chronic Heart Disease Ranked No 1 in leading single cause of death in Australia.</div>
-            <div>CHD can cause a stroke. Angina pectoris, myocardial infarction, arrhythmia, and heart failure. They are the main causes of sudden death in patients with CHD.</div>
-            <div>According to research,  the main factors for CHD are smoking, age, and gender.</div>
-            <div>Compared with non-smokers, smoking more than 25 cigarettes a day increased the risk of more than fivefold. Also, the number of smokers between 45 to 60 years of age smoked a lot which accounted for 16% of the total population in 2019.</div>
-            <div>The proportion of patients generally increases with age. The number of patients is also increasing year by year in Australia.</div>
+
+    <div class="content">
+        <div class="row" style="font-weight: bold"><h2>Coronary Heart Disease (CHD) Ranked <span
+                        style="font-size: 10vh; color: red">No.1</span> in leading single cause of death in Australia.</h2>
         </div>
-        <div class="col-md-9 col-lg-9">
-            <div id="myChart" style="width: 500px; height: 500px;"></div>
-
-        </div>
-    </div>
-</div>
-
-<footer class="site-footer">
-    <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-6">
-                <h6>About</h6>
-                <p class="text-justify">Heart KSDS Tech provides information and suggestions on Chronic Heart Disease</p>
+            <div class="col-md-3 col-lg-3">
+                <div class="section"><p>CHD can cause <b style="text-transform: capitalize">stroke, angina pectoris,
+                            myocardial infarction, arrhythmia, and heart failure</b>. They are the main causes of sudden
+                        death in patients with CHD.</p></div>
+                <div class="section">
+                    <p>According to research, the main factors for CHD are <b style="text-transform: capitalize">smoking,
+                            age, and gender.</b></p>
+                    <br />
+                    <?php
+                    echo $this->Html->link("Read More", ['controller' => 'pages', 'action' => 'smoke_visualisation'], ['class' => 'btn btn-info']);
+                    ?>
+                    <br />
+                </div>
             </div>
+            <div class="col-md-9 col-lg-9 infographic-container">
+                <div>
+                    <?php echo $this->Html->image('CHD infographic.png', ['id' => 'infographic', 'class' => 'content-image']); ?>
+                </div>
 
-            <div class="col-xs-6 col-md-3">
-                <h6>Categories</h6>
-                <ul class="footer-links">
-                    <li><a href="#">Exercises</a></li>
-                    <li><a href="#">Nutrition</a></li>
-                    <li><a href="#">Meals</a></li>
-                    <li><a href="#">Feature</a></li>
-                    <li><a href="#">Feature</a></li>
-                </ul>
-            </div>
-
-            <div class="col-xs-6 col-md-3">
-                <h6>Quick Links</h6>
-                <ul class="footer-links">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Contribute</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
             </div>
         </div>
-        <hr>
-    </div>
-    <div class="container">
         <div class="row">
-            <div class="col-md-8 col-sm-6 col-xs-12">
-                <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by
-                    <a href="#">Heart KSDS Tech</a>.
-                </p>
+            <div class="col-md-5 col-lg-5 section card one">
+                <h3>Nutrition Advice</h3>
+                <?php
+                echo $this->Html->link("Read More", ['controller' => 'nutritions', 'action' => 'healthy_nutrition'], ['class' => 'btn btn-success']);
+                ?>
             </div>
+            <div class="col-md-5 col-lg-5 section card two">
+                <h3>Exercise Advice</h3>
+                <button class="btn btn-success" disabled>Read More</button>
 
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <ul class="social-icons">
-                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
+            </div>
+            <div class="col-md-5 col-lg-5 section card three">
+                <h3>CHD Statistics</h3>
+                <?php
+                echo $this->Html->link("Read More", ['controller' => 'mortality_record', 'action' => 'visualisation'], ['class' => 'btn btn-success']);
+                ?>
+
+            </div>
+            <div class="col-md-5 col-lg-5 section card four">
+                <h3>Daily Reminder</h3>
+                <button class="btn btn-success" disabled>Read More</button>
+
             </div>
         </div>
     </div>
-</footer>
-
 
 
 </body>
 
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
 <script>
-    // var ctx = document.getElementById('myChart').getContext('2d');
-    // var myChart = new Chart(ctx, {
-    //     type: 'bar',
-    //     data: {
-    //         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    //         datasets: [{
-    //             label: '# of Votes',
-    //             data: [12, 19, 3, 5, 2, 3],
-    //             backgroundColor: [
-    //                 'rgba(255, 99, 132, 0.2)',
-    //                 'rgba(54, 162, 235, 0.2)',
-    //                 'rgba(255, 206, 86, 0.2)',
-    //                 'rgba(75, 192, 192, 0.2)',
-    //                 'rgba(153, 102, 255, 0.2)',
-    //                 'rgba(255, 159, 64, 0.2)'
-    //             ],
-    //             borderColor: [
-    //                 'rgba(255, 99, 132, 1)',
-    //                 'rgba(54, 162, 235, 1)',
-    //                 'rgba(255, 206, 86, 1)',
-    //                 'rgba(75, 192, 192, 1)',
-    //                 'rgba(153, 102, 255, 1)',
-    //                 'rgba(255, 159, 64, 1)'
-    //             ],
-    //             borderWidth: 1
-    //         }]
-    //     },
-    //     options: {
-    //         scales: {
-    //             yAxes: [{
-    //                 ticks: {
-    //                     beginAtZero: true
-    //                 }
-    //             }]
-    //         }
-    //     }
-    // });
-</script>
-<script>
-    google.charts.load('current', {'packages':['bar']});
-    google.charts.setOnLoadCallback(drawStuff);
+    $(document).ready(function () {
+        var textWrapper = document.querySelector('.ml10 .letters');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-    function drawStuff() {
-        var data = new google.visualization.arrayToDataTable([
-            ['Major causes of CVD', 'Male', 'Female'],
-            <?php
-            foreach ($mortalityRecords as $mortalityRecord){
-                echo "['".$mortalityRecord->cause."', ".$mortalityRecord->male_death.", ".$mortalityRecord->female_death."],";
-            }
-            ?>
-        ]);
+        anime.timeline({loop: false})
+            .add({
+                targets: '.ml10 .letter',
+                rotateY: [-90, 0],
+                duration: 1000,
+                delay: (el, i) => 145 * i
+            });
 
-        var options = {
-            width: 850,
-            chart: {
-                title: 'CVD Mortality Rate',
-            },
-            bars: 'horizontal' // Required for Material Bar Charts.
-        };
+        var textWrapper = document.querySelector('.ml12');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-        var chart = new google.charts.Bar(document.getElementById('myChart'));
-        chart.draw(data, options);
-    };
+        anime.timeline({loop: false})
+            .add({
+                targets: '.ml12 .letter',
+                translateX: [0,40],
+                translateZ: 0,
+                opacity: [0,1],
+                easing: "easeOutExpo",
+                duration: 2000,
+                delay: (el, i) => 2500 + 30 * i
+            });
+    });
+    //google.charts.load('current', {'packages': ['bar']});
+    //google.charts.setOnLoadCallback(drawStuff);
+    //
+    //function drawStuff() {
+    //    var data = new google.visualization.arrayToDataTable([
+    //        ['Major causes of CVD', 'Male', 'Female'],
+    //        <?php
+    //        foreach ($mortalityRecords as $mortalityRecord) {
+    //            echo "['" . $mortalityRecord->cause . "', " . $mortalityRecord->male_death . ", " . $mortalityRecord->female_death . "],";
+    //        }
+    //        ?>
+    //    ]);
+    //
+    //    var options = {
+    //        width: 600,
+    //        chart: {
+    //            title: 'CVD Mortality Rate',
+    //        },
+    //        bars: 'horizontal' // Required for Material Bar Charts.
+    //    };
+    //
+    //    var chart = new google.charts.Bar(document.getElementById('myChart'));
+    //    chart.draw(data, options);
+    //};
+    $(".btn-red").click(function () {
+        var selection = $("#selection").val();
+        if(selection==="1"){
+            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'pages', 'action' => 'questionnaire']) ?>"
+        }
+        else if(selection==="2"){
+            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'nutritions', 'action' => 'healthy_nutrition']) ?>"
+        }
+        else if(selection==="3"){
+            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'pages', 'action' => 'questionnaire']) ?>"
+        }
+        else if(selection==="4"){
+            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'nutritions', 'action' => 'healthy_nutrition']) ?>"
+        }
+    });
 </script>
 </html>

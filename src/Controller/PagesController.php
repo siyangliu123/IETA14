@@ -42,12 +42,12 @@ class PagesController extends AppController
      */
     public function display(...$path)
     {
+
         $mortalityRecordTable = $this->loadModel('mortality_record');
         $query = $mortalityRecordTable->find('all');
         $results = $query->all();
         $mortalityRecords = $results->toList();
         $this->set('mortalityRecords', $mortalityRecords);
-
 
 
         if (!$path) {
@@ -75,4 +75,11 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
+
+    public function smokeVisualisation()
+    {
+
+    }
+
+
 }

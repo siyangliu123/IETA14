@@ -1,0 +1,1 @@
+INSERT INTO ieta14.users (user_id, username, password) VALUES (1, 'BestTeamIE2020', '$2y$10$8ISV5RcsNDTEKPTv0l0Rw.LDv0l4i4YKfN5j5TP2gk3H94OLMKv0S');

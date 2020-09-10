@@ -22,7 +22,6 @@
         <legend><?= __('Edit Nutrition') ?></legend>
         <?php
             echo $this->Form->control('nutrition_name');
-            echo $this->Form->control('nutrition_measure');
             echo $this->Form->control('nutrition_grams');
             echo $this->Form->control('nutrition_calories');
             echo $this->Form->control('nutrition_protein');
@@ -31,6 +30,7 @@
             echo $this->Form->control('nutrition_fiber');
             echo $this->Form->control('nutrition_carbs');
             echo $this->Form->control('nutrition_is_veg');
+            echo $this->Form->control('nutrition_categories');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

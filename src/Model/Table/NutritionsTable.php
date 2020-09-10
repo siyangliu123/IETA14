@@ -55,12 +55,6 @@ class NutritionsTable extends Table
             ->notEmptyString('nutrition_name');
 
         $validator
-            ->scalar('nutrition_measure')
-            ->maxLength('nutrition_measure', 100)
-            ->requirePresence('nutrition_measure', 'create')
-            ->notEmptyString('nutrition_measure');
-
-        $validator
             ->scalar('nutrition_grams')
             ->maxLength('nutrition_grams', 100)
             ->requirePresence('nutrition_grams', 'create')
@@ -99,6 +93,12 @@ class NutritionsTable extends Table
             ->integer('nutrition_is_veg')
             ->requirePresence('nutrition_is_veg', 'create')
             ->notEmptyString('nutrition_is_veg');
+
+        $validator
+            ->scalar('nutrition_categories')
+            ->maxLength('nutrition_categories', 100)
+            ->requirePresence('nutrition_categories', 'create')
+            ->notEmptyString('nutrition_categories');
 
         return $validator;
     }
