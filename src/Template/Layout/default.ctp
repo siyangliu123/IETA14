@@ -45,6 +45,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
     <?= $this->Html->meta('icon') ?>
 
@@ -105,11 +106,21 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                             </li>
                             <li class="menu-item">
                                 <?php
-                                echo $this->Html->link("Unhealthy Nutrition Lists", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'unhealthy']);
+                                echo $this->Html->link("Unhealthy Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'unhealthy']);
+                                ?>
+                            </li>
+                            <li class="menu-item">
+                                <?php
+                                echo $this->Html->link("Legumes Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'nuts']);
+                                ?>
+                            </li>
+                            <li class="menu-item">
+                                <?php
+                                echo $this->Html->link("Drink Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'drinks']);
                                 ?>
                             </li>
                             <li class="menu-item"><?php
-                                echo $this->Html->link("All Nutrition", ['controller' => 'nutritions', 'action' => 'nutrition_list']);
+                                echo $this->Html->link("All Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list']);
                                 ?>
                             </li>
 
@@ -219,6 +230,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     $('#scrollTop').click(function () {
         $('html, body').animate({scrollTop: 0}, 'slow');
         return false;
+    });
+    $(document).ready(function () {
+        $('#logo').animate({'top':'0px'}, 1500);
     });
 
 </script>

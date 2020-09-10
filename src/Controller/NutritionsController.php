@@ -28,7 +28,7 @@ class NutritionsController extends AppController
     public function nutritionList()
     {
         $filter = $this->request->getQuery('filter');
-        if ($filter == "seeds") {
+        if ($filter == "nuts") {
             $nutritions = $this->Nutritions->find('all')
                 ->where([
                     'nutrition_sat_fat >' => 0,
@@ -38,7 +38,7 @@ class NutritionsController extends AppController
         } else if ($filter == "unhealthy") {
             $nutritions = $this->Nutritions->find('all')
                 ->where(['nutrition_sat_fat >' => 16, 'nutrition_is_veg' => '1']);
-        } else if ($filter == "alcohol") {
+        } else if ($filter == "drinks") {
             $nutritions = $this->Nutritions->find('all')
                 ->where([
                     'nutrition_is_veg' => '0',

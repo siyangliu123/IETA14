@@ -1,5 +1,5 @@
 .nutritions-container {
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../img/nutrition.jpg") no-repeat center center fixed;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("../img/nutrition.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -10,6 +10,25 @@
 
 h1 {
     padding-top: 25px;
+
+}
+
+.nutrition-inner h1{
+    color: white;
+    letter-spacing: 1px;
+}
+.nutrition-inner h1 span{
+    font-size: 5vw;
+    color: white;
+    letter-spacing: 2px;
+}
+
+ul{
+    margin-bottom: 0;
+}
+
+b{
+    font-size: x-large;
 }
 
 .nutritions-list-container {
@@ -43,10 +62,11 @@ h1 {
 }
 
 .nutrition-inner {
-    background: white;
+    background: rgba(0, 0, 0, 0.7);
     margin: 0 10vw;
     padding: 20px;
     border-radius: 25px;
+    color: white;
 }
 
 .nutrition-inner .row {
@@ -65,6 +85,7 @@ h1 {
 
 .nutrition-inner li {
     text-align: left;
+
 }
 
 .nutrition-inner li:first-letter {
@@ -75,10 +96,13 @@ h1 {
 
 
 .nutrition-inner h2{
+    width: 100%;
     text-align: left;
     margin-left: 5vw;
     padding-top: 5vh;
     border-top: 1px silver solid;
+    background-image: linear-gradient(to left, violet, green, yellow, orange);   -webkit-background-clip: text;
+    color: transparent;
 }
 
 
@@ -108,10 +132,11 @@ h1 {
 }
 
 .meat-list{
+    color: black;
     background: rgba(255, 255, 255, 0.6);
     padding-left: 30px;
     margin-left: 10vw;
-    border-radius: 50px;
+    border-radius: 25px;
 }
 
 .nutrition-inner .col-md-6,.col-lg-6{
@@ -130,4 +155,39 @@ h1 {
 .content-image:hover{
     transform: scale(1.2);
 }
+
+#navTitle{
+    padding: 5vh 0;
+    border-top: 1px solid white;
+    margin-top: 5vh;
+    display: block;
+    font-weight: bold;
+    background-image: linear-gradient(to left,  green, yellow, orange);   -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+.nav-div{
+    width: 100%;
+    margin-right: 30%;
+}
+
+.nav{
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0 50px;
+    border-radius: 15px;
+}
+
+.nav li a {
+    font-weight: bold;
+    font-size: larger;
+    background-image: linear-gradient(to left, palevioletred, violet, deepskyblue, palegreen, yellow, orange, orangered);   -webkit-background-clip: text;
+    color: transparent;
+}
+
+.nav li a:hover{
+    background-image: linear-gradient(to right, palevioletred, violet, dodgerblue, palegreen, yellow, orange, red);   -webkit-background-clip: text;
+    color: transparent;
+}
+
 

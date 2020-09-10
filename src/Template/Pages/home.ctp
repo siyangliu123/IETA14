@@ -34,13 +34,19 @@ use Cake\Http\Exception\NotFoundException;
         <!--                <div>Having difficulties reading?</div>-->
         <!--                <div> Browse <a href="#" class="btn btn-primary">Simplified</a> Version</div>-->
         <!--            </div>-->
-        <h2>Save more Hearts from <br/><span>chronary heart diseases</span></h2>
+        <h1 class="ml10">
+  <span class="text-wrapper">
+    <span class="letters">Save more hearts from</span>
+  </span>
+        </h1>
+        <h1 class="ml12">Coronary Heart Disease</h1>
         <div id="select-div">
             <span>Are you</span>
-            <select class="form-control" name="selection">
-                <option value="1" disabled>Having concerns about CHD</option>
-                <option value="2">Currently having CHD</option>
-                <option value="3" disabled>Concerned for someone else having CHD</option>
+            <select class="form-control" id="selection" name="selection">
+                <option value="1">Having concerns about develop CHD</option>
+                <option value="2">Currently having CHD </option>
+                <option value="3">Concerned for someone else will develop CHD</option>
+                <option value="4">Someone else is currently having CHD </option>
             </select>
             <a type="submit" class="btn btn-red">Submit</a>
         </div>
@@ -51,8 +57,8 @@ use Cake\Http\Exception\NotFoundException;
 
 
     <div class="content">
-        <div class="row" style="font-weight: bold"><h2>Chronary Heart Disease (CHD) Ranked <span
-                        style="font-size: 10vh">No.1</span> in leading single cause of death in Australia.</h2>
+        <div class="row" style="font-weight: bold"><h2>Coronary Heart Disease (CHD) Ranked <span
+                        style="font-size: 10vh; color: red">No.1</span> in leading single cause of death in Australia.</h2>
         </div>
         <div class="row">
             <div class="col-md-3 col-lg-3">
@@ -69,30 +75,35 @@ use Cake\Http\Exception\NotFoundException;
                     <br />
                 </div>
             </div>
-            <div class="col-md-9 col-lg-9">
-                <h1>Chronic Heart Disease Kills</h1>
-                <div id="myChart" style="height: 500px;"></div>
+            <div class="col-md-9 col-lg-9 infographic-container">
+                <div>
+                    <?php echo $this->Html->image('CHD infographic.png', ['id' => 'infographic', 'class' => 'content-image']); ?>
+                </div>
 
             </div>
         </div>
         <div class="row">
             <div class="col-md-5 col-lg-5 section card one">
-                <h5>Nutrition Advice</h5>
-                <button class="btn btn-info">Read More</button>
+                <h3>Nutrition Advice</h3>
+                <?php
+                echo $this->Html->link("Read More", ['controller' => 'nutritions', 'action' => 'healthy_nutrition'], ['class' => 'btn btn-success']);
+                ?>
             </div>
             <div class="col-md-5 col-lg-5 section card two">
-                <h5>Exercise Advice</h5>
-                <button class="btn btn-info">Read More</button>
+                <h3>Exercise Advice</h3>
+                <button class="btn btn-success" disabled>Read More</button>
 
             </div>
             <div class="col-md-5 col-lg-5 section card three">
-                <h5>CHD Statistics</h5>
-                <button class="btn btn-info">Read More</button>
+                <h3>CHD Statistics</h3>
+                <?php
+                echo $this->Html->link("Read More", ['controller' => 'mortality_record', 'action' => 'visualisation'], ['class' => 'btn btn-success']);
+                ?>
 
             </div>
             <div class="col-md-5 col-lg-5 section card four">
-                <h5>Daily Reminder</h5>
-                <button class="btn btn-info">Read More</button>
+                <h3>Daily Reminder</h3>
+                <button class="btn btn-success" disabled>Read More</button>
 
             </div>
         </div>
@@ -102,32 +113,70 @@ use Cake\Http\Exception\NotFoundException;
 </body>
 
 <script>
-    google.charts.load('current', {'packages': ['bar']});
-    google.charts.setOnLoadCallback(drawStuff);
+    $(document).ready(function () {
+        var textWrapper = document.querySelector('.ml10 .letters');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-    function drawStuff() {
-        var data = new google.visualization.arrayToDataTable([
-            ['Major causes of CVD', 'Male', 'Female'],
-            <?php
-            foreach ($mortalityRecords as $mortalityRecord) {
-                echo "['" . $mortalityRecord->cause . "', " . $mortalityRecord->male_death . ", " . $mortalityRecord->female_death . "],";
-            }
-            ?>
-        ]);
+        anime.timeline({loop: false})
+            .add({
+                targets: '.ml10 .letter',
+                rotateY: [-90, 0],
+                duration: 1000,
+                delay: (el, i) => 145 * i
+            });
 
-        var options = {
-            width: 600,
-            chart: {
-                title: 'CVD Mortality Rate',
-            },
-            bars: 'horizontal' // Required for Material Bar Charts.
-        };
+        var textWrapper = document.querySelector('.ml12');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-        var chart = new google.charts.Bar(document.getElementById('myChart'));
-        chart.draw(data, options);
-    };
+        anime.timeline({loop: false})
+            .add({
+                targets: '.ml12 .letter',
+                translateX: [0,40],
+                translateZ: 0,
+                opacity: [0,1],
+                easing: "easeOutExpo",
+                duration: 2000,
+                delay: (el, i) => 2500 + 30 * i
+            });
+    });
+    //google.charts.load('current', {'packages': ['bar']});
+    //google.charts.setOnLoadCallback(drawStuff);
+    //
+    //function drawStuff() {
+    //    var data = new google.visualization.arrayToDataTable([
+    //        ['Major causes of CVD', 'Male', 'Female'],
+    //        <?php
+    //        foreach ($mortalityRecords as $mortalityRecord) {
+    //            echo "['" . $mortalityRecord->cause . "', " . $mortalityRecord->male_death . ", " . $mortalityRecord->female_death . "],";
+    //        }
+    //        ?>
+    //    ]);
+    //
+    //    var options = {
+    //        width: 600,
+    //        chart: {
+    //            title: 'CVD Mortality Rate',
+    //        },
+    //        bars: 'horizontal' // Required for Material Bar Charts.
+    //    };
+    //
+    //    var chart = new google.charts.Bar(document.getElementById('myChart'));
+    //    chart.draw(data, options);
+    //};
     $(".btn-red").click(function () {
-        window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'nutritions', 'action' => 'healthy_nutrition']) ?>"
+        var selection = $("#selection").val();
+        if(selection==="1"){
+            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'pages', 'action' => 'questionnaire']) ?>"
+        }
+        else if(selection==="2"){
+            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'nutritions', 'action' => 'healthy_nutrition']) ?>"
+        }
+        else if(selection==="3"){
+            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'pages', 'action' => 'questionnaire']) ?>"
+        }
+        else if(selection==="4"){
+            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'nutritions', 'action' => 'healthy_nutrition']) ?>"
+        }
     });
 </script>
 </html>

@@ -13,7 +13,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', serif;
+}
 
+.col-md-3,.col-lg-3{
+    padding: 0;
 }
 
 .top-nav {
@@ -31,8 +34,10 @@ body {
 }
 
 #logo {
-    margin: 15px 50px;
-    width: 200px;
+    position: fixed;
+    bottom: -150px;
+    margin: 15px 15px;
+    width: 275px;
     height: 55px;
 }
 
@@ -43,6 +48,42 @@ body {
     padding: 0;
 
 }
+
+.ml10 {
+    position: relative;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+.ml10 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 1vh 17vw;
+    margin-top: 10vh;
+}
+
+.ml10 .letter {
+    display: inline-block;
+    line-height: 1em;
+    transform-origin: 0 0;
+}
+.ml12 {
+    font-weight: 500;
+    font-size: 5vw;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: white;
+}
+
+.ml12 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+
 
 .error{
     margin: 20px 0;
@@ -56,10 +97,6 @@ body {
     background: green;
     padding: 5px;
     border-radius: 25px;
-}
-
-#select-div{
-    text-align: center;
 }
 
 @font-face {
@@ -239,17 +276,17 @@ body {
 
 @media (min-width: 600px) {
 
-    a:focus,
-    a:hover {
+    .menu a:focus,
+    .menu a:hover {
         position: relative;
     }
 
-    a:focus:after,
-    a:hover:after {
+    .menu a:focus:after,
+    .menu a:hover:after {
         width: 50px;
     }
 
-    a:after {
+    .menu a:after {
         left: 0;
         right: 0;
         margin: auto;
@@ -605,16 +642,6 @@ body {
     height: 75vh;
 }
 
-.photo-container h2{
-    padding-top: 10vh;
-    color: white;
-}
-
-.photo-container h2 span{
-    font-size: 10vh; 
-    text-transform: capitalize;
-    color: white;
-}
 
 .speech-bubble {
     position: absolute;
@@ -647,24 +674,24 @@ body {
     margin-top: 10vh;
     vertical-align: center;
     align-items: center;
+    text-align: center;
 }
 
 #select-div span {
-    font-size: xx-large;
+    font-size: x-large;
     color: white;
     margin: 5px;
 }
 
 #select-div select {
-    margin: 0;
+    position: relative;
     display: inline;
-    width: 30vw;
-    top: 0;
+    width: 40vw;
     font-size: larger;
 }
 
 #select-div a {
-    margin: 8px;
+    margin: 0 8px;
     position: relative;
     vertical-align: top;
     color: white;
@@ -695,7 +722,7 @@ body {
 }
 
 .content .col-md-3 div {
-    padding: 20px;
+    padding: 20px 0;
     text-align: left;
 }
 
@@ -716,8 +743,7 @@ body {
     border-bottom: 1px solid darkgrey;
 }
 
-.content .section{
-    padding: 3vw;
+.content .section:first-child{
     border-bottom: 1px silver solid;
 }
 
@@ -728,30 +754,33 @@ body {
     height: 40vh;
     vertical-align: center;
     align-items: center;
+    border-radius: 25px;
 }
 
 .card:hover{
     filter: brightness(80%);
 }
 
-.card h5{
+.card h3{
     margin: 0;
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.6);
     padding: 1vw;
-    border-radius: 50px;
+    border-radius: 25px;
+    width: 80%;
 }
 
-.card .btn-info{
+.card .btn{
     margin: 0;
     position: absolute;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 
 .card.one{
     background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../img/fruits.jpg");
@@ -789,7 +818,7 @@ body {
 }
 
 .content.visualisation {
-    background: white;
+    background-color: white;
     padding: 5vw 15vw;
     margin: 0 5vw;
     border-radius: 25px;
@@ -827,4 +856,13 @@ body {
     margin: 20px 5px;
 }
 
+.infographic-container div img{
+    margin: 5vh 0;
+    width:100%;
+}
+
+.infographic-container div img:hover{
+    transform: scale(1.2);
+    transition-duration: 3s;
+}
 
