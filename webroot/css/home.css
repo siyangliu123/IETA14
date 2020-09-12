@@ -859,10 +859,52 @@ body {
 .infographic-container div img{
     margin: 5vh 0;
     width:100%;
+    opacity: 1;
+    cursor: pointer;
 }
 
-.infographic-container div img:hover{
-    transform: scale(1.2);
-    transition-duration: 3s;
+
+.image-container {
+    position: fixed;
+    top:0;
+    left: 0;
+    text-align: center;
+    align-items: center;
+    display: none;
+    z-index: 200;
+    padding: 0;
+    background: #3c3c3c;
+}
+
+#expandedImg{
+    margin: 2.5vh 10vw;
+    height: 95vh;
+    width: 80vw;
+    cursor: unset;
+}
+
+#imgtext {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    font-size: 20px;
+
+}
+
+.closebtn {
+    position: fixed;
+    top: 2.5vh;
+    right: 5vh;
+    color: white;
+    cursor: pointer;
+    z-index: 250;
+    background: #6f6f6f;
+    padding: 1vw 2vw;
+    font-size: 3vw;
+}
+
+.closebtn:hover {
+    background: silver;
 }
 

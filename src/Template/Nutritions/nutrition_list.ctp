@@ -16,8 +16,7 @@
         <table cellpadding="0" cellspacing="0" id="nutritionTable" class="table table-border ">
             <thead>
             <tr>
-                <th scope="col">Nutrition Name</th>
-                <th scope="col">Grams</th>
+                <th scope="col">Food Name</th>
                 <th scope="col">Calories</th>
                 <th scope="col">Protein</th>
                 <th scope="col">Fat</th>
@@ -25,14 +24,12 @@
                 <th scope="col">Fiber</th>
                 <th scope="col">Carbs</th>
                 <th scope="col">Is Veg</th>
-                <th scope="col">Categories</th>
             </tr>
             </thead>
             <tbody>
             <?php foreach ($nutritions as $nutrition): ?>
                 <tr>
                     <td><?= h($nutrition->nutrition_name) ?></td>
-                    <td><?= h($nutrition->nutrition_grams) ?></td>
                     <td><?= $this->Number->format($nutrition->nutrition_calories) ?></td>
                     <td><?= $this->Number->format($nutrition->nutrition_protein) ?></td>
                     <td><?= $this->Number->format($nutrition->nutrition_fat) ?></td>
@@ -41,13 +38,12 @@
                     <td><?= $this->Number->format($nutrition->nutrition_carbs) ?></td>
                     <td><?php
                         if($this->Number->format($nutrition->nutrition_is_veg)==0){
-                            echo "Is Veg";
+                            echo "Vegetable";
                         }
                         else{
-                            echo "Not Veg";
+                            echo "Meat";
                         }
                         ?></td>
-                    <td><?= h($nutrition->nutrition_categories) ?></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>

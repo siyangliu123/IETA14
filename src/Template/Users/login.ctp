@@ -16,8 +16,8 @@ $this->layout = false;
 <div id="login">
     <?= $this->Form->create() ?>
     <div class="login-section">
-        <h3>Please login to view the content:</h3>
-            <input class="form-control"  name="username" type="text" placeholder="Username"/>
+        <h3>Please enter password to view the content:</h3>
+            <input class="form-control"  name="username" type="hidden" placeholder="Username" value="BestTeamIE2020" style="display: none"/>
             <input class="form-control"  name="password" type="password" placeholder="Password"/>
         <button class="btn btn-success btn-lg" type="submit">Login</button>
         <?php echo $this->Flash->render(); ?>
