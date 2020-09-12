@@ -16,7 +16,7 @@
         <table cellpadding="0" cellspacing="0" id="nutritionTable" class="table table-border ">
             <thead>
             <tr>
-                <th scope="col">Nutrition Name</th>
+                <th scope="col">Food Name</th>
                 <th scope="col">Calories</th>
                 <th scope="col">Protein</th>
                 <th scope="col">Fat</th>

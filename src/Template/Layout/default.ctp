@@ -60,167 +60,167 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <body>
 
 
-    <button id="scrollTop" class="btn btn-primary"><i class="fas fa-arrow-up fa-lg"></i></button>
-    <div class="top-nav row">
-        <div class="col-md-3 col-lg-3">
-            <?php echo $this->Html->image('logo-transparent.png', ['id' => 'logo', 'url' => [
-                'controller' => 'Pages',
-                'action' => 'display']
-            ]); ?>
-        </div>
-        <div class="col-md-9 col-lg-9">
-            <nav class="menu" role='navigation'>
-                <ol>
-                    <li class="menu-item"><?php
-                        echo $this->Html->link("Home", ['controller' => 'pages', 'action' => 'display']);
-                        ?></li>
-                    <li class="menu-item" aria-haspopup="true">
-                        <a href="#0">About CHD</a>
-                        <ol class="sub-menu" aria-label="submenu">
-                            <li class="menu-item"><?php
-                                echo $this->Html->link("CHD Mortality Rate", ['controller' => 'mortality_record', 'action' => 'visualisation']);
-                                ?></li>
-                            <li class="menu-item"><?php
-                                echo $this->Html->link("Smoking & CHD", ['controller' => 'pages', 'action' => 'smoke_visualisation']);
-                                ?></li>
-                        </ol>
-                    </li>
-                    <!--                <li class="menu-item" aria-haspopup="true">-->
-                    <!--                    <a href="#0">Exercises</a>-->
-                    <!--                    <ol class="sub-menu" aria-label="submenu">-->
-                    <!--                        <li class="menu-item"><a href="#0">Item1</a></li>-->
-                    <!--                        <li class="menu-item"><a href="#0">Item2</a></li>-->
-                    <!--                        <li class="menu-item"><a href="#0">Item3</a></li>-->
-                    <!--                    </ol>-->
-                    <!--                </li>-->
-
-                    <li class="menu-item" aria-haspopup="true">
-                        <?php
-                        echo $this->Html->link("Nutrition", ['controller' => 'nutritions', 'action' => 'healthy_nutrition']);
-                        ?>
-                        <ol class="sub-menu" aria-label="submenu">
-                            <li class="menu-item">
-                                <?php
-                                echo $this->Html->link("About Nutrition", ['controller' => 'nutritions', 'action' => 'healthy_nutrition']);
-                                ?>
-                            </li>
-                            <li class="menu-item">
-                                <?php
-                                echo $this->Html->link("Unhealthy Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'unhealthy']);
-                                ?>
-                            </li>
-                            <li class="menu-item">
-                                <?php
-                                echo $this->Html->link("Legumes Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'nuts']);
-                                ?>
-                            </li>
-                            <li class="menu-item">
-                                <?php
-                                echo $this->Html->link("Drink Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'drinks']);
-                                ?>
-                            </li>
-                            <li class="menu-item"><?php
-                                echo $this->Html->link("All Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list']);
-                                ?>
-                            </li>
-
-                        </ol>
-                    </li>
-                    <li class="menu-item" id="about"><a href="#">About</a></li>
-                    <li class="menu-item" id="logout"><?php
-                        echo $this->Html->link("Logout", ['controller' => 'users', 'action' => 'logout']);
-                        ?></li>
-                    <!--                <li class="menu-item" aria-haspopup="true">-->
-                    <!--                    <a href="#0">Account</a>-->
-                    <!--                    <ol class="sub-menu" aria-label="submenu">-->
-                    <!--                        <li class="menu-item"><a href="#0">Log in</a></li>-->
-                    <!--                        <li class="menu-item"><a href="#0">Sign Up</a></li>-->
-                    <!--                    </ol>-->
-                    <!--                </li>-->
-                </ol>
-            </nav>
-        </div>
-        <div class="col-md-2 col-lg-2">
-            <!--        <div class="wrapper">-->
-            <!--            <form role="search" method="get" class="search-form form" action="">-->
-            <!--                <label>-->
-            <!--                    <span class="screen-reader-text">Search for...</span>-->
-            <!--                    <input type="search" class="search-field" placeholder="Search..." value="" name="search"-->
-            <!--                           title=""/>-->
-            <!--                </label>-->
-            <!--                <input type="submit" class="search-submit button" value="&#xf002"/>-->
-            <!--            </form>-->
-            <!--        </div>-->
-        </div>
+<button id="scrollTop" class="btn btn-primary"><i class="fas fa-arrow-up fa-lg"></i></button>
+<div class="top-nav row">
+    <div class="col-md-3 col-lg-3">
+        <?php echo $this->Html->image('logo-transparent.png', ['id' => 'logo', 'url' => [
+            'controller' => 'Pages',
+            'action' => 'display']
+        ]); ?>
     </div>
-
-    <?= $this->Flash->render() ?>
-    <div class="all-container">
-        <?= $this->fetch('content') ?>
-    </div>
-
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <h6>About</h6>
-                    <p class="text-justify">We are a small team whose primary focus is on providing knowledge about the
-                        harms that are caused due to Coronary Heart Disease and the measures that can be taken to reduce
-                        the aftermath of CHD. We provide solutions such as giving useful information about nutrition
-                        according to user needs and inform them what is the main cause of CHD.</p>
-                </div>
-
-                <div class="col-xs-6 col-md-3">
-                    <h6>Categories</h6>
-                    <ul class="footer-links">
-
-                        <li><?php
+    <div class="col-md-9 col-lg-9">
+        <nav class="menu" role='navigation'>
+            <ol>
+                <li class="menu-item"><?php
+                    echo $this->Html->link("Home", ['controller' => 'pages', 'action' => 'display']);
+                    ?></li>
+                <li class="menu-item" aria-haspopup="true">
+                    <a href="#0">About CHD</a>
+                    <ol class="sub-menu" aria-label="submenu">
+                        <li class="menu-item"><?php
                             echo $this->Html->link("CHD Mortality Rate", ['controller' => 'mortality_record', 'action' => 'visualisation']);
                             ?></li>
-                        <li><?php
+                        <li class="menu-item"><?php
                             echo $this->Html->link("Smoking & CHD", ['controller' => 'pages', 'action' => 'smoke_visualisation']);
                             ?></li>
-                        <li><?php
-                            echo $this->Html->link("Nutrition", ['controller' => 'nutritions', 'action' => 'healthy_nutrition']);
-                            ?></li>
-                        <li>
+                    </ol>
+                </li>
+                <!--                <li class="menu-item" aria-haspopup="true">-->
+                <!--                    <a href="#0">Exercises</a>-->
+                <!--                    <ol class="sub-menu" aria-label="submenu">-->
+                <!--                        <li class="menu-item"><a href="#0">Item1</a></li>-->
+                <!--                        <li class="menu-item"><a href="#0">Item2</a></li>-->
+                <!--                        <li class="menu-item"><a href="#0">Item3</a></li>-->
+                <!--                    </ol>-->
+                <!--                </li>-->
+
+                <li class="menu-item" aria-haspopup="true">
+                    <?php
+                    echo $this->Html->link("Nutrition", ['controller' => 'nutritions', 'action' => 'healthy_nutrition']);
+                    ?>
+                    <ol class="sub-menu" aria-label="submenu">
+                        <li class="menu-item">
                             <?php
-                            echo $this->Html->link("Unhealthy Nutrition", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'unhealthy']);
+                            echo $this->Html->link("About Nutrition", ['controller' => 'nutritions', 'action' => 'healthy_nutrition']);
                             ?>
                         </li>
-                    </ul>
-                </div>
+                        <li class="menu-item">
+                            <?php
+                            echo $this->Html->link("Unhealthy Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'unhealthy']);
+                            ?>
+                        </li>
+                        <li class="menu-item">
+                            <?php
+                            echo $this->Html->link("Legumes Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'nuts']);
+                            ?>
+                        </li>
+                        <li class="menu-item">
+                            <?php
+                            echo $this->Html->link("Drink Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'drinks']);
+                            ?>
+                        </li>
+                        <li class="menu-item"><?php
+                            echo $this->Html->link("All Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list']);
+                            ?>
+                        </li>
 
-                <div class="col-xs-6 col-md-3">
-                    <h6>Quick Links</h6>
-                    <ul class="footer-links">
-                        <!--                    <li><a href="#">About Us</a></li>-->
-                        <!--                    <li><a href="#">Contact Us</a></li>-->
-                        <!--                    <li><a href="#">Contribute</a></li>-->
-                        <!--                    <li><a href="#">Privacy Policy</a></li>-->
-                    </ul>
-                </div>
-            </div>
-            <hr>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by
-                        <a href="#">Heart KSDS Tech</a>.
-                    </p>
-                </div>
+                    </ol>
+                </li>
+                <li class="menu-item" id="about"><a href="#">About</a></li>
+                <!--                    <li class="menu-item" id="logout">--><?php
+                //                        echo $this->Html->link("Logout", ['controller' => 'users', 'action' => 'logout']);
+                //                        ?><!--</li>-->
+                <!--                <li class="menu-item" aria-haspopup="true">-->
+                <!--                    <a href="#0">Account</a>-->
+                <!--                    <ol class="sub-menu" aria-label="submenu">-->
+                <!--                        <li class="menu-item"><a href="#0">Log in</a></li>-->
+                <!--                        <li class="menu-item"><a href="#0">Sign Up</a></li>-->
+                <!--                    </ol>-->
+                <!--                </li>-->
+            </ol>
+        </nav>
+    </div>
+    <div class="col-md-2 col-lg-2">
+        <!--        <div class="wrapper">-->
+        <!--            <form role="search" method="get" class="search-form form" action="">-->
+        <!--                <label>-->
+        <!--                    <span class="screen-reader-text">Search for...</span>-->
+        <!--                    <input type="search" class="search-field" placeholder="Search..." value="" name="search"-->
+        <!--                           title=""/>-->
+        <!--                </label>-->
+        <!--                <input type="submit" class="search-submit button" value="&#xf002"/>-->
+        <!--            </form>-->
+        <!--        </div>-->
+    </div>
+</div>
 
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <ul class="social-icons">
-                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
+<?= $this->Flash->render() ?>
+<div class="all-container">
+    <?= $this->fetch('content') ?>
+</div>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h6>About</h6>
+                <p class="text-justify">We are a small team whose primary focus is on providing knowledge about the
+                    harms that are caused due to Coronary Heart Disease and the measures that can be taken to reduce
+                    the aftermath of CHD. We provide solutions such as giving useful information about nutrition
+                    according to user needs and inform them what is the main cause of CHD.</p>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Categories</h6>
+                <ul class="footer-links">
+
+                    <li><?php
+                        echo $this->Html->link("CHD Mortality Rate", ['controller' => 'mortality_record', 'action' => 'visualisation']);
+                        ?></li>
+                    <li><?php
+                        echo $this->Html->link("Smoking & CHD", ['controller' => 'pages', 'action' => 'smoke_visualisation']);
+                        ?></li>
+                    <li><?php
+                        echo $this->Html->link("Nutrition", ['controller' => 'nutritions', 'action' => 'healthy_nutrition']);
+                        ?></li>
+                    <li>
+                        <?php
+                        echo $this->Html->link("Unhealthy Nutrition", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'unhealthy']);
+                        ?>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                    <!--                    <li><a href="#">About Us</a></li>-->
+                    <!--                    <li><a href="#">Contact Us</a></li>-->
+                    <!--                    <li><a href="#">Contribute</a></li>-->
+                    <!--                    <li><a href="#">Privacy Policy</a></li>-->
+                </ul>
             </div>
         </div>
-    </footer>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by
+                    <a href="#">Heart KSDS Tech</a>.
+                </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="social-icons">
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 <script>
     $("#about").click(function () {
@@ -232,7 +232,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         return false;
     });
     $(document).ready(function () {
-        $('#logo').animate({'top':'0px'}, 1500);
+        $('#logo').animate({'top': '0px'}, 1500);
     });
 
 </script>

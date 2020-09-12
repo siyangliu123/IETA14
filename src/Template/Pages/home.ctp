@@ -77,9 +77,15 @@ use Cake\Http\Exception\NotFoundException;
             </div>
             <div class="col-md-9 col-lg-9 infographic-container">
                 <div>
-                    <?php echo $this->Html->image('CHD infographic.png', ['id' => 'infographic', 'class' => 'content-image']); ?>
+                    <?php echo $this->Html->image('CHD infographic.png', ['id' => 'infographic', 'class' => 'content-image', 'onclick' => 'showImage(this);']); ?>
                 </div>
+                <div class="image-container">
+                    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
 
+                    <img id="expandedImg">
+
+                    <div id="imgtext"></div>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -178,5 +184,13 @@ use Cake\Http\Exception\NotFoundException;
             window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'nutritions', 'action' => 'healthy_nutrition']) ?>"
         }
     });
+
+    function showImage(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+    }
 </script>
 </html>
