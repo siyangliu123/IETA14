@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 .nutritions-container {
     background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/nutrition.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -8,20 +11,21 @@
     padding: 50px 0;
 }
 
+.healthy-nutritions-container{
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/veg_fruit.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    padding: 50px 0;
+}
+
 h1 {
     padding-top: 25px;
-
 }
 
-.nutrition-inner h1{
-    color: black;
-    letter-spacing: 1px;
-}
-.nutrition-inner h1 span{
-    font-size: 5vw;
-    color: red;
-    letter-spacing: 2px;
-}
+
 
 ul{
     margin-bottom: 0;
@@ -63,10 +67,23 @@ b{
 
 .nutrition-inner {
     background: floralwhite;
-    margin: 0 10vw;
     padding: 20px;
     border-radius: 25px;
     color: black;
+    margin-left: 20vw;
+    width: 70vw
+}
+
+.nutrition-inner h1{
+    color: black;
+    letter-spacing: 1px;
+    border-bottom: 2px solid grey;
+    padding: 5vh;
+}
+.nutrition-inner h1 span{
+    font-size: 5vw;
+    color: red;
+    letter-spacing: 2px;
 }
 
 .nutrition-inner .row {
@@ -98,9 +115,13 @@ b{
 .nutrition-inner h2{
     width: 100%;
     text-align: left;
-    margin-left: 5vw;
+    padding-left: 5vw;
     padding-top: 5vh;
     border-top: 1px silver solid;
+}
+
+.nutrition-inner .col-md-6,.col-lg-6{
+    padding: 2vw;
 }
 
 
@@ -137,9 +158,7 @@ b{
     border-radius: 25px;
 }
 
-.nutrition-inner .col-md-6,.col-lg-6{
-    padding: 2vw;
-}
+
 
 #alcohol-image{
     width: 30vw;
@@ -155,11 +174,13 @@ b{
 }
 
 #navTitle{
-    padding: 5vh 0;
-    border-top: 1px solid silver;
-    margin-top: 5vh;
+    text-align: center;
     display: block;
     font-weight: bold;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+    margin: 0 2vw;
+    border-bottom: 1px solid silver;
 }
 
 
@@ -168,21 +189,41 @@ b{
     margin-right: 30%;
 }
 
-.nav{
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0 50px;
-    border-radius: 15px;
+.nav-div {
+    position: fixed;
+    top: 20vh;
+    left: 0;
+    align-self: start;
+    background: lightcyan;
+    width: 20vw;
+    border: 1px silver solid;
+    z-index: 200;
+    border-radius: 25px;
+    margin-left: 2vw;
 }
 
-.nav li a {
-    font-weight: bold;
-    font-size: larger;
-
+.section-nav ul{
+    padding: 10px 50px;
 }
 
-.nav li a:hover{
-    background-image: linear-gradient(to right, palevioletred, violet, dodgerblue, palegreen, yellow, orange, red);   -webkit-background-clip: text;
-    color: transparent;
+.section-nav li.active > a {
+    color: #333;
+    font-weight: 500;
 }
+
+
+.section-nav a {
+    text-decoration: none;
+    display: block;
+    padding: .125rem 0;
+    color: rgba(128, 128, 128, 0.51);
+    transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+    color: black;
+}
+
 
 
