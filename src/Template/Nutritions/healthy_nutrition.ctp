@@ -73,7 +73,7 @@
                 reduces the risk of high blood pressure and ensures better cardiovascular health for
                 most people.</p>
         </div>
-        <h2 class="4"><i class="fas fa-circle fa-sm"></i> Eat legumes regularly</h2>
+        <h2 class="4"><i class="fas fa-circle fa-sm"></i> Eat nuts regularly</h2>
         <div class="row section legume">
             <div class="col-md-6 col-lg-6 left">
                 <p>Eat legumes regularly – like baked beans (reduced salt), soybeans, lentils and
