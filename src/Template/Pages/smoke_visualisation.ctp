@@ -1,9 +1,9 @@
 <?= $this->Html->css('smoke.css'); ?>
 <div class="smoke-visualisation-container">
     <div class="inner">
-        <h1>Smoking & Chronic Heart Disease</h1>
+        <h1>Smoking & Coronary Heart Disease</h1>
         <div class="section row">
-            <p class="col-md-4 col-sm-6 col-xs-12">Smoking is a major risk factor for CHD.
+            <p class="col-md-4 col-sm-6 col-xs-12"><span style="font-size: xx-large; ">Smoking is a major risk factor for CHD.</span>
                 Cigarette smoking promotes atherosclerosis and increases the
                 levels of
                 blood clotting factors such as fibrinogen. Nicotine also accelerates heart rate and raises blood

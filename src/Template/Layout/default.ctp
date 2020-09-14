@@ -25,8 +25,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         Heart's Healthy Habits
         <?= $this->fetch('title') ?>
     </title>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
@@ -46,6 +44,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script
+            src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+            integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
     <?= $this->Html->meta('icon') ?>
 
@@ -230,9 +233,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     $('#scrollTop').click(function () {
         $('html, body').animate({scrollTop: 0}, 'slow');
         return false;
-    });
-    $(document).ready(function () {
-        $('#logo').animate({'top': '0px'}, 1500);
     });
 
 </script>

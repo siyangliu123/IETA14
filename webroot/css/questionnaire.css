@@ -1,0 +1,89 @@
+.questionnaire-container {
+    padding: 5vh 10vw;
+
+}
+
+.title h1 {
+    text-align: left;
+    color: red;
+    font-weight: 800;
+}
+
+.title h5 {
+    text-align: left;
+    font-weight: bold;
+    margin: 5vh 0;
+}
+
+#tabs {
+    border: 0;
+    font-family: Georgia, serif;
+}
+
+#tabs ul {
+    font-family: Georgia, serif;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 2vh 2vh 0 2vh;
+}
+
+#tabs .row {
+    border: 1px solid silver;
+    padding: 5vw;
+    display: flex;
+}
+
+.row img {
+    width: 100%;
+}
+
+.row .right {
+    font-size: larger;
+    padding-left: 5vw;
+}
+
+.row .right div {
+    padding-bottom: 3vh;
+}
+
+.row .right .chd-title {
+    text-align: left;
+    color: red;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.row .btn-info{
+    color: white;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.red {
+    color: red;
+}
+
+a.mover {
+    background: #007bff;
+    padding: 10px 30px;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.next-tab {
+    bottom: 4px;
+    right: 4px;
+    -moz-border-radius-topleft: 10px;
+    -webkit-border-top-left-radius: 10px;
+}
+
+.prev-tab {
+    bottom: 4px;
+    left: 4px;
+    -moz-border-radius-topright: 10px;
+    -webkit-border-top-right-radius: 10px;
+}

@@ -23,7 +23,24 @@ use Cake\Http\Exception\NotFoundException;
 ?>
 <!DOCTYPE html>
 <html>
-
+<script>
+    $( function() {
+        $( document ).tooltip({
+            position: {
+                my: "center top-20",
+                at: "center top",
+                using: function( position, feedback ) {
+                    $( this ).css( position );
+                    $( "<div>" )
+                        .addClass( "arrow" )
+                        .addClass( feedback.vertical )
+                        .addClass( feedback.horizontal )
+                        .appendTo( this );
+                }
+            }
+        });
+    } );
+</script>
 <body class="home">
 <div class="home-container">
 
@@ -44,9 +61,9 @@ use Cake\Http\Exception\NotFoundException;
             <span>Are you</span>
             <select class="form-control" id="selection" name="selection">
                 <option value="1">Having concerns about develop CHD</option>
-                <option value="2">Currently having CHD </option>
+                <option value="2">Currently having CHD</option>
                 <option value="3">Concerned for someone else will develop CHD</option>
-                <option value="4">Someone else is currently having CHD </option>
+                <option value="4">Someone else is currently having CHD</option>
             </select>
             <a type="submit" class="btn btn-red">Submit</a>
         </div>
@@ -58,7 +75,8 @@ use Cake\Http\Exception\NotFoundException;
 
     <div class="content">
         <div class="row" style="font-weight: bold"><h2>Coronary Heart Disease (CHD) Ranked <span
-                        style="font-size: 10vh; color: red">No.1</span> in leading single cause of death in Australia.</h2>
+                        style="font-size: 10vh; color: red">No.1</span> in leading single cause of death in Australia.
+            </h2>
         </div>
         <div class="row">
             <div class="col-md-3 col-lg-3">
@@ -68,16 +86,16 @@ use Cake\Http\Exception\NotFoundException;
                 <div class="section">
                     <p>According to research, the main factors for CHD are <b style="text-transform: capitalize">smoking,
                             age, and gender.</b></p>
-                    <br />
+                    <br/>
                     <?php
                     echo $this->Html->link("Read More", ['controller' => 'pages', 'action' => 'smoke_visualisation'], ['class' => 'btn btn-info']);
                     ?>
-                    <br />
+                    <br/>
                 </div>
             </div>
             <div class="col-md-9 col-lg-9 infographic-container">
                 <div>
-                    <?php echo $this->Html->image('CHD infographic.png', ['id' => 'infographic', 'class' => 'content-image', 'onclick' => 'showImage(this);']); ?>
+                    <?php echo $this->Html->image('CHD infographic.png', ['id' => 'infographic', 'class' => 'content-image', 'onclick' => 'showImage(this);', 'title' => 'Click to view in full screen.']); ?>
                 </div>
                 <div class="image-container">
                     <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
@@ -137,9 +155,9 @@ use Cake\Http\Exception\NotFoundException;
         anime.timeline({loop: false})
             .add({
                 targets: '.ml12 .letter',
-                translateX: [0,40],
+                translateX: [0, 40],
                 translateZ: 0,
-                opacity: [0,1],
+                opacity: [0, 1],
                 easing: "easeOutExpo",
                 duration: 2000,
                 delay: (el, i) => 2500 + 30 * i
@@ -171,16 +189,16 @@ use Cake\Http\Exception\NotFoundException;
     //};
     $(".btn-red").click(function () {
         var selection = $("#selection").val();
-        if(selection==="1"){
+        if (selection === "1") {
             window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'pages', 'action' => 'questionnaire']) ?>"
         }
-        else if(selection==="2"){
+        else if (selection === "2") {
             window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'nutritions', 'action' => 'healthy_nutrition']) ?>"
         }
-        else if(selection==="3"){
+        else if (selection === "3") {
             window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'pages', 'action' => 'questionnaire']) ?>"
         }
-        else if(selection==="4"){
+        else if (selection === "4") {
             window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'nutritions', 'action' => 'healthy_nutrition']) ?>"
         }
     });

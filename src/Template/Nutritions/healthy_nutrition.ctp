@@ -7,10 +7,10 @@
 <?= $this->Html->css('nutritions.css'); ?>
 <div class="nutritions-container">
     <div class="nutrition-inner">
-        <h1 style="padding: 0 5vw;">Choose healthy foods to reduce the risk of <span>Chronic Heart Disease</span></h1>
+        <h1 style="padding: 0 5vw;">Choose healthy foods to reduce the risk of <span>Coronary Heart Disease</span></h1>
         <div class="row">
             <p style="font-size: larger"><b>A healthy diet</b> is one of the most important ways you can reduce your
-                risk of developing chronic heart disease.</p>
+                risk of developing Coronary Heart Disease.</p>
             <p>It is always important to remember that it's not just whether one particular food group is
                 'bad'; or not but to look at you are eating as a whole and ensure you eat <b>a well-balanced diet
                     with plenty of plant-based foods</b>. </p>
