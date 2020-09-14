@@ -82,7 +82,12 @@ use Cake\Http\Exception\NotFoundException;
             <div class="col-md-3 col-lg-3">
                 <div class="section"><p>CHD can cause <b style="text-transform: capitalize">stroke, angina pectoris,
                             myocardial infarction, arrhythmia, and heart failure</b>. They are the main causes of sudden
-                        death in patients with CHD.</p></div>
+                        death in patients with CHD.</p>
+                <?php
+                echo $this->Html->link("Test Your Risk Here", ['controller' => 'pages', 'action' => 'questionnaire'], ['class' => 'btn btn-success']);
+                ?>
+                    <br>
+                </div>
                 <div class="section">
                     <p>According to research, the main factors for CHD are <b style="text-transform: capitalize">smoking,
                             age, and gender.</b></p>
