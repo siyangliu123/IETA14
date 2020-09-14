@@ -87,3 +87,7 @@ a.mover {
     -moz-border-radius-topright: 10px;
     -webkit-border-top-right-radius: 10px;
 }
+
+.ui-slider-horizontal .ui-slider-handle{
+    top: -3px;
+}
