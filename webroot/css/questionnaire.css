@@ -65,6 +65,14 @@
     color: red;
 }
 
+.green{
+    color: green;
+}
+
+.orange{
+    color: orange;
+}
+
 a.mover {
     background: #007bff;
     padding: 10px 30px;
@@ -88,6 +96,45 @@ a.mover {
     -webkit-border-top-right-radius: 10px;
 }
 
-.ui-slider-horizontal .ui-slider-handle{
-    top: -3px;
+.result h1{
+    padding: 2vh;
+    text-align: left;
+}
+
+.result h5{
+    padding: 2vh;
+    text-align: left;
+}
+
+.result div{
+    padding: 2vh;
+    text-align: left;
+}
+
+.result ul{
+    margin-left: 5vw;
+}
+
+.result a{
+    color: #007bff;
+}
+
+.result.low{
+    display: none;
+}
+
+.result.moderate{
+    display: none;
+}
+
+.result.high{
+    display: none;
+}
+
+#slider-range-max{
+    padding-bottom: 0;
+}
+
+#slider-range-max div{
+    padding-bottom: 0;
 }

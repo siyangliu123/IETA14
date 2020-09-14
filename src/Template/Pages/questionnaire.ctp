@@ -15,9 +15,10 @@
 </script>
 <script type="text/javascript">
     $(function () {
+        var progress = 1;
 
         var $tabs = $('#tabs').tabs({
-            disabled: [2, 3, 4, 5, 6, 7, 8]
+            disabled: [1, 2, 3, 4, 5, 6, 7, 8]
         });
 
         $(".dialog").dialog({
@@ -74,6 +75,10 @@
                 $tabs.tabs("enable", parseInt($(this).attr("rel")));
                 $tabs.tabs("option", "active", $(this).attr("rel"));
             }
+            progress+=1;
+            $( "#progressbar" ).progressbar({
+                value: progress
+            });
 
             return false;
         });
@@ -85,6 +90,12 @@
 
         $("input[type=radio]").checkboxradio();
 
+        $( function() {
+            $( "#progressbar" ).progressbar({
+                max: 9,
+                value: progress
+            });
+        } );
 
         $("#finish").on("click", function () {
             var age = parseInt($("input[name=age]:checked").val());
@@ -108,7 +119,18 @@
                 fruit_veg = -3;
             }
             result = age + gender + smoke + drink + family + fruit_veg;
-            $("#result").html(result);
+            if(result<5){
+                $(".result").hide();
+                $(".result.low").show();
+            }
+            else if(result>5&&result<10){
+                $(".result").hide();
+                $(".result.moderate").show();
+            }
+            else if(result>10){
+                $(".result").hide();
+                $(".result.high").show();
+            }
 
             $tabs.tabs("enable", 8);
             $tabs.tabs({
@@ -123,9 +145,12 @@
         <h1>Risk Checker</h1>
         <h5>Free online CHD primary test you can have</h5>
     </div>
+    <h5 style="text-align: left">Progress: </h5>
     <div class="dialog" title="Please input required data">
-        <p>Please select from one of the selection or slider to complete the questionnaire.</p>
+        <p>Please <b>select from one of the selection or slider</b> to complete the questionnaire.</p>
     </div>
+
+    <div id="progressbar"></div>
     <form id="questionnaire-form">
         <div id="tabs" class="container">
             <ul>
@@ -149,7 +174,7 @@
                     <div>This 2-minute health questionnaire will assess you risk for</div>
                     <div class="chd-title">Coronary Heart Disease</div>
                     <div>We will also provide you practical tips on how to lower your risk</div>
-                    <div>This tool <span class="strong red">CANNOT</span> replace professional health check</div>
+                    <div><span class="strong orange">Warning</span>: This tool <span class="strong red">CANNOT</span> replace professional health check</div>
                 </div>
 
 
@@ -191,17 +216,17 @@
                         <label for="age-3">40-44</label>
                         <input type="radio" name="age" id="age-3" value="0">
                         <label for="age-4">45-49</label>
-                        <input type="radio" name="age" id="age-4" value="3">
+                        <input type="radio" name="age" id="age-4" value="1">
                         <label for="age-5">50-54</label>
-                        <input type="radio" name="age" id="age-5" value="6">
+                        <input type="radio" name="age" id="age-5" value="2">
                         <label for="age-6">55-59</label>
-                        <input type="radio" name="age" id="age-6" value="8">
+                        <input type="radio" name="age" id="age-6" value="3">
                         <label for="age-7">60-64</label>
-                        <input type="radio" name="age" id="age-7" value="10">
+                        <input type="radio" name="age" id="age-7" value="4">
                         <label for="age-8">65-69</label>
-                        <input type="radio" name="age" id="age-8" value="11">
+                        <input type="radio" name="age" id="age-8" value="6">
                         <label for="age-9">Above 70</label>
-                        <input type="radio" name="age" id="age-9" value="12">
+                        <input type="radio" name="age" id="age-9" value="8">
                     </fieldset>
                 </div>
             </div>
@@ -240,7 +265,7 @@
                         <input type="radio" name="smoke" id="smoke-4" value="3">
                         <label for="smoke-5">20 to 30</label>
                         <input type="radio" name="smoke" id="smoke-5" value="4">
-                        <label for="smoke-6">more than 30</label>
+                        <label for="smoke-6">More than 30</label>
                         <input type="radio" name="smoke" id="smoke-6" value="5">
                     </fieldset>
                 </div>
@@ -300,7 +325,42 @@
                 </div>
             </div>
             <div id="tabs-9" class="row">
-                <h3>Your result is: <span id="result"></span></h3>
+                <div class="result low">
+                    <h1>Congratulations!</h1>
+                    <h5>Your risk of Coronary Heart Disease is <b class="green">Low</b>, please continue the healthy lifestyle!</h5>
+                    <div>See diet recommendation <?php
+                        echo $this->Html->link("here", ['controller' => 'nutritions', 'action' => 'healthy_nutrition']);
+                        ?>.
+                    </div>
+                </div>
+                <div class="result moderate">
+                    <h1>Your risk of Coronary Heart Disease is <b class="orange">Moderate</b>.</h1>
+                    <h5>We suggest you contact your GP about your recent health.</h5>
+                    <h5>We encourage you adopt healthy habits to prevent CHD:</h5>
+                    <ul>
+                        <li>If you want to eat healthier, use this <?php
+                            echo $this->Html->link("nutrition guideline", ['controller' => 'nutritions', 'action' => 'healthy_nutrition']);
+                            ?>. to help you plan nutritious
+                            meals.</li>
+                        <li>If you are starting a new activity. Find more tips on how to <a href="#">start exercising</a>.</li>
+                        <li>If you are smoker, please consider <a href="https://www.health.gov.au/health-topics/smoking-and-tobacco/how-to-quit-smoking" target="_blank">quit smoking</a>.</li>
+                        <li>If you drink over <?php
+                            echo $this->Html->link("limit", ['controller' => 'nutritions', 'action' => 'healthy_nutrition/#section6']);
+                            ?>, set yourself a limit and count your standard drinks, plan regular
+                            alcohol-free days each week.</li>
+                    </ul>
+                </div>
+                <div class="result high">
+                    <h1>Your risk of Coronary Heart Disease is <b class="red">High</b>.</h1>
+                    <h5>We recommend you make an medical appointment as soon as possible and ask:</h5>
+                    <ul>
+                        <li>About lowering your risk for developing CHD.</li>
+                        <li>To check your blood pressure to confirm your heart disease risk.</li>
+                    </ul>
+                    <h5>You should have a CHD test every year.</h5>
+
+                    <div>Click and see <a href="#">Clinics</a> nearby.</div>
+                </div>
             </div>
         </div>
     </form>
