@@ -1,5 +1,5 @@
 .nutritions-container {
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("../img/nutrition.jpg") no-repeat center center fixed;
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/nutrition.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -14,12 +14,12 @@ h1 {
 }
 
 .nutrition-inner h1{
-    color: white;
+    color: black;
     letter-spacing: 1px;
 }
 .nutrition-inner h1 span{
     font-size: 5vw;
-    color: white;
+    color: red;
     letter-spacing: 2px;
 }
 
@@ -62,11 +62,11 @@ b{
 }
 
 .nutrition-inner {
-    background: rgba(0, 0, 0, 0.7);
+    background: floralwhite;
     margin: 0 10vw;
     padding: 20px;
     border-radius: 25px;
-    color: white;
+    color: black;
 }
 
 .nutrition-inner .row {
@@ -101,8 +101,6 @@ b{
     margin-left: 5vw;
     padding-top: 5vh;
     border-top: 1px silver solid;
-    background-image: linear-gradient(to left, violet, green, yellow, orange);   -webkit-background-clip: text;
-    color: transparent;
 }
 
 
@@ -158,12 +156,10 @@ b{
 
 #navTitle{
     padding: 5vh 0;
-    border-top: 1px solid white;
+    border-top: 1px solid silver;
     margin-top: 5vh;
     display: block;
     font-weight: bold;
-    background-image: linear-gradient(to left,  green, yellow, orange);   -webkit-background-clip: text;
-    color: transparent;
 }
 
 
@@ -181,8 +177,7 @@ b{
 .nav li a {
     font-weight: bold;
     font-size: larger;
-    background-image: linear-gradient(to left, palevioletred, violet, deepskyblue, palegreen, yellow, orange, orangered);   -webkit-background-clip: text;
-    color: transparent;
+
 }
 
 .nav li a:hover{

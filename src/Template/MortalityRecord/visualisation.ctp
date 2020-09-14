@@ -1,7 +1,7 @@
 <div class="visualisation-container">
 
     <div class="visualisation content">
-        <h1>Chronic Heart Disease Mortality Rate</h1>
+        <h1>Coronary Heart Disease Mortality Rate</h1>
 
         <div>
             <p>For the data related to different cardiovascular diseases. <b>CHD is ranked 1st</b> in total number of cases</p>

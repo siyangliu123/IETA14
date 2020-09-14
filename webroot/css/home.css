@@ -12,7 +12,8 @@ body {
     width: 100vw;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', serif;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: Georgia, serif;
 }
 
 .col-md-3,.col-lg-3{
@@ -35,7 +36,7 @@ body {
 
 #logo {
     position: fixed;
-    bottom: -150px;
+    top: 0;
     margin: 15px 15px;
     width: 275px;
     height: 55px;
@@ -53,8 +54,9 @@ body {
     position: relative;
     font-weight: bold;
     letter-spacing: 3px;
-    color: white;
-    text-transform: uppercase;
+    color: lightgrey;
+    text-transform: capitalize;
+    margin-right: 5vw;
 
 }
 
@@ -71,11 +73,13 @@ body {
     transform-origin: 0 0;
 }
 .ml12 {
-    font-weight: 500;
+    font-weight: 800;
     font-size: 5vw;
     text-transform: uppercase;
-    letter-spacing: 5px;
-    color: white;
+    letter-spacing: 2px;
+    color: red;
+    text-shadow: 1px 1px 2px black, 0 0 25px lightgrey, 0 0 5px white;
+    margin-right: 5vw;
 }
 
 .ml12 .letter {
@@ -906,5 +910,50 @@ body {
 
 .closebtn:hover {
     background: silver;
+}
+
+.ui-tooltip, .arrow:after {
+    background: black;
+    border: 2px solid white;
+}
+.ui-tooltip {
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    font: bold 14px "Helvetica Neue", Sans-Serif;
+    text-transform: uppercase;
+    box-shadow: 0 0 7px black;
+}
+.arrow {
+    width: 70px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+}
+.arrow.top {
+    top: -16px;
+    bottom: auto;
+}
+.arrow.left {
+    left: 20%;
+}
+.arrow:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 25px;
+    height: 25px;
+    box-shadow: 6px 5px 9px -9px black;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.arrow.top:after {
+    bottom: -20px;
+    top: auto;
 }
 
