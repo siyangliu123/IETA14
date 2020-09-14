@@ -25,7 +25,7 @@
                         <li><a href="#section1" class="1">Avoid Saturated Fat</a></li>
                         <li><a href="#section2" class="2">Avoid processed Meats</a></li>
                         <li><a href="#section3" class="3">Choose lowest sodium products</a></li>
-                        <li><a href="#section4" class="4">Eat legumes regularly</a></li>
+                        <li><a href="#section4" class="4">Eat nuts regularly</a></li>
                         <li><a href="#section5" class="5">Eat more fruit & vegetable</a></li>
                         <li><a href="#section6" class="6">Reduce alcohol & refined sources of carbohydrates</a></li>
                     </ul>
