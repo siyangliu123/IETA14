@@ -254,7 +254,7 @@
                 </div>
                 <div class="col-md-9 col-lg-9 right widget">
                     <fieldset>
-                        <legend>Do you smoke?</legend>
+                        <legend>Do you smoke? If so, how many cigarettes/day?</legend>
                         <label for="smoke-1">No</label>
                         <input type="radio" name="smoke" id="smoke-1" value="0">
                         <label for="smoke-2">1 to 5</label>
