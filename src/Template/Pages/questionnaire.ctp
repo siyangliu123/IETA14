@@ -359,7 +359,9 @@
                     </ul>
                     <h5>You should have a CHD test every year.</h5>
 
-                    <div>Click and see <a href="#">Clinics</a> nearby.</div>
+                    <div>Click and see <?php
+                        echo $this->Html->link("Clinics", ['controller' => 'hospitalLocations', 'action' => 'listHospitals']);
+                        ?> nearby.</div>
                 </div>
             </div>
         </div>
