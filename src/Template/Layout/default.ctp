@@ -66,7 +66,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <button id="scrollTop" class="btn btn-primary"><i class="fas fa-arrow-up fa-lg"></i></button>
 <div class="top-nav row">
     <div class="col-md-3 col-lg-3">
-        <?php echo $this->Html->image('logo-transparent.png', ['id' => 'logo', 'url' => [
+        <?php echo $this->Html->image('logo.png', ['id' => 'logo', 'url' => [
             'controller' => 'Pages',
             'action' => 'display']
         ]); ?>
