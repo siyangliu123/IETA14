@@ -88,14 +88,19 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                             ?></li>
                     </ol>
                 </li>
-                <!--                <li class="menu-item" aria-haspopup="true">-->
-                <!--                    <a href="#0">Exercises</a>-->
-                <!--                    <ol class="sub-menu" aria-label="submenu">-->
-                <!--                        <li class="menu-item"><a href="#0">Item1</a></li>-->
-                <!--                        <li class="menu-item"><a href="#0">Item2</a></li>-->
-                <!--                        <li class="menu-item"><a href="#0">Item3</a></li>-->
-                <!--                    </ol>-->
-                <!--                </li>-->
+                <li class="menu-item" aria-haspopup="true">
+                    <?php
+                    echo $this->Html->link("Exercises", ['controller' => 'pages', 'action' => 'exercise']);
+                    ?>
+                    <ol class="sub-menu" aria-label="submenu">
+                        <li class="menu-item"><?php
+                            echo $this->Html->link("Cardiovascular Exercises", ['controller' => 'pages', 'action' => 'cardio']);
+                            ?></li>
+                        <li class="menu-item"><?php
+                            echo $this->Html->link("Strength Exercises", ['controller' => 'pages', 'action' => 'strength']);
+                            ?></li>
+                    </ol>
+                </li>
 
                 <li class="menu-item" aria-haspopup="true">
                     <?php

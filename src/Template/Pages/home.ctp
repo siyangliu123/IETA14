@@ -120,8 +120,9 @@ use Cake\Http\Exception\NotFoundException;
             </div>
             <div class="col-md-5 col-lg-5 section card two">
                 <h3>Exercise Advice</h3>
-                <button class="btn btn-success" disabled>Read More</button>
-
+                <?php
+                echo $this->Html->link("Read More", ['controller' => 'pages', 'action' => 'exercise'], ['class' => 'btn btn-success']);
+                ?>
             </div>
             <div class="col-md-5 col-lg-5 section card three">
                 <h3>CHD Statistics</h3>
