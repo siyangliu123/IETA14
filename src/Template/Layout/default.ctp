@@ -178,36 +178,28 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     according to user needs and inform them what is the main cause of CHD.</p>
             </div>
 
-            <div class="col-xs-6 col-md-3">
+            <div class="col-xs-6 col-md-6">
                 <h6>Categories</h6>
-                <ul class="footer-links">
+                <ul class="footer-links" style="text-align: center">
 
+
+                    <li><?php
+                        echo $this->Html->link("Nutrition Advice", ['controller' => 'nutritions', 'action' => 'healthy_nutrition']);
+                        ?></li>
+                    <li>
+                        <?php
+                        echo $this->Html->link("Exercise Advice", ['controller' => 'pages', 'action' => 'exercise']);
+                        ?>
+                    </li>
                     <li><?php
                         echo $this->Html->link("CHD Mortality Rate", ['controller' => 'mortality_record', 'action' => 'visualisation']);
                         ?></li>
                     <li><?php
                         echo $this->Html->link("Smoking & CHD", ['controller' => 'pages', 'action' => 'smoke_visualisation']);
                         ?></li>
-                    <li><?php
-                        echo $this->Html->link("Nutrition", ['controller' => 'nutritions', 'action' => 'healthy_nutrition']);
-                        ?></li>
-                    <li>
-                        <?php
-                        echo $this->Html->link("Unhealthy Nutrition", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'unhealthy']);
-                        ?>
-                    </li>
                 </ul>
             </div>
 
-            <div class="col-xs-6 col-md-3">
-                <h6>Quick Links</h6>
-                <ul class="footer-links">
-                    <!--                    <li><a href="#">About Us</a></li>-->
-                    <!--                    <li><a href="#">Contact Us</a></li>-->
-                    <!--                    <li><a href="#">Contribute</a></li>-->
-                    <!--                    <li><a href="#">Privacy Policy</a></li>-->
-                </ul>
-            </div>
         </div>
         <hr>
     </div>
