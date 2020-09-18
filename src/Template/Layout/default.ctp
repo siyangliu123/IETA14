@@ -119,12 +119,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                         </li>
                         <li class="menu-item">
                             <?php
-                            echo $this->Html->link("Legumes Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'nuts']);
+                            echo $this->Html->link("Nuts Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'nuts']);
                             ?>
                         </li>
                         <li class="menu-item">
                             <?php
-                            echo $this->Html->link("Drink Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'drinks']);
+                            echo $this->Html->link("View Drink List", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'drinks']);
                             ?>
                         </li>
                         <li class="menu-item"><?php

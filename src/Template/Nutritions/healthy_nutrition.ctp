@@ -135,7 +135,7 @@
                     <?php endforeach; ?>
                     <br/>
                     <?php
-                    echo $this->Html->link(" View Drinks nutrition detail", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'drinks'], ['class' => 'btn btn-primary']);
+                    echo $this->Html->link(" View Drinks detail", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'drinks'], ['class' => 'btn btn-primary']);
                     ?>
                 </ul>
                 <div class="col-md-6 col-lg-6">
