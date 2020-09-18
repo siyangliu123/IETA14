@@ -346,7 +346,9 @@
                             echo $this->Html->link("nutrition guideline", ['controller' => 'nutritions', 'action' => 'healthy_nutrition']);
                             ?>. to help you plan nutritious
                             meals.</li>
-                        <li>If you are starting a new activity. Find more tips on how to <a href="#">start exercising</a>.</li>
+                        <li>If you are starting a new activity. Find more tips on how to <?php
+                            echo $this->Html->link("start exercising", ['controller' => 'pages', 'action' => 'exercise']);
+                            ?>.</li>
                         <li>If you are smoker, please consider <a href="https://www.health.gov.au/health-topics/smoking-and-tobacco/how-to-quit-smoking" target="_blank">quit smoking</a>.</li>
                         <li>If you drink over <?php
                             echo $this->Html->link("limit", ['controller' => 'nutritions', 'action' => 'healthy_nutrition/#section6']);
