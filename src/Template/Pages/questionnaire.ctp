@@ -109,10 +109,10 @@
             if (fruit_veg_val < 1) {
                 fruit_veg = 3;
             }
-            else if (fruit_veg_val > 1 && fruit_veg_val < 3) {
+            else if (fruit_veg_val === 1 && fruit_veg_val < 3) {
                 fruit_veg = 0;
             }
-            else if (fruit_veg_val > 3 && fruit_veg_val < 5) {
+            else if (fruit_veg_val === 3 && fruit_veg_val < 5) {
                 fruit_veg = -1;
             }
             else if (fruit_veg_val === 5) {
@@ -132,6 +132,7 @@
                 $(".result.high").show();
             }
             else{
+                console.log(age + " " + gender + " " + smoke + " " + drink + " " + family + " " + fruit_veg);
                 alert("Cannot get result, please refresh and try again.")
             }
 
@@ -139,7 +140,7 @@
             $tabs.tabs({
                 active: 8
             });
-        })
+        });
     });
 
 </script>
