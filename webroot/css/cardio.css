@@ -1,8 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
 .all-container {
     background-color: #0d1b2b;
     overflow-x: hidden;
-    font-family: roboto;
     -webkit-font-smoothing: antialiased;
     margin: 0;
 }
