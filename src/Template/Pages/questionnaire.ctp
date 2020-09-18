@@ -131,6 +131,9 @@
                 $(".result").hide();
                 $(".result.high").show();
             }
+            else{
+                alert("Cannot get result, please refresh and try again.")
+            }
 
             $tabs.tabs("enable", 8);
             $tabs.tabs({
