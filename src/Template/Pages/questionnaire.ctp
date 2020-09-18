@@ -119,11 +119,11 @@
                 fruit_veg = -3;
             }
             result = age + gender + smoke + drink + family + fruit_veg;
-            if(result<5){
+            if(result<=5){
                 $(".result").hide();
                 $(".result.low").show();
             }
-            else if(result>5&&result<10){
+            else if(result>5&&result<=10){
                 $(".result").hide();
                 $(".result.moderate").show();
             }
