@@ -312,7 +312,7 @@
             <div id="tabs-8" class="row">
                 <div class="col-md-3 col-lg-3 left">
                     <?php
-                    echo $this->Html->image("veg_fruit.jpg");
+                    echo $this->Html->image("nutrition.jpg");
                     ?>
                 </div>
                 <div class="col-md-9 col-lg-9 right">
