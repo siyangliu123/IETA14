@@ -164,6 +164,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 <?= $this->Flash->render() ?>
 <div class="all-container">
+    <button onclick="goBack()" id="backBtn" class="btn btn-red"><i class="fas fa-lg fa-arrow-circle-left"></i> Previous Page</button>
+
+
     <?= $this->fetch('content') ?>
 </div>
 
@@ -231,6 +234,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         $('html, body').animate({scrollTop: 0}, 'slow');
         return false;
     });
+    function goBack() {
+        window.history.back();
+    }
 
 </script>
 </html>

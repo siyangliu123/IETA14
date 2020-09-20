@@ -1,5 +1,5 @@
 .smoke-visualisation-container {
-    background: #3c3c3c no-repeat center center fixed;
+    background: white no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -13,11 +13,20 @@
     margin: 5vh 7vw;
     border-radius: 25px;
     font-size: larger;
+    border: silver 1px solid;
+    box-shadow: 0 0 20px rgba(255,0,0,1);
 }
 
 
-.smoke-visualisation-container h1 {
+.smoke-visualisation-container h1.red{
     padding-top: 35px;
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+
+.smoke-visualisation-container .large-text{
+    font-size: 2.5vw;
 }
 
 .smoke-visualisation-container .section{
@@ -29,5 +38,24 @@
 .center {
     margin-left: auto;
     margin-right: auto;
+}
+
+.section.box{
+    margin: 10vh;
+    border: silver 1px solid;
+    padding: 10vh;
+    border-radius: 25px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+
+.box .btn-red{
+    margin-top: 5vh;
+}
+
+.section img{
+    width: 100%;
 }
 

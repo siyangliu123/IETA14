@@ -1,19 +1,21 @@
 <?= $this->Html->css('smoke.css'); ?>
 <div class="smoke-visualisation-container">
     <div class="inner">
-        <h1>Smoking & Coronary Heart Disease</h1>
+        <h1 class="red">Smoking & Coronary Heart Disease</h1>
         <div class="section row">
-            <p class="col-md-4 col-sm-6 col-xs-12"><span style="font-size: xx-large; ">Smoking is a major risk factor for CHD.</span>
+            <p class="col-md-4 col-sm-6 col-xs-12"><span class="large-text">Smoking is a major risk factor for CHD.</span>
                 Cigarette smoking promotes atherosclerosis and increases the
                 levels of
                 blood clotting factors such as fibrinogen. Nicotine also accelerates heart rate and raises blood
                 pressure.</p>
             <div class="col-md-8 col-sm-6 col-xs-12" style="border-left: 1px solid silver; padding: 0 5vw;">
-                <p>Compared with non-smokers, <span style="font-size: xx-large; ">smoking more than 25 cigarettes a day increased the risk of more than <b>fivefold</b></span>.
+                <p>Compared with non-smokers, <span class="large-text">smoking more than 25 cigarettes a day increased the risk of more than <b>fivefold</b></span>.
                 </p>
                 <p>Also, the number of smokers between 45 to 60 years of age smoked a lot which accounted for 16% of the
                     total population in 2019.</p>
             </div>
+            <?php echo $this->Html->image('smoking.jpg'); ?>
+
         </div>
         <div id="chart1" style="height: 500px"></div>
         <div class="section">
@@ -24,6 +26,7 @@
                 other diseases like diabetes, cancer, asthma. By 2019 the cases related to
                 heart disease were the highest among the citizens of Australia who smoke on a regular basis and it
                 contributes to 19.7% of the population who smokes tobacco.</p>
+
         </div>
         <div>
             <table class="columns center">
@@ -38,11 +41,18 @@
             </table>
         </div>
         <div class="section">
-            <p>The pie chart here illustrates the distribution of males by age. It describes the percentage of males who
+            <p>The pie chart here illustrates the distribution of males and females by <b>age</b>. It describes the percentage of males who
                 smoke in a given age group. </p>
-            <p>As we can see. In 2019, around 23.25% of the male population around age 40-49 and 50-59 smokes. That's
-                around 46.6% of the total male population compared to any other age group. The risk of CHD is also
+            <p>As we can see. In 2019, <b>around 23.25% of the male population around age 40-49 and 50-59 smokes</b>. That's
+                around <b>46.6%</b> of the total male population compared to any other age group. The risk of CHD is also
                 greater for people in this age group.</p>
+        </div>
+
+        <div class="section box">
+            <h3>Want to know more about your risk of getting CHD? Take a simple test to check your risk. </h3>
+            <?php
+            echo $this->Html->link("Test Your Risk Here", ['controller' => 'pages', 'action' => 'questionnaire'], ['class' => 'btn btn-red']);
+            ?>
         </div>
 
     </div>

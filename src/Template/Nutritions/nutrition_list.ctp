@@ -7,7 +7,7 @@
 <?= $this->Html->css('nutritions.css'); ?>
 <div class="nutritions-container">
     <div class="nutritions-list-container">
-        <h1 style="text-transform: capitalize"><?php echo  $this->request->getQuery('filter')." Nutrition"; ?></h1>
+        <h1 style="text-transform: capitalize"><?php echo  $this->request->getQuery('filter'); ?></h1>
 
 <!--        <div class="filter-group">-->
 <!--            <label for="sat_fat" class="filter-label">Saturated Fat: <</label>-->

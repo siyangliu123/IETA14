@@ -74,26 +74,25 @@ use Cake\Http\Exception\NotFoundException;
 
 
     <div class="content">
-        <div class="row" style="font-weight: bold"><h2>Coronary Heart Disease (CHD) Ranked <span
+        <div class="row pad" style="font-weight: bold"><h2>Coronary Heart Disease (CHD) Ranked <span
                         style="font-size: 10vh; color: red">No.1</span> in leading single cause of death in Australia.
             </h2>
         </div>
-        <div class="row">
+        <div class="row pad">
             <div class="col-md-3 col-lg-3">
                 <div class="section"><p>CHD can cause <b style="text-transform: capitalize">stroke, angina pectoris,
                             myocardial infarction, arrhythmia, and heart failure</b>. They are the main causes of sudden
                         death in patients with CHD.</p>
                 <?php
-                echo $this->Html->link("Test Your Risk Here", ['controller' => 'pages', 'action' => 'questionnaire'], ['class' => 'btn btn-success']);
+                echo $this->Html->link("Test Your Risk Here", ['controller' => 'pages', 'action' => 'questionnaire'], ['class' => 'btn btn-red']);
                 ?>
                     <br>
                 </div>
                 <div class="section">
                     <p>According to research, the main factors for CHD are <b style="text-transform: capitalize">smoking,
                             age, and gender.</b></p>
-                    <br/>
                     <?php
-                    echo $this->Html->link("Read More", ['controller' => 'pages', 'action' => 'smoke_visualisation'], ['class' => 'btn btn-info']);
+                    echo $this->Html->link("Read More", ['controller' => 'pages', 'action' => 'smoke_visualisation'], ['class' => 'btn btn-red']);
                     ?>
                     <br/>
                 </div>
@@ -111,29 +110,29 @@ use Cake\Http\Exception\NotFoundException;
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row pad">
             <div class="col-md-5 col-lg-5 section card one">
                 <h3>Nutrition Advice</h3>
                 <?php
-                echo $this->Html->link("Read More", ['controller' => 'nutritions', 'action' => 'healthy_nutrition'], ['class' => 'btn btn-success']);
+                echo $this->Html->link("Read More", ['controller' => 'nutritions', 'action' => 'healthy_nutrition'], ['class' => 'btn btn-red']);
                 ?>
             </div>
             <div class="col-md-5 col-lg-5 section card two">
                 <h3>Exercise Advice</h3>
                 <?php
-                echo $this->Html->link("Read More", ['controller' => 'pages', 'action' => 'exercise'], ['class' => 'btn btn-success']);
+                echo $this->Html->link("Read More", ['controller' => 'pages', 'action' => 'exercise'], ['class' => 'btn btn-red']);
                 ?>
             </div>
             <div class="col-md-5 col-lg-5 section card three">
                 <h3>CHD Statistics</h3>
                 <?php
-                echo $this->Html->link("Read More", ['controller' => 'mortality_record', 'action' => 'visualisation'], ['class' => 'btn btn-success']);
+                echo $this->Html->link("Read More", ['controller' => 'mortality_record', 'action' => 'visualisation'], ['class' => 'btn btn-red']);
                 ?>
 
             </div>
             <div class="col-md-5 col-lg-5 section card four">
                 <h3>Daily Reminder</h3>
-                <button class="btn btn-success" disabled>Read More</button>
+                <button class="btn btn-red" disabled>Read More</button>
 
             </div>
         </div>

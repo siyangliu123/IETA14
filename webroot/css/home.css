@@ -703,11 +703,13 @@ body {
 }
 
 .btn-red {
-    background: #C5232D;
+    background: #e6232d;
+    color: white;
 }
 
 .btn-red:hover {
-    background: indianred;
+    background: #b4232d;
+    color: white;
 }
 
 .row {
@@ -719,7 +721,7 @@ body {
 }
 
 
-.content .row{
+.content .row.pad{
     margin: 0 8vw;
     padding: 2vw 3vw;
     border-bottom: 1px solid darkgrey;
@@ -811,7 +813,7 @@ body {
 }
 
 .visualisation-container {
-    background: #ffe6e6 no-repeat center center fixed;
+    background: white no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -821,16 +823,24 @@ body {
     z-index: 100;
 }
 
+.visualisation-container h1.red{
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+.visualisation-container p{
+    padding: 5vh 0;
+}
+
 .content.visualisation {
     background-color: white;
     padding: 5vw 15vw;
-    margin: 0 5vw;
+    margin: 5vh 7vw;
     border-radius: 25px;
+    border: silver 1px solid;
+    box-shadow: 0 0 20px rgba(255,0,0,1);
 }
 
-.content.visualisation div {
-    margin-top: 2vw;
-}
 
 #login{
     position: absolute;
@@ -957,3 +967,27 @@ body {
     top: auto;
 }
 
+.red{
+    color: red;
+}
+
+#backBtn{
+    position: absolute;
+    top: 105px;
+    left: 20px;
+}
+
+.row .box{
+    margin-top: 5vh;
+    border: silver 1px solid;
+    padding: 5vh;
+    border-radius: 25px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+
+.row .box .btn-red{
+    margin-top: 3vh;
+}
