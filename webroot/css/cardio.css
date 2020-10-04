@@ -1,8 +1,16 @@
 .all-container {
-    background-color: #0d1b2b;
+    background-color: white;
+}
+
+.inner{
+    background: white;
+    margin: 5vh 7vw;
+    border-radius: 25px;
+    font-size: larger;
+    border: silver 1px solid;
+    box-shadow: 0 0 20px rgba(255,0,0,1);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
-    margin: 0;
 }
 .flex {
     display: -webkit-flex;
@@ -15,7 +23,7 @@
 
 .slider{
     height: 100vh;
-    padding-top: 15vh;
+    padding-top: 5vh;
 }
 
 .slider-wrapper div {
@@ -33,40 +41,41 @@
     cursor: pointer;
 }
 .slide-content {
-    width: 50vw;
-    color: #fff;
+    width: 60vw;
+    color: black;
     padding: 0vw 18vw 3vw 9vw;
 }
 .slide-date {
-    color: #0a8acb;
-    font-size: 2vw;
+    color: deepskyblue;
+    font-size: 3vw;
     font-weight: 400;
     letter-spacing: 0.1vw;
     padding-bottom: 1.4vw;
 }
 .slide-title {
-    font-size: 1.2vw;
+    font-size: 1.5vw;
     font-weight: 400;
-    letter-spacing: 0.1vw;
+    letter-spacing: 1px;
     line-height: 1.55vw;
     padding-bottom: 1.8vw;
 }
 .slide-text {
-    font-size: 1vw;
+    font-size: 1.2vw;
     line-height: 1.2vw;
     opacity: 0.8;
+    letter-spacing: 1px;
     padding-bottom: 4vw;
 }
 .slide-more {
     font-weight: 400;
-    letter-spacing: 0.1vw;
+    letter-spacing: 1px;
     float: left;
     font-size: 0.9vw;
 }
 .slide-bullet {
     width: 0.5vw;
     height: 0.5vw;
-    background-color: #0b8bcc;
+    background-color: red;
     border-radius: 200%;
     position: relative;
     margin-left: 1.2vw;
@@ -83,9 +92,6 @@ div.overlay-blue {
     top: 0;
     transition: 0.5s ease all;
 }
-div.overlay-blue:hover {
-    background-color: rgba(13, 27, 43, 0.5);
-}
 
 .arrows {
     width: 3.5vw;
@@ -100,14 +106,14 @@ div.overlay-blue:hover {
     height: 2vw;
     background: transparent;
     text-indent: -9999px;
-    border-top: 0.15vw solid #fff;
-    border-left: 0.15vw solid #fff;
+    border-top: 0.15vw solid #000;
+    border-left: 0.15vw solid #000;
     transition: all 0.1s ease-in-out;
     text-decoration: none;
     color: transparent;
 }
 .arrow:hover {
-    border-color: #0a8acb;
+    border-color: red;
     border-width: 0.25vw;
 }
 .arrow:before {
@@ -126,4 +132,8 @@ div.overlay-blue:hover {
 .arrow.next {
     transform: rotate(135deg);
     right: 0;
+}
+
+a:not([href]).btn-primary{
+    color: white;
 }

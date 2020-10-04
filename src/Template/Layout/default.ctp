@@ -81,7 +81,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <a href="#0">About CHD</a>
                     <ol class="sub-menu" aria-label="submenu">
                         <li class="menu-item"><?php
-                            echo $this->Html->link("CHD Mortality Rate", ['controller' => 'mortality_record', 'action' => 'visualisation']);
+                            echo $this->Html->link("CHD Mortality Rate", ['controller' => 'MortalityRecord', 'action' => 'visualisation']);
                             ?></li>
                         <li class="menu-item"><?php
                             echo $this->Html->link("Smoking & CHD", ['controller' => 'pages', 'action' => 'smoke_visualisation']);
@@ -164,8 +164,33 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 <?= $this->Flash->render() ?>
 <div class="all-container">
-    <button onclick="goBack()" id="backBtn" class="btn btn-red"><i class="fas fa-lg fa-arrow-circle-left"></i> Previous Page</button>
+<?php
+//Credit goes to Dominic Barnes - http://stackoverflow.com/users/188702/dominic-barnes
+//http://stackoverflow.com/questions/2594211/php-simple-dynamic-breadcrumb
+function breadcrumbs($separator = ' &raquo; ', $home = 'Home') {
+    $path = array_filter(explode('/', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)));
+    $base = ($_SERVER['HTTPS'] ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
+    $breadcrumbs = Array("<a href=\"$base\">$home</a>");
+    $last = end(array_keys($path));
+    foreach ($path AS $x => $crumb) {$title = ucwords(str_replace(Array('.php', '_'), Array('', ' '), $crumb));
+        if ($x != $last)
+            $breadcrumbs[] = "<a href=\"$base$crumb\">$title</a>";
+        else
+            $breadcrumbs[] = $title;
+    }
+    return implode($separator, $breadcrumbs);
+}
 
+?>
+
+<?php
+    if($this->getRequest()->getRequestTarget()!=="/"){
+        echo '<div class="breadcrumb">';
+        echo breadcrumbs(' / ');
+        echo '</div>';
+
+    }
+?>
 
     <?= $this->fetch('content') ?>
 </div>
@@ -195,7 +220,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                         ?>
                     </li>
                     <li><?php
-                        echo $this->Html->link("CHD Mortality Rate", ['controller' => 'mortality_record', 'action' => 'visualisation']);
+                        echo $this->Html->link("CHD Mortality Rate", ['controller' => 'MortalityRecord', 'action' => 'visualisation']);
                         ?></li>
                     <li><?php
                         echo $this->Html->link("Smoking & CHD", ['controller' => 'pages', 'action' => 'smoke_visualisation']);
@@ -234,9 +259,24 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         $('html, body').animate({scrollTop: 0}, 'slow');
         return false;
     });
+
     function goBack() {
         window.history.back();
     }
+
+    $(document).ready(function(){
+        var here = location.href.split('/').slice(3);
+
+        var parts = [{ "text": 'Home', "link": '/' }];
+
+        for( var i = 0; i < here.length; i++ ) {
+            var part = here[i];
+            var text = part.toUpperCase();
+            var link = '/' + here.slice( 0, i + 1 ).join('/');
+            parts.push({ "text": text, "link": link });
+        }
+
+    });
 
 </script>
 </html>

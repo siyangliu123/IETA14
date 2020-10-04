@@ -80,6 +80,20 @@ class PagesController extends AppController
     {
 
     }
+    public function exercise()
+    {
+
+    }
+
+    public function cardio()
+    {
+
+    }
+
+    public function strength()
+    {
+
+    }
 
 
 }

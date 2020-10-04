@@ -70,6 +70,26 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
+    $routes->connect('/Nutrition/NutritionList',['controller' => 'Nutritions', 'action' => 'nutrition_list']);
+    $routes->connect('/Nutrition/NutritionList/Unhealthy',['controller' => 'Nutritions', 'action' => 'nutrition_list', 'filter' => 'unhealthy']);
+    $routes->connect('/Nutrition/NutritionList/Nuts',['controller' => 'Nutritions', 'action' => 'nutrition_list', 'filter' => 'nuts']);
+    $routes->connect('/Nutrition/NutritionList/Drinks',['controller' => 'Nutritions', 'action' => 'nutrition_list', 'filter' => 'drinks']);
+    $routes->connect('/Nutrition',['controller' => 'Nutritions', 'action' => 'healthy_nutrition']);
+
+    $routes->connect('/Mortality',['controller' => 'MortalityRecord', 'action' => 'visualisation']);
+    $routes->connect('/Smoking',['controller' => 'Pages', 'action' => 'smoke_visualisation']);
+
+    $routes->connect('/Questionnaire',['controller' => 'Pages', 'action' => 'questionnaire']);
+
+    $routes->connect('/Exercises',['controller' => 'pages', 'action' => 'exercise']);
+    $routes->connect('/Exercises/Cardiovascular',['controller' => 'pages', 'action' => 'cardio']);
+    $routes->connect('/Exercises/Strength',['controller' => 'pages', 'action' => 'strength']);
+
+
+
+
+
+
     /*
      * Connect catchall routes for all controllers.
      *

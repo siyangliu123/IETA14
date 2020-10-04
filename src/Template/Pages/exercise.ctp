@@ -6,11 +6,9 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <?= $this->Html->css('exercise.css'); ?>
-
-    <title>Slider</title>
 </head>
 <body>
-<div class="container">
+<div class="inner">
     <div class="slider">
 
         <div class="box1 box">

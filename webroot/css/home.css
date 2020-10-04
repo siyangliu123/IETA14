@@ -127,6 +127,10 @@ body {
     height: 40px;
 }
 
+.breadcrumb{
+    margin-bottom: 0;
+}
+
 /*Menubar, Search and Footer code Start*/
 
 .menu a:focus {

@@ -1,15 +1,6 @@
-*,
-*:before,
-*:after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
 
 .all-container {
-    background-color: #000;
-    color: #fff;
+    background-color: white;
 }
 @media only screen and (max-width: 1000px) {
     .all-container {
@@ -17,17 +8,11 @@
     }
 }
 
-.container {
+.inner {
     position: relative;
     overflow: hidden;
-    border-radius: 5rem;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-}
-@media only screen and (max-width: 1000px) {
-    .container {
-        border-radius: 0;
-    }
 }
 
 .slider {
@@ -130,6 +115,7 @@
     font-size: 2.5vw;
     font-weight: 500;
     margin-bottom: .5rem;
+    color: white;
 }
 .slider .box .details p {
     display: inline-block;
@@ -143,7 +129,7 @@
     }
 }
 .slider .box .details button {
-    padding: 1rem 3rem;
+    padding: 0.5rem 2rem;
     color: #fff;
     border-radius: 2rem;
     outline: none;
@@ -165,7 +151,8 @@
     border: none;
 }
 .slider .box1 {
-    background-color: #500033;
+    background-color: rgba(255, 0, 0, 0.8);
+
 }
 .slider .box1 .illustration .inner {
     width: 40vw;
@@ -180,7 +167,7 @@
     background-color: #FF0077;
 }
 .slider .box2 {
-    background-color: #000050;
+    background-color: lightskyblue;
 }
 .slider .box2 .illustration .inner {
     width: 40vw;
@@ -194,42 +181,7 @@
 .slider .box2 button {
     background-color: #0033FF;
 }
-.slider .box3 {
-    background-color: #00501D;
-}
-.slider .box3 .illustration .inner {
-    background-color: #00FF44;
-}
-.slider .box3 .illustration .inner::after, .slider .box3 .illustration .inner::before {
-    background-color: rgba(0, 255, 68, 0.4);
-}
-.slider .box3 button {
-    background-color: #00FF44;
-}
-.slider .box4 {
-    background-color: #554D00;
-}
-.slider .box4 .illustration .inner {
-    background-color: #FF4E00;
-}
-.slider .box4 .illustration .inner::after, .slider .box4 .illustration .inner::before {
-    background-color: rgba(255, 78, 0, 0.4);
-}
-.slider .box4 button {
-    background-color: #FF4E00;
-}
-.slider .box5 {
-    background-color: #300050;
-}
-.slider .box5 .illustration .inner {
-    background-color: #8000FF;
-}
-.slider .box5 .illustration .inner::after, .slider .box5 .illustration .inner::before {
-    background-color: rgba(128, 0, 255, 0.4);
-}
-.slider .box5 button {
-    background-color: #8000FF;
-}
+
 .slider .illustration {
     grid-column: 2 / -1;
     grid-row: 1 / -1;
@@ -345,6 +297,7 @@
     opacity: .3;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    color: white;
 }
 .trail div:hover {
     opacity: .6;

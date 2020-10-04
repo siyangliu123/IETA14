@@ -1,4 +1,5 @@
 <?= $this->Html->css('cardio.css'); ?>
+<div class="inner">
 <div class="slider">
     <div class="slider-wrapper flex">
         <div class="slide flex">
@@ -12,7 +13,7 @@
                 <div class="slide-text"><span style="color: orange">Warning: </span>
                     Do not lift weights if you have angina or have just suffered from heart failure. Always consult the doctor and a professional trainer before carrying out any strength workouts.
                 </div>
-                <div class="slide-more"><a class="btn btn-info">Read More</a></div>
+                <div class="slide-more"><a class="btn btn-primary">Read More</a></div>
             </div>
         </div>
         <div class="slide flex">
@@ -23,7 +24,7 @@
                 <div class="slide-date">Resistance band workout</div>
                 <div class="slide-title">One of the benefits of resistance band over free weights is mobility and variety of exercises that can be performed. </div>
                 <div class="slide-text"><span style="color: orange">Warning: </span>If you have a heart condition or high blood pressure it’s important to check with your doctor or cardiac rehabilitation team what sort of activities you can safely do and how much you should do. </div>
-                <div class="slide-more"><a class="btn btn-info">Read More</a></div>
+                <div class="slide-more"><a class="btn btn-primary">Read More</a></div>
             </div>
         </div>
     </div>
@@ -31,6 +32,7 @@
         <a href="#" title="Previous" class="arrow slider-link prev"></a>
         <a href="#" title="Next" class="arrow slider-link next"></a>
     </div>
+</div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
 <script>
