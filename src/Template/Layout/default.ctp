@@ -53,6 +53,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->meta('icon') ?>
 
     <?= $this->Html->css('home.css') ?>
+    <?= $this->Html->css('menu.css') ?>
 
 
 
@@ -65,132 +66,113 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 <button id="scrollTop" class="btn btn-primary"><i class="fas fa-arrow-up fa-lg"></i></button>
 <div class="top-nav row">
-    <div class="col-md-3 col-lg-3">
-        <?php echo $this->Html->image('logo.png', ['id' => 'logo', 'url' => [
-            'controller' => 'Pages',
-            'action' => 'display']
-        ]); ?>
+    <?php echo $this->Html->image('logo.png', ['id' => 'logo', 'url' => [
+        'controller' => 'Pages',
+        'action' => 'display']
+    ]); ?>
+
+    <div class="button">
+        <a class="btn-open"></a>
     </div>
-    <div class="col-md-9 col-lg-9">
-        <nav class="menu" role='navigation'>
-            <ol>
-                <li class="menu-item"><?php
+
+    <div class="menu">
+        <div class="wrap">
+            <ul class="wrap-nav">
+                <li><?php
                     echo $this->Html->link("Home", ['controller' => 'pages', 'action' => 'display']);
                     ?></li>
-                <li class="menu-item" aria-haspopup="true">
-                    <a href="#0">About CHD</a>
-                    <ol class="sub-menu" aria-label="submenu">
-                        <li class="menu-item"><?php
+                <li><span>About CHD</span>
+                    <ul>
+                        <li><?php
                             echo $this->Html->link("CHD Mortality Rate", ['controller' => 'MortalityRecord', 'action' => 'visualisation']);
                             ?></li>
-                        <li class="menu-item"><?php
+                        <li><?php
                             echo $this->Html->link("Smoking & CHD", ['controller' => 'pages', 'action' => 'smoke_visualisation']);
                             ?></li>
-                    </ol>
+                        <li><?php
+                            echo $this->Html->link("CHD Questionnaire", ['controller' => 'Pages', 'action' => 'questionnaire']);
+                            ?></li>
+                    </ul>
                 </li>
-                <li class="menu-item" aria-haspopup="true">
-                    <?php
+                <li><?php
                     echo $this->Html->link("Exercises", ['controller' => 'pages', 'action' => 'exercise']);
                     ?>
-                    <ol class="sub-menu" aria-label="submenu">
-                        <li class="menu-item"><?php
+                    <ul>
+                        <li><?php
                             echo $this->Html->link("Cardiovascular Exercises", ['controller' => 'pages', 'action' => 'cardio']);
                             ?></li>
-                        <li class="menu-item"><?php
+                        <li><?php
                             echo $this->Html->link("Strength Exercises", ['controller' => 'pages', 'action' => 'strength']);
                             ?></li>
-                    </ol>
+                    </ul>
                 </li>
-
-                <li class="menu-item" aria-haspopup="true">
-                    <?php
+                <li><?php
                     echo $this->Html->link("Nutrition", ['controller' => 'nutritions', 'action' => 'healthy_nutrition']);
                     ?>
-                    <ol class="sub-menu" aria-label="submenu">
-                        <li class="menu-item">
+                    <ul>
+                        <li>
                             <?php
                             echo $this->Html->link("About Nutrition", ['controller' => 'nutritions', 'action' => 'healthy_nutrition']);
                             ?>
                         </li>
-                        <li class="menu-item">
+                        <li>
                             <?php
                             echo $this->Html->link("Unhealthy Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'unhealthy']);
                             ?>
                         </li>
-                        <li class="menu-item">
+                        <li>
                             <?php
                             echo $this->Html->link("Nuts Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'nuts']);
                             ?>
                         </li>
-                        <li class="menu-item">
+                        <li>
                             <?php
                             echo $this->Html->link("View Drink List", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'drinks']);
                             ?>
                         </li>
-                        <li class="menu-item"><?php
+                        <li><?php
                             echo $this->Html->link("All Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list']);
                             ?>
                         </li>
-
-                    </ol>
+                    </ul>
                 </li>
-                <li class="menu-item" id="about"><a href="#">About</a></li>
-                <!--                    <li class="menu-item" id="logout">--><?php
-                //                        echo $this->Html->link("Logout", ['controller' => 'users', 'action' => 'logout']);
-                //                        ?><!--</li>-->
-                <!--                <li class="menu-item" aria-haspopup="true">-->
-                <!--                    <a href="#0">Account</a>-->
-                <!--                    <ol class="sub-menu" aria-label="submenu">-->
-                <!--                        <li class="menu-item"><a href="#0">Log in</a></li>-->
-                <!--                        <li class="menu-item"><a href="#0">Sign Up</a></li>-->
-                <!--                    </ol>-->
-                <!--                </li>-->
-            </ol>
-        </nav>
-    </div>
-    <div class="col-md-2 col-lg-2">
-        <!--        <div class="wrapper">-->
-        <!--            <form role="search" method="get" class="search-form form" action="">-->
-        <!--                <label>-->
-        <!--                    <span class="screen-reader-text">Search for...</span>-->
-        <!--                    <input type="search" class="search-field" placeholder="Search..." value="" name="search"-->
-        <!--                           title=""/>-->
-        <!--                </label>-->
-        <!--                <input type="submit" class="search-submit button" value="&#xf002"/>-->
-        <!--            </form>-->
-        <!--        </div>-->
+            </ul>
+
+        </div>
     </div>
 </div>
 
 <?= $this->Flash->render() ?>
 <div class="all-container">
-<?php
-//Credit goes to Dominic Barnes - http://stackoverflow.com/users/188702/dominic-barnes
-//http://stackoverflow.com/questions/2594211/php-simple-dynamic-breadcrumb
-function breadcrumbs($separator = ' &raquo; ', $home = 'Home') {
-    $path = array_filter(explode('/', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)));
-    $base = ($_SERVER['HTTPS'] ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
-    $breadcrumbs = Array("<a href=\"$base\">$home</a>");
-    $last = end(array_keys($path));
-    foreach ($path AS $x => $crumb) {$title = ucwords(str_replace(Array('.php', '_'), Array('', ' '), $crumb));
-        if ($x != $last)
-            $breadcrumbs[] = "<a href=\"$base$crumb\">$title</a>";
-        else
-            $breadcrumbs[] = $title;
+    <?php
+    //Credit goes to Dominic Barnes - http://stackoverflow.com/users/188702/dominic-barnes
+    //http://stackoverflow.com/questions/2594211/php-simple-dynamic-breadcrumb
+    function breadcrumbs($separator = ' &raquo; ', $home = 'Home')
+    {
+        $path = array_filter(explode('/', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)));
+        $base = ($_SERVER['HTTPS'] ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
+        $breadcrumbs = Array("<a href=\"$base\">$home</a>");
+        $last = end(array_keys($path));
+        foreach ($path AS $x => $crumb) {
+            $title = ucwords(str_replace(Array('.php', '_'), Array('', ' '), $crumb));
+            if ($x != $last)
+                $breadcrumbs[] = "<a href=\"$base$crumb\">$title</a>";
+            else
+                $breadcrumbs[] = $title;
+        }
+        return implode($separator, $breadcrumbs);
     }
-    return implode($separator, $breadcrumbs);
-}
 
-?>
+    ?>
 
-<?php
-    if($this->getRequest()->getRequestTarget()!=="/"){
+    <?php
+    if ($this->getRequest()->getRequestTarget() !== "/") {
         echo '<div class="breadcrumb">';
         echo breadcrumbs(' / ');
         echo '</div>';
 
     }
-?>
+    ?>
 
     <?= $this->fetch('content') ?>
 </div>
@@ -264,18 +246,12 @@ function breadcrumbs($separator = ' &raquo; ', $home = 'Home') {
         window.history.back();
     }
 
-    $(document).ready(function(){
-        var here = location.href.split('/').slice(3);
 
-        var parts = [{ "text": 'Home', "link": '/' }];
-
-        for( var i = 0; i < here.length; i++ ) {
-            var part = here[i];
-            var text = part.toUpperCase();
-            var link = '/' + here.slice( 0, i + 1 ).join('/');
-            parts.push({ "text": text, "link": link });
-        }
-
+    $(document).ready(function () {
+        $(".button a").click(function () {
+            $(".menu").fadeToggle(200);
+            $(this).toggleClass('btn-open').toggleClass('btn-close');
+        });
     });
 
 </script>

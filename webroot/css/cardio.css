@@ -1,5 +1,6 @@
 .all-container {
     background-color: white;
+
 }
 
 .inner{
@@ -11,6 +12,7 @@
     box-shadow: 0 0 20px rgba(255,0,0,1);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    z-index: 0;
 }
 .flex {
     display: -webkit-flex;

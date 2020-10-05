@@ -6,7 +6,21 @@
 ?>
 <?= $this->Html->css('nutritions.css'); ?>
 <div class="healthy-nutritions-container">
+
     <div class="nutrition-inner">
+        <div class="nav-div">
+            <h3 id="navTitle">Navigation</h3>
+            <nav class="nav section-nav">
+                <ul>
+                    <li><a href="#section1" class="1">Avoid Saturated Fat</a></li>
+                    <li><a href="#section2" class="2">Avoid processed Meats</a></li>
+                    <li><a href="#section3" class="3">Choose lowest sodium products</a></li>
+                    <li><a href="#section4" class="4">Eat nuts regularly</a></li>
+                    <li><a href="#section5" class="5">Eat more fruit & vegetable</a></li>
+                    <li><a href="#section6" class="6">Reduce alcohol & refined sources of carbohydrates</a></li>
+                </ul>
+            </nav>
+        </div>
         <h1>Choose healthy foods to reduce the risk of <span>Coronary Heart Disease</span></h1>
         <div class="row">
             <p style="font-size: larger"><b>A healthy diet</b> is one of the most important ways you can reduce your
@@ -18,20 +32,7 @@
                     and fruits </b> as well as some <b>fish and seafood and protein</b> such as lentils beans and tofu.
             </p>
 
-            <div class="nav-div">
-                <h3 id="navTitle">Navigation</h3>
-                <nav class="nav section-nav">
-                    <ul>
-                        <li><a href="#section1" class="1">Avoid Saturated Fat</a></li>
-                        <li><a href="#section2" class="2">Avoid processed Meats</a></li>
-                        <li><a href="#section3" class="3">Choose lowest sodium products</a></li>
-                        <li><a href="#section4" class="4">Eat nuts regularly</a></li>
-                        <li><a href="#section5" class="5">Eat more fruit & vegetable</a></li>
-                        <li><a href="#section6" class="6">Reduce alcohol & refined sources of carbohydrates</a></li>
-                    </ul>
-                </nav>
 
-            </div>
         </div>
 
         <section id="section1">
