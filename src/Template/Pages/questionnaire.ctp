@@ -215,19 +215,19 @@
                         <legend>How old are you?</legend>
                         <label for="age-1">Under 34</label>
                         <input type="radio" name="age" id="age-1" value="-9">
-                        <label for="age-2">35-39</label>
+                        <label for="age-2">35 to 39</label>
                         <input type="radio" name="age" id="age-2" value="-4">
-                        <label for="age-3">40-44</label>
+                        <label for="age-3">40 to 44</label>
                         <input type="radio" name="age" id="age-3" value="0">
-                        <label for="age-4">45-49</label>
+                        <label for="age-4">45 to 49</label>
                         <input type="radio" name="age" id="age-4" value="1">
-                        <label for="age-5">50-54</label>
+                        <label for="age-5">50 to 54</label>
                         <input type="radio" name="age" id="age-5" value="2">
-                        <label for="age-6">55-59</label>
+                        <label for="age-6">55 to 59</label>
                         <input type="radio" name="age" id="age-6" value="3">
-                        <label for="age-7">60-64</label>
+                        <label for="age-7">60 to 64</label>
                         <input type="radio" name="age" id="age-7" value="4">
-                        <label for="age-8">65-69</label>
+                        <label for="age-8">65 to 69</label>
                         <input type="radio" name="age" id="age-8" value="6">
                         <label for="age-9">Above 70</label>
                         <input type="radio" name="age" id="age-9" value="8">
@@ -283,7 +283,7 @@
                 <div class="col-md-9 col-lg-9 right widget">
                     <fieldset>
                         <legend>What is your drink standard per day?</legend>
-                        <label for="drink-1">0-1</label>
+                        <label for="drink-1">0 to 1</label>
                         <input type="radio" name="drink" id="drink-1" value="0">
                         <label for="drink-2">2 to 3</label>
                         <input type="radio" name="drink" id="drink-2" value="1">
@@ -366,7 +366,7 @@
                     <h5>You should have a CHD test every year.</h5>
 
                     <div>Click and see <?php
-                        echo $this->Html->link("Clinics", ['controller' => 'hospitalLocations', 'action' => 'listHospitals']);
+                        echo $this->Html->link("Clinics", ['controller' => 'HospitalLocations', 'action' => 'list_hospitals']);
                         ?> nearby.</div>
                 </div>
             </div>

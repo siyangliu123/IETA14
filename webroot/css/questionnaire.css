@@ -31,6 +31,15 @@
     border: 1px solid silver;
     padding: 5vw;
     display: flex;
+    height: 60vh;
+}
+
+#tabs fieldset{
+    width: 75%;
+}
+
+#tabs-6 img{
+    height: 60%;
 }
 
 .row img {
@@ -97,17 +106,17 @@ a.mover {
 }
 
 .result h1{
-    padding: 2vh;
+    padding: 0 2vh;
     text-align: left;
 }
 
 .result h5{
-    padding: 2vh;
+    padding:0 2vh;
     text-align: left;
 }
 
 .result div{
-    padding: 2vh;
+    padding: 0 2vh;
     text-align: left;
 }
 

@@ -85,6 +85,9 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/Exercises/Cardiovascular',['controller' => 'pages', 'action' => 'cardio']);
     $routes->connect('/Exercises/Strength',['controller' => 'pages', 'action' => 'strength']);
 
+    $routes->connect('/HospitalLocation',['controller' => 'HospitalLocations', 'action' => 'list_hospitals']);
+
+
 
 
 
