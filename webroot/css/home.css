@@ -126,7 +126,8 @@ body {
 }
 
 .breadcrumb{
-    margin-bottom: 0;
+    margin: 10px;
+    font-size: 1.5vw;
 }
 
 
