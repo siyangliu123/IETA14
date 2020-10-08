@@ -52,7 +52,7 @@
                     <p>Limit unprocessed red meats (such as beef, veal, mutton, lamb, pork, kangaroo,
                         rabbit, and other game meats) to a maximum of 350g (cooked weight) per week.</p>
                     <?php
-                    echo $this->Html->link(" View Unhealthy Meat Nutrition Detail", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'unhealthy'], ['class' => 'btn btn-primary']);
+                    echo $this->Html->link(" View Unhealthy Nutrition Detail", ['controller' => 'foods', 'action' => 'index', 'filter' => 'processedmeat'], ['class' => 'btn btn-primary']);
                     ?>
                 </div>
                 <div class="col-md-6 col-lg-6 meats">
@@ -61,7 +61,7 @@
                             <ul>
                                 <?php foreach ($nutritions3 as $nutrition3): ?>
                                     <li>
-                                        <?= h($nutrition3->nutrition_name) ?>
+                                        <?= h($nutrition3->food_name) ?>
                                     </li>
                                 <?php endforeach; ?>
                             </ul>
@@ -78,6 +78,9 @@
                     in foods like seafood, meat, dairy, eggs and some vegetables. Reducing salt intake
                     reduces the risk of high blood pressure and ensures better cardiovascular health for
                     most people.</p>
+                <?php
+                echo $this->Html->link(" View Unhealthy Nutrition Detail", ['controller' => 'foods', 'action' => 'index', 'filter' => 'processedmeat'], ['class' => 'btn btn-primary']);
+                ?>
             </div>
         </section>
         <section id="section4">
@@ -96,12 +99,12 @@
                     <ul>
                         <?php foreach ($nutritions1 as $nutrition1): ?>
                             <li>
-                                <?= h($nutrition1->nutrition_name) ?>
+                                <?= h($nutrition1->food_name) ?>
                             </li>
                         <?php endforeach; ?>
                         <br/>
                         <?php
-                        echo $this->Html->link(" View Nuts nutrition detail", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'nuts'], ['class' => 'btn btn-primary']);
+                        echo $this->Html->link(" View Nuts nutrition detail", ['controller' => 'foods', 'action' => 'index', 'filter' => 'nuts'], ['class' => 'btn btn-primary']);
                         ?>
                     </ul>
 
@@ -131,12 +134,12 @@
                 <ul class="col-md-6 col-lg-6">
                     <?php foreach ($nutritions2 as $nutrition2): ?>
                         <li>
-                            <?= h($nutrition2->nutrition_name) ?>
+                            <?= h($nutrition2->food_name) ?>
                         </li>
                     <?php endforeach; ?>
                     <br/>
                     <?php
-                    echo $this->Html->link(" View Drinks detail", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'drinks'], ['class' => 'btn btn-primary']);
+                    echo $this->Html->link(" View Drinks detail", ['controller' => 'foods', 'action' => 'index', 'filter' => 'alcohol'], ['class' => 'btn btn-primary']);
                     ?>
                 </ul>
                 <div class="col-md-6 col-lg-6">

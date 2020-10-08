@@ -107,31 +107,31 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     </ul>
                 </li>
                 <li><?php
-                    echo $this->Html->link("Nutrition", ['controller' => 'nutritions', 'action' => 'healthy_nutrition']);
+                    echo $this->Html->link("Nutrition", ['controller' => 'foods', 'action' => 'healthy_nutrition']);
                     ?>
                     <ul>
                         <li>
                             <?php
-                            echo $this->Html->link("About Nutrition", ['controller' => 'nutritions', 'action' => 'healthy_nutrition']);
+                            echo $this->Html->link("About Nutrition", ['controller' => 'foods', 'action' => 'healthy_nutrition']);
                             ?>
                         </li>
                         <li>
                             <?php
-                            echo $this->Html->link("Unhealthy Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'unhealthy']);
+                            echo $this->Html->link("Unhealthy Foods List", ['controller' => 'foods', 'action' => 'index', 'filter' => 'unhealthy']);
                             ?>
                         </li>
                         <li>
                             <?php
-                            echo $this->Html->link("Nuts Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'nuts']);
+                            echo $this->Html->link("Nuts Nutrition List", ['controller' => 'foods', 'action' => 'index', 'filter' => 'nuts']);
                             ?>
                         </li>
                         <li>
                             <?php
-                            echo $this->Html->link("View Drink List", ['controller' => 'nutritions', 'action' => 'nutrition_list', 'filter' => 'drinks']);
+                            echo $this->Html->link("View Drink List", ['controller' => 'foods', 'action' => 'index', 'filter' => 'alcohol']);
                             ?>
                         </li>
                         <li><?php
-                            echo $this->Html->link("All Nutrition List", ['controller' => 'nutritions', 'action' => 'nutrition_list']);
+                            echo $this->Html->link("All Nutrition List", ['controller' => 'foods', 'action' => 'index']);
                             ?>
                         </li>
                     </ul>
@@ -194,7 +194,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 
                     <li><?php
-                        echo $this->Html->link("Nutrition Advice", ['controller' => 'nutritions', 'action' => 'healthy_nutrition']);
+                        echo $this->Html->link("Nutrition Advice", ['controller' => 'foods', 'action' => 'healthy_nutrition']);
                         ?></li>
                     <li>
                         <?php
