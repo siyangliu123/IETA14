@@ -134,6 +134,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                             echo $this->Html->link("All Nutrition List", ['controller' => 'foods', 'action' => 'index']);
                             ?>
                         </li>
+                        <li><?php
+                            echo $this->Html->link("Calories Calculator", ['controller' => 'foods', 'action' => 'calculator']);
+                            ?>
+                        </li>
                     </ul>
                 </li>
             </ul>
