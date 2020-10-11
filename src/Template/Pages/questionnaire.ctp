@@ -175,7 +175,7 @@
                     ?>
                 </div>
                 <div class="col-md-9 col-lg-9 right">
-                    <div>This 2-minute health questionnaire will assess you risk for</div>
+                    <div>This 2-minute health questionnaire will assess your risk for</div>
                     <div class="chd-title">Coronary Heart Disease</div>
                     <div>We will also provide you practical tips on how to lower your risk</div>
                     <div><span class="strong orange">Warning</span>: This tool <span class="strong red">CANNOT</span> replace professional health check</div>
@@ -333,7 +333,7 @@
                     <h1>Congratulations!</h1>
                     <h5>Your risk of Coronary Heart Disease is <b class="green">Low</b>, please continue the healthy lifestyle!</h5>
                     <div>See diet recommendation <?php
-                        echo $this->Html->link("here", ['controller' => 'nutritions', 'action' => 'healthy_nutrition']);
+                        echo $this->Html->link("here", ['controller' => 'foods', 'action' => 'healthy_nutrition']);
                         ?>.
                     </div>
                 </div>
@@ -343,7 +343,7 @@
                     <h5>We encourage you adopt healthy habits to prevent CHD:</h5>
                     <ul>
                         <li>If you want to eat healthier, use this <?php
-                            echo $this->Html->link("nutrition guideline", ['controller' => 'nutritions', 'action' => 'healthy_nutrition']);
+                            echo $this->Html->link("nutrition guideline", ['controller' => 'foods', 'action' => 'healthy_nutrition']);
                             ?>. to help you plan nutritious
                             meals.</li>
                         <li>If you are starting a new activity. Find more tips on how to <?php
@@ -351,7 +351,7 @@
                             ?>.</li>
                         <li>If you are smoker, please consider <a href="https://www.health.gov.au/health-topics/smoking-and-tobacco/how-to-quit-smoking" target="_blank">quit smoking</a>.</li>
                         <li>If you drink over <?php
-                            echo $this->Html->link("limit", ['controller' => 'nutritions', 'action' => 'healthy_nutrition/#section6']);
+                            echo $this->Html->link("limit", ['controller' => 'foods', 'action' => 'healthy_nutrition/#section6']);
                             ?>, set yourself a limit and count your standard drinks, plan regular
                             alcohol-free days each week.</li>
                     </ul>

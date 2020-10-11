@@ -52,7 +52,7 @@
                     <p>Limit unprocessed red meats (such as beef, veal, mutton, lamb, pork, kangaroo,
                         rabbit, and other game meats) to a maximum of 350g (cooked weight) per week.</p>
                     <?php
-                    echo $this->Html->link(" View Unhealthy Nutrition Detail", ['controller' => 'foods', 'action' => 'index', 'filter' => 'processedmeat'], ['class' => 'btn btn-primary']);
+                    echo $this->Html->link(" View Unhealthy Nutrition Detail", ['controller' => 'foods', 'action' => 'index', 'filter' => 'unhealthy'], ['class' => 'btn btn-primary']);
                     ?>
                 </div>
                 <div class="col-md-6 col-lg-6 meats">

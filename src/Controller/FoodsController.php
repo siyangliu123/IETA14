@@ -142,4 +142,9 @@ class FoodsController extends AppController
         $this->set(compact('nutritions3'));
     }
 
+    public function calculator(){
+        $foods = $this->Foods->find('all');
+        $this->set(compact("foods"));
+    }
+
 }

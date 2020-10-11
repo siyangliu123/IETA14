@@ -9,7 +9,7 @@
     <div class="foods view large-9 medium-8 columns content">
         <h1><?= h($food->food_name) ?></h1>
         <div class="row food-description">
-            <h2><?= __('Food Description: ') ?></h2>
+            <h2>Food Description:</h2>
             <div><?= $food->food_description ?></div>
         </div>
 

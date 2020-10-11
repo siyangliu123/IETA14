@@ -541,7 +541,11 @@ body {
 }
 
 
-.login-section h3,input{
+.login-section h3{
+    margin: 20px 5px;
+}
+
+.login-section input{
     margin: 20px 5px;
 }
 
