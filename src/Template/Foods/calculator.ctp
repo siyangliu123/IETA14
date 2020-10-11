@@ -15,6 +15,17 @@
             }
         });
 
+        $("#tooltip1").tooltip({
+            show: {
+                effect: "slideDown",
+                delay: 250
+            },
+            hide: {
+                effect: "slideUp",
+                delay: 250
+            }
+        });
+
 
         var progress = 1;
 
@@ -231,7 +242,11 @@
                     <tr>
                         <th>Food</th>
                         <th>Calories</th>
-                        <th>Serves</th>
+                        <th>Serves
+                            <a id="tooltip1"
+                               title="Each serve is measured at per 100g."><i
+                                        class="fas fa-question-circle"></i></a>
+                        </th>
                         <th>Total</th>
                     </tr>
                     </thead>
