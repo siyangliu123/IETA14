@@ -131,8 +131,10 @@ use Cake\Http\Exception\NotFoundException;
 
             </div>
             <div class="col-md-5 col-lg-5 section card four">
-                <h3>Daily Reminder</h3>
-                <button class="btn btn-red" disabled>Read More</button>
+                <h3>Calories Calculator</h3>
+                <?php
+                echo $this->Html->link("Read More", ['controller' => 'foods', 'action' => 'calculator'], ['class' => 'btn btn-red']);
+                ?>
 
             </div>
         </div>

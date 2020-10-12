@@ -41,6 +41,22 @@ class FoodsController extends AppController
         }
 
         $this->set(compact('foods'));
+
+        $query = $this->Foods->find()->select(["food_categories"])->distinct(['food_categories']);
+        $categories = array();
+        foreach ($query as $category){
+            if(substr($category->food_categories, 0, strpos($category->food_categories,','))){
+                $category = substr($category->food_categories, 0, strpos($category->food_categories,','));
+            }
+            else{
+                $category = $category->food_categories;
+            }
+            if(!array_search($category,$categories)&&$category!=""){
+                array_push($categories,$category);
+            }
+        }
+        $this->set(compact('categories'));
+
     }
 
     /**

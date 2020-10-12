@@ -432,7 +432,7 @@ body {
     text-align: center;
     padding: 2vw !important;
     margin: 2vw;
-    height: 40vh;
+    height: 250px;
     vertical-align: center;
     align-items: center;
     border-radius: 25px;
@@ -482,7 +482,7 @@ body {
 }
 
 .card.four{
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../img/reminders.jpg");
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../img/diet.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
