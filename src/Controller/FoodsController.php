@@ -31,7 +31,7 @@ class FoodsController extends AppController
                         'food_categories LIKE' => 'Processed meat%',
                         'food_sodium >' => '1000'
                     ]]);
-        } else if ($filter == "drinks") {
+        } else if ($filter == "alcohol") {
             $foods = $this->Foods->find('all')
                 ->where([
                     'food_alcohol >' => '1'

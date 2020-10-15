@@ -66,6 +66,9 @@
                                 <?php endforeach; ?>
                             </ul>
                         </div>
+                        <div>
+                            <?php echo $this->Html->image('ham.jpg', ['id' => 'nuts-image', 'class' => 'content-image']); ?>
+                        </div>
                     </div>
                 </div>
 

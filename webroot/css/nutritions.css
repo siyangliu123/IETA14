@@ -101,7 +101,7 @@ b {
 }
 
 .nutrition-inner ul {
-    padding: 20px 0;
+    padding: 0;
 }
 
 .nutrition-inner li {
@@ -131,31 +131,18 @@ b {
     border-left: 1px solid silver;
 }
 
-#nuts-image {
-    width: 30vw;
-    margin-top: 5vh;
-}
-
-#eat-image {
-    width: 60vw;
-}
-
 .meats {
     border-left: 1px solid silver;
 }
 
 .meat-inner {
     margin-left: 5vw;
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../img/ham.jpg");
     background-size: cover;
     border-radius: 25px;
 }
 
 .meat-list {
     color: black;
-    background: rgba(255, 255, 255, 0.6);
-    padding-left: 30px;
-    margin-left: 5vw;
     border-radius: 25px;
 }
 
@@ -166,6 +153,7 @@ b {
 }
 
 .content-image {
+    width: 100%;
     transition-duration: 2s;
     z-index: 100;
 }
@@ -187,9 +175,9 @@ b {
 @media only screen and (min-width: 600px) {
     .nav-div {
         position: fixed;
-        top: 30vh;
+        top: 20vh;
         left: 0;
-        background: white;
+        background: lightgrey;
         width: 20vw;
         border: 1px silver solid;
         z-index: 50;
@@ -219,7 +207,6 @@ b {
 
 }
 
-
 .section-nav ul {
     padding: 10px 50px;
 }
@@ -233,7 +220,7 @@ b {
     text-decoration: none;
     display: block;
     padding: .125rem 0;
-    color: rgba(128, 128, 128, 0.51);
+    color: ghostwhite;
     transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
 }
 
