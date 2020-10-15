@@ -333,13 +333,13 @@ use Cake\Http\Exception\NotFoundException;
             window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'pages', 'action' => 'questionnaire']) ?>"
         }
         else if (selection === "2") {
-            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'nutritions', 'action' => 'healthy_nutrition']) ?>"
+            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'foods', 'action' => 'healthy_nutrition']) ?>"
         }
         else if (selection === "3") {
             window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'pages', 'action' => 'questionnaire']) ?>"
         }
         else if (selection === "4") {
-            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'nutritions', 'action' => 'healthy_nutrition']) ?>"
+            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'foods', 'action' => 'healthy_nutrition']) ?>"
         }
     });
 
