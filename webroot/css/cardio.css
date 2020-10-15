@@ -26,6 +26,7 @@
 .slider{
     height: 100vh;
     padding-top: 5vh;
+    scroll-behavior: smooth;
 }
 
 .slider-wrapper div {
@@ -138,4 +139,38 @@ div.overlay-blue {
 
 a:not([href]).btn-primary{
     color: white;
+}
+
+.slider-wrapper .read-more{
+    display: none;
+    background: silver;
+    width: 30vw;
+    padding: 5vh;
+    margin-bottom: 15vh;
+}
+
+.slider-wrapper .read-more div,p{
+    font-size: 1.2vw;
+}
+
+.slider-wrapper .read-more ul{
+    margin: 10px 0;
+    padding: 0;
+}
+
+.slider-wrapper .read-more div h5{
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+
+.read-more .close-btn {
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+    color: white;
+    cursor: pointer;
+    background: #6f6f6f;
+    padding: 0 1vw;
+    font-size: 2vw;
 }

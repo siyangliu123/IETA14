@@ -11,7 +11,22 @@
                 <div class="slide-title">Using dumbbells as a form of resistance can help us reduce body fat more than cardiovascular exercises which will eventually decrease the risk of heart diseases.
                 </div>
                 <div class="slide-text"><span style="color: orange">Warning: </span>
+                    Heart patients should start strength workouts by using lighter dumbbells preferably below 5 pounds.
+
                     Do not lift weights if you have angina or have just suffered from heart failure. Always consult the doctor and a professional trainer before carrying out any strength workouts.
+                </div>
+                <div class="read-more">
+                    <span class="close-btn">&times;</span>
+                    <div>
+                        <h5>Benefits</h5>
+                        <ul>
+                            <li>Lowers LDL (bad) cholesterol levels</li>
+                            <li>Reduces body fat percentage</li>
+                            <li>Might help improve HDL (good) cholesterol level</li>
+                        </ul>
+                        <h5>How much</h5>
+                        <p>Start by working out for 2-3 days a week for 15-20 mins and gradually increase the length of the workout </p>
+                    </div>
                 </div>
                 <div class="slide-more"><a class="btn btn-primary">Read More</a></div>
             </div>
@@ -23,7 +38,22 @@
             <div class="slide-content">
                 <div class="slide-date">Resistance band workout</div>
                 <div class="slide-title">One of the benefits of resistance band over free weights is mobility and variety of exercises that can be performed. </div>
-                <div class="slide-text"><span style="color: orange">Warning: </span>If you have a heart condition or high blood pressure it’s important to check with your doctor or cardiac rehabilitation team what sort of activities you can safely do and how much you should do. </div>
+                <div class="slide-text"><span style="color: orange">Warning: </span>
+                    If you have a heart condition or high blood pressure it’s important to check with your doctor or cardiac rehabilitation team what sort of activities you can safely do and how much you should do.
+                </div>
+                <div class="read-more">
+                    <span class="close-btn">&times;</span>
+                    <div>
+                        <h5>Benefits</h5>
+                        <ul>
+                            <li>Adapts easily for multiple fitness levels.</li>
+                            <li>Exercises entire body.</li>
+                            <li>Cost effective way of loosing fat and toning muscles.</li>
+                        </ul>
+                        <h5>How much</h5>
+                        <p>Start by working out for 2-3 days a week for 15-20 mins and gradually increase the length of the workout </p>
+                    </div>
+                </div>
                 <div class="slide-more"><a class="btn btn-primary">Read More</a></div>
             </div>
         </div>
@@ -86,5 +116,15 @@
     })(jQuery);
 
     $(".overlay").addClass("overlay-blue");
+
+    $(".slide-more a").on("click", function () {
+        $(this).parent().parent().find(".slide-text,.slide-title,.slide-more").toggle();
+        $(this).parent().parent().find(".read-more").toggle("drop",1000);
+    });
+
+    $(".close-btn").on("click", function () {
+        $(this).parent().parent().find(".slide-text,.slide-title,.slide-more").toggle("drop", 1000);
+        $(this).parent().parent().find(".read-more").toggle();
+    });
 
 </script>
