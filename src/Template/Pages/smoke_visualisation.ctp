@@ -3,18 +3,18 @@
     <div class="inner">
         <h1 class="red">Smoking & Coronary Heart Disease</h1>
         <div class="section row">
-            <p class="col-md-4 col-sm-6 col-xs-12"><span class="large-text">Smoking is a major risk factor for CHD.</span>
+            <p class="col-md-4 col-sm-6 col-xs-12"><b>Smoking is a major risk factor for CHD.</b>
                 Cigarette smoking promotes atherosclerosis and increases the
                 levels of
                 blood clotting factors such as fibrinogen. Nicotine also accelerates heart rate and raises blood
                 pressure.</p>
             <div class="col-md-8 col-sm-6 col-xs-12" style="border-left: 1px solid silver; padding: 0 5vw;">
-                <p>Compared with non-smokers, <span class="large-text">smoking more than 25 cigarettes a day increased the risk of more than <b>fivefold</b></span>.
+                <p>Compared with non-smokers, <b>smoking more than 25 cigarettes a day increased the risk of more than <b>fivefold</b></b>.
                 </p>
                 <p>Also, the number of smokers between 45 to 60 years of age smoked a lot which accounted for 16% of the
                     total population in 2019.</p>
+                <?php echo $this->Html->image('smoking.jpg',['id' => 'smoking-img']); ?>
             </div>
-            <?php echo $this->Html->image('smoking.jpg'); ?>
 
         </div>
         <div id="chart1" style="height: 500px"></div>
