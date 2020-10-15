@@ -107,17 +107,17 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     </ul>
                 </li>
                 <li><?php
-                    echo $this->Html->link("Nutrition", ['controller' => 'foods', 'action' => 'healthy_nutrition']);
+                    echo $this->Html->link("Diet", ['controller' => 'foods', 'action' => 'healthy_nutrition']);
                     ?>
                     <ul>
                         <li>
                             <?php
-                            echo $this->Html->link("About Nutrition", ['controller' => 'foods', 'action' => 'healthy_nutrition']);
+                            echo $this->Html->link("About Diet", ['controller' => 'foods', 'action' => 'healthy_nutrition']);
                             ?>
                         </li>
                         <li>
                             <?php
-                            echo $this->Html->link("Unhealthy Foods List", ['controller' => 'foods', 'action' => 'index', 'filter' => 'unhealthy']);
+                            echo $this->Html->link("Unhealthy Diet List", ['controller' => 'foods', 'action' => 'index', 'filter' => 'unhealthy']);
                             ?>
                         </li>
                         <li>
@@ -131,7 +131,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                             ?>
                         </li>
                         <li><?php
-                            echo $this->Html->link("All Nutrition List", ['controller' => 'foods', 'action' => 'index']);
+                            echo $this->Html->link("All Food List", ['controller' => 'foods', 'action' => 'index']);
                             ?>
                         </li>
                         <li><?php
@@ -198,7 +198,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 
                     <li><?php
-                        echo $this->Html->link("Nutrition Advice", ['controller' => 'foods', 'action' => 'healthy_nutrition']);
+                        echo $this->Html->link("Diet Advice", ['controller' => 'foods', 'action' => 'healthy_nutrition']);
                         ?></li>
                     <li>
                         <?php

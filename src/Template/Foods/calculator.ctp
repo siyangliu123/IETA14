@@ -267,22 +267,22 @@
                                 }
                                 ?>
                             </select>
-                            <?= $this->Html->link(__('View'), ['action' => 'view'], ['class' => 'btn btn-red btn-sm btn-view', 'style' => 'display:none']) ?>
+                            <?= $this->Html->link(__('View'), ['action' => 'view'], ['class' => 'btn btn-primary btn-sm btn-view', 'style' => 'display:none']) ?>
                         </td>
                         <td>
                             <span class="calories">0</span>
                         </td>
                         <td>
-                            <a class="btn btn-red btn-quantity" operation="minus">-</a>
+                            <a class="btn btn-primary btn-quantity btn-sm" operation="minus">-</a>
                             <input type="text" value="1" class="quantity" readonly="readonly"/>
-                            <a class="btn btn-red btn-quantity" operation="plus">+</a>
+                            <a class="btn btn-primary btn-quantity btn-sm" operation="plus">+</a>
                         </td>
                         <td><span class="total">0</span></td>
                     </tr>
                     </tbody>
                     <tfoot>
                     <tr>
-                        <td colspan="4"><a class="btn btn-red btn-add"><i class="fas fa-plus-circle fa-lg"></i> Add new
+                        <td colspan="4"><a class="btn btn-primary btn-add"><i class="fas fa-plus-circle fa-lg"></i> Add new
                                 food</a>
                         </td>
                     </tr>

@@ -8,6 +8,7 @@
 <div class="healthy-nutritions-container">
 
     <div class="nutrition-inner">
+        <h1>Choose healthy foods to reduce the risk of <span>Coronary Heart Disease</span></h1>
         <div class="nav-div">
             <h3 id="navTitle">Navigation</h3>
             <nav class="nav section-nav">
@@ -21,7 +22,6 @@
                 </ul>
             </nav>
         </div>
-        <h1>Choose healthy foods to reduce the risk of <span>Coronary Heart Disease</span></h1>
         <div class="row">
             <p style="font-size: larger"><b>A healthy diet</b> is one of the most important ways you can reduce your
                 risk of developing Coronary Heart Disease.</p>
@@ -36,7 +36,7 @@
         </div>
 
         <section id="section1">
-            <h2 class="1"><i class="fas fa-circle fa-sm"></i> Avoid Saturated Fat</h2>
+            <h2 class="1">Avoid Saturated Fat</h2>
             <div class="row">
                 <p>Replace energy from saturated fats (such as butter, coconut oil and cream) with
                     healthy unsaturated fats from seeds and plants (such as extra virgin olive oil,
@@ -45,7 +45,7 @@
             </div>
         </section>
         <section id="section2">
-            <h2 class="2"><i class="fas fa-circle fa-sm"></i> Avoid processed Meats</h2>
+            <h2 class="2">Avoid processed Meats</h2>
             <div class="section row">
                 <div class="col-md-6 col-lg-6">
                     <p>Such as sausages, ham, salami, and prosciutto.</p>
@@ -72,7 +72,7 @@
             </div>
         </section>
         <section id="section3">
-            <h2 class="3"><i class="fas fa-circle fa-sm"></i> Choose lowest sodium products</h2>
+            <h2 class="3">Choose lowest sodium products</h2>
             <div class="row">
                 <p>People need a very small amount of sodium to be healthy, which is present naturally
                     in foods like seafood, meat, dairy, eggs and some vegetables. Reducing salt intake
@@ -84,7 +84,7 @@
             </div>
         </section>
         <section id="section4">
-            <h2 class="4"><i class="fas fa-circle fa-sm"></i> Eat nuts regularly</h2>
+            <h2 class="4">Eat nuts regularly</h2>
             <div class="row section legume">
                 <div class="col-md-6 col-lg-6 left">
                     <p>Eat legumes regularly – like baked beans (reduced salt), soybeans, lentils and
@@ -112,7 +112,7 @@
             </div>
         </section>
         <section id="section5">
-            <h2 class="5"><i class="fas fa-circle fa-sm"></i> Eat more fruit & vegetable</h2>
+            <h2 class="5">Eat more fruit & vegetable</h2>
             <div class="row">
                 <p>The World Health Report 2002 estimates that <b>approximately <span
                                 style="font-size: larger">30%</span>
@@ -123,7 +123,7 @@
             </div>
         </section>
         <section id="section6">
-            <h2 class="6"><i class="fas fa-circle fa-sm"></i> Reduce alcohol & refined sources of carbohydrates</h2>
+            <h2 class="6">Reduce alcohol & refined sources of carbohydrates</h2>
             <div class="row">
                 <p>Reduce intake of refined sources of carbohydrates with higher glycaemic indices
                     (including

@@ -110,33 +110,166 @@ use Cake\Http\Exception\NotFoundException;
                 </div>
             </div>
         </div>
+        <div class="cont s--inactive">
+            <!-- cont inner start -->
+            <div class="cont__inner">
+                <!-- el start -->
+                <div class="el">
+                    <div class="el__overflow">
+                        <div class="el__inner">
+                            <div class="el__bg"></div>
+                            <div class="el__preview-cont">
+                                <h2 class="el__heading">CHD Statistics</h2>
+                            </div>
+                            <div class="el__content">
+                                <div class="el__title">CHD Statistics</div>
+                                <div class="el__close-btn"></div>
+                                <div class="el__text">
+                                    Write content here
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="el__index">
+                        <div class="el__index-back">1</div>
+                        <div class="el__index-front">
+                            <div class="el__index-overlay" data-index="1">1</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- el end -->
+                <!-- el start -->
+                <div class="el">
+                    <div class="el__overflow">
+                        <div class="el__inner">
+                            <div class="el__bg"></div>
+                            <div class="el__preview-cont">
+                                <h2 class="el__heading">Diet Advice</h2>
+                            </div>
+                            <div class="el__content">
+                                <div class="el__title">Diet Advice</div>
+                                <div class="el__close-btn"></div>
+                                <div class="el__text">
+                                    Write content here
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="el__index">
+                        <div class="el__index-back">2</div>
+                        <div class="el__index-front">
+                            <div class="el__index-overlay" data-index="2">2</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- el end -->
+                <!-- el start -->
+                <div class="el">
+                    <div class="el__overflow">
+                        <div class="el__inner">
+                            <div class="el__bg"></div>
+                            <div class="el__preview-cont">
+                                <h2 class="el__heading">Exercise Advice</h2>
+                            </div>
+                            <div class="el__content">
+                                <div class="el__title">Exercise Advice</div>
+                                <div class="el__close-btn"></div>
+                                <div class="el__text">
+                                    Write content here
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="el__index">
+                        <div class="el__index-back">3</div>
+                        <div class="el__index-front">
+                            <div class="el__index-overlay" data-index="3">3</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- el end -->
+                <!-- el start -->
+                <div class="el">
+                    <div class="el__overflow">
+                        <div class="el__inner">
+                            <div class="el__bg"></div>
+                            <div class="el__preview-cont">
+                                <h2 class="el__heading">Calories Calculator</h2>
+                            </div>
+                            <div class="el__content">
+                                <div class="el__title">Calories Calculator</div>
+                                <div class="el__close-btn"></div>
+                                <div class="el__text">
+                                    Write content here
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="el__index">
+                        <div class="el__index-back">4</div>
+                        <div class="el__index-front">
+                            <div class="el__index-overlay" data-index="4">4</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- el end -->
+                <!-- el start -->
+                <div class="el">
+                    <div class="el__overflow">
+                        <div class="el__inner">
+                            <div class="el__bg"></div>
+                            <div class="el__preview-cont">
+                                <h2 class="el__heading">Exercise Calculator</h2>
+                            </div>
+                            <div class="el__content">
+                                <div class="el__title">Exercise Calculator</div>
+                                <div class="el__close-btn"></div>
+                                <div class="el__text">
+                                    Write content here
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="el__index">
+                        <div class="el__index-back">5</div>
+                        <div class="el__index-front">
+                            <div class="el__index-overlay" data-index="5">5</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- el end -->
+            </div>
+            <!-- cont inner end -->
+        </div>
+
         <div class="row pad">
-            <div class="col-md-5 col-lg-5 section card one">
-                <h3>Nutrition Advice</h3>
-                <?php
-                echo $this->Html->link("Read More", ['controller' => 'nutritions', 'action' => 'healthy_nutrition'], ['class' => 'btn btn-red']);
-                ?>
-            </div>
-            <div class="col-md-5 col-lg-5 section card two">
-                <h3>Exercise Advice</h3>
-                <?php
-                echo $this->Html->link("Read More", ['controller' => 'pages', 'action' => 'exercise'], ['class' => 'btn btn-red']);
-                ?>
-            </div>
-            <div class="col-md-5 col-lg-5 section card three">
-                <h3>CHD Statistics</h3>
-                <?php
-                echo $this->Html->link("Read More", ['controller' => 'mortality_record', 'action' => 'visualisation'], ['class' => 'btn btn-red']);
-                ?>
 
-            </div>
-            <div class="col-md-5 col-lg-5 section card four">
-                <h3>Calories Calculator</h3>
-                <?php
-                echo $this->Html->link("Read More", ['controller' => 'foods', 'action' => 'calculator'], ['class' => 'btn btn-red']);
-                ?>
-
-            </div>
+<!--            <div class="col-md-5 col-lg-5 section card one">-->
+<!--                <h3>Nutrition Advice</h3>-->
+<!--                --><?php
+//                echo $this->Html->link("Read More", ['controller' => 'nutritions', 'action' => 'healthy_nutrition'], ['class' => 'btn btn-red']);
+//                ?>
+<!--            </div>-->
+<!--            <div class="col-md-5 col-lg-5 section card two">-->
+<!--                <h3>Exercise Advice</h3>-->
+<!--                --><?php
+//                echo $this->Html->link("Read More", ['controller' => 'pages', 'action' => 'exercise'], ['class' => 'btn btn-red']);
+//                ?>
+<!--            </div>-->
+<!--            <div class="col-md-5 col-lg-5 section card three">-->
+<!--                <h3>CHD Statistics</h3>-->
+<!--                --><?php
+//                echo $this->Html->link("Read More", ['controller' => 'mortality_record', 'action' => 'visualisation'], ['class' => 'btn btn-red']);
+//                ?>
+<!---->
+<!--            </div>-->
+<!--            <div class="col-md-5 col-lg-5 section card four">-->
+<!--                <h3>Calories Calculator</h3>-->
+<!--                --><?php
+//                echo $this->Html->link("Read More", ['controller' => 'foods', 'action' => 'calculator'], ['class' => 'btn btn-red']);
+//                ?>
+<!---->
+<!--            </div>-->
         </div>
     </div>
 
@@ -217,5 +350,31 @@ use Cake\Http\Exception\NotFoundException;
         imgText.innerHTML = imgs.alt;
         expandImg.parentElement.style.display = "block";
     }
+
+    var $cont = document.querySelector('.cont');
+    var $elsArr = [].slice.call(document.querySelectorAll('.el'));
+    var $closeBtnsArr = [].slice.call(document.querySelectorAll('.el__close-btn'));
+
+    setTimeout(function() {
+        $cont.classList.remove('s--inactive');
+    }, 200);
+
+    $elsArr.forEach(function($el) {
+        $el.addEventListener('click', function() {
+            if (this.classList.contains('s--active')) return;
+            $cont.classList.add('s--el-active');
+            this.classList.add('s--active');
+        });
+    });
+
+    $closeBtnsArr.forEach(function($btn) {
+        $btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            $cont.classList.remove('s--el-active');
+            document.querySelector('.el.s--active').classList.remove('s--active');
+        });
+    });
+
+
 </script>
 </html>

@@ -9,7 +9,7 @@
     <div class="nutritions-list-container">
         <h1 style="text-transform: capitalize">Diet Nutrition</h1>
         <div class="select sort">
-            <label for="sort">Sort by:</label>
+            <label for="sort">Order by: </label>
             <select class="form-control" id="sort">
                 <option value="1">Food Name</option>
                 <option value="3">Total Calories</option>
