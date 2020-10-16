@@ -71,10 +71,12 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
     $routes->connect('/HealthyNutrition',['controller' => 'Foods', 'action' => 'healthy_nutrition']);
-    $routes->connect('/Foods',['controller' => 'Foods', 'action' => 'view'])
-        ->setPatterns(['food_id' => '\d+'])
-        ->setPass(['food_id']);
-
+    $routes->connect(
+        '/Foods/:id',
+        ['controller' => 'Foods', 'action' => 'view']
+    )
+        ->setPatterns(['id' => '\d+'])
+        ->setPass(['id']);
 
     $routes->connect('/Mortality',['controller' => 'MortalityRecord', 'action' => 'visualisation']);
     $routes->connect('/Smoking',['controller' => 'Pages', 'action' => 'smoke_visualisation']);
