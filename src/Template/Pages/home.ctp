@@ -201,15 +201,15 @@ use Cake\Http\Exception\NotFoundException;
                         <div class="el__inner">
                             <div class="el__bg"></div>
                             <div class="el__preview-cont">
-                                <h2 class="el__heading">Calories Calculator</h2>
+                                <h2 class="el__heading">Food Calories Calculator</h2>
                             </div>
                             <div class="el__content">
-                                <div class="el__title">Calories Calculator</div>
+                                <div class="el__title">Food Calories Calculator</div>
                                 <div class="el__close-btn"></div>
                                 <div class="el__text">
                                     Obesity can increase the risk of coronary heart disease by change your cholesterol level and blood pressure. Record and calculate the total calories of each meal to help you balance your daily nutrition intake.
                                     <br>
-                                    <?php echo $this->Html->link("Calories Calculator", ['controller' => 'foods', 'action' => 'calculator'], ['class' => 'btn btn-red']); ?>
+                                    <?php echo $this->Html->link("Start calculate calories", ['controller' => 'foods', 'action' => 'calculator'], ['class' => 'btn btn-red']); ?>
                                 </div>
                             </div>
                         </div>
