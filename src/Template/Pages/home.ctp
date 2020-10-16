@@ -62,8 +62,8 @@ use Cake\Http\Exception\NotFoundException;
             <select class="form-control" id="selection" name="selection">
                 <option value="1">Having concerns about develop CHD</option>
                 <option value="2">Currently having CHD</option>
-                <option value="3">Concerned for someone else will develop CHD</option>
-                <option value="4">Someone else is currently having CHD</option>
+                <option value="3">Looking for diet suggestion</option>
+                <option value="4">Looking for exercise suggestion</option>
             </select>
             <a type="submit" class="btn btn-red">Submit</a>
         </div>

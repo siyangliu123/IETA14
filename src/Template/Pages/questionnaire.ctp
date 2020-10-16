@@ -194,12 +194,8 @@
                         <li>If you <b>smoke and drink</b> often, your risk goes up.</li>
                         <li>If your immediate <b>family has heart disease</b>, your risk goes up.</li>
                     </ul>
-                </div>
-
-                <div class="col-md-3 col-lg-3">
-                    <br><br><br>
                     <?php
-                    echo $this->Html->link("Read More", ['controller' => 'pages', 'action' => 'smoke_visualisation'], ['class' => 'btn btn-info']);
+                    echo $this->Html->link("Read More", ['controller' => 'pages', 'action' => 'smoke_visualisation'], ['class' => 'btn btn-primary']);
                     ?>
                 </div>
             </div>
@@ -336,6 +332,10 @@
                         echo $this->Html->link("here", ['controller' => 'foods', 'action' => 'healthy_nutrition']);
                         ?>.
                     </div>
+                    <div>See exercise recommendation <?php
+                        echo $this->Html->link("here", ['controller' => 'pages', 'action' => 'exercise']);
+                        ?>.
+                    </div>
                 </div>
                 <div class="result moderate">
                     <h1>Your risk of Coronary Heart Disease is <b class="orange">Moderate</b>.</h1>
@@ -343,7 +343,7 @@
                     <h5>We encourage you adopt healthy habits to prevent CHD:</h5>
                     <ul>
                         <li>If you want to eat healthier, use this <?php
-                            echo $this->Html->link("nutrition guideline", ['controller' => 'foods', 'action' => 'healthy_nutrition']);
+                            echo $this->Html->link("diet guideline", ['controller' => 'foods', 'action' => 'healthy_nutrition']);
                             ?>. to help you plan nutritious
                             meals.</li>
                         <li>If you are starting a new activity. Find more tips on how to <?php
@@ -358,15 +358,26 @@
                 </div>
                 <div class="result high">
                     <h1>Your risk of Coronary Heart Disease is <b class="red">High</b>.</h1>
+                    <ul>
+                        <li>Please start to eat healthier, use this <?php
+                            echo $this->Html->link("diet guideline", ['controller' => 'foods', 'action' => 'healthy_nutrition']);
+                            ?>. to help you plan nutritious meals.</li>
+                        <li>If you are starting a new activity. Find more tips on how to <?php
+                            echo $this->Html->link("start exercising", ['controller' => 'pages', 'action' => 'exercise']);
+                            ?>.</li>
+                        <li>If you are smoker, please consider <a href="https://www.health.gov.au/health-topics/smoking-and-tobacco/how-to-quit-smoking" target="_blank">quit smoking</a>.</li>
+                        <li>If you drink over <?php
+                            echo $this->Html->link("limit", ['controller' => 'foods', 'action' => 'healthy_nutrition/#section6']);
+                            ?>, set yourself a limit and count your standard drinks, plan regular
+                            alcohol-free days each week.</li>
+                    </ul>
                     <h5>We recommend you make an medical appointment as soon as possible and ask:</h5>
                     <ul>
                         <li>About lowering your risk for developing CHD.</li>
                         <li>To check your blood pressure to confirm your heart disease risk.</li>
                     </ul>
-                    <h5>You should have a CHD test every year.</h5>
-
                     <div>Click and see <?php
-                        echo $this->Html->link("Clinics", ['controller' => 'HospitalLocations', 'action' => 'list_hospitals']);
+                        echo $this->Html->link("Hospitals/Clinics", ['controller' => 'HospitalLocations', 'action' => 'list_hospitals']);
                         ?> nearby.</div>
                 </div>
             </div>

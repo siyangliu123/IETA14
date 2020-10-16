@@ -11,7 +11,7 @@
         <div class="select sort">
             <label for="sort">Order by: </label>
             <select class="form-control" id="sort">
-                <option value="1">Food Name</option>
+                <option value="0">Food Name</option>
                 <option value="3">Total Calories</option>
                 <option value="4">Protein</option>
                 <option value="5">Total Fat</option>
@@ -119,9 +119,16 @@
     });
 
     $("#sort").on("change", function () {
-        table
-            .order([$(this).val(), 'dsc'])
-            .draw();
+        if($(this).val()==="0"){
+            table
+                .order([$(this).val(), 'asc'])
+                .draw();
+        }
+        else {
+            table
+                .order([$(this).val(), 'desc'])
+                .draw();
+        }
     });
 
     $("#category").on("change", function () {

@@ -31,7 +31,9 @@
     border: 1px solid silver;
     padding: 5vw;
     display: flex;
-    height: 60vh;
+    height: 80vh;
+    align-content: center;
+    vertical-align: center;
 }
 
 #tabs fieldset{
@@ -39,7 +41,7 @@
 }
 
 #tabs-6 img{
-    height: 60%;
+    height: 40vh;
 }
 
 .row img {
@@ -62,7 +64,7 @@
     font-size: xx-large;
 }
 
-.row .btn-info{
+.row .btn-primary{
     color: white;
 }
 
