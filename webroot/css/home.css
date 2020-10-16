@@ -825,14 +825,15 @@ body {
     transition: all 0.5s 1.4s;
 }
 .el__title {
+    margin: 0 150px;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 50px;
     color: #fff;
 }
 
 .el__text {
-    margin: 20px 50px;
-    font-size: 20px;
+    margin: 20px 150px;
+    font-size: 30px;
     color: #fff;
 }
 .el__close-btn {
@@ -1139,3 +1140,6 @@ body {
     transform: scale(1.1);
 }
 
+.el__content .btn-red{
+    margin: 5vh 0;
+}

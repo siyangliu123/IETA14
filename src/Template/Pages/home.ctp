@@ -125,7 +125,10 @@ use Cake\Http\Exception\NotFoundException;
                                 <div class="el__title">CHD Statistics</div>
                                 <div class="el__close-btn"></div>
                                 <div class="el__text">
-                                    Write content here
+                                    Explore the statistics and graphs on Coronary Heart Disease and it's effect on factors such as age group, smoking and gender.
+                                    <br>
+                                    <?php echo $this->Html->link("View Mortality Rate", ['controller' => 'mortality_record', 'action' => 'visualisation'], ['class' => 'btn btn-red']); ?>
+                                    <?php echo $this->Html->link("View Factors of CHD", ['controller' => 'pages', 'action' => 'smoke_visualisation'], ['class' => 'btn btn-red']); ?>
                                 </div>
                             </div>
                         </div>
@@ -150,7 +153,9 @@ use Cake\Http\Exception\NotFoundException;
                                 <div class="el__title">Diet Advice</div>
                                 <div class="el__close-btn"></div>
                                 <div class="el__text">
-                                    Write content here
+                                    Improve your lifestyle by following our diet suggestions. View our comprehensive list of foods and their nutrition details to reduce the risk of Coronary heart disease
+                                    <br>
+                                    <?php echo $this->Html->link("View Diet Suggestions", ['controller' => 'foods', 'action' => 'healthy_nutrition'], ['class' => 'btn btn-red']); ?>
                                 </div>
                             </div>
                         </div>
@@ -175,7 +180,9 @@ use Cake\Http\Exception\NotFoundException;
                                 <div class="el__title">Exercise Advice</div>
                                 <div class="el__close-btn"></div>
                                 <div class="el__text">
-                                    Write content here
+                                    Strengthen your body to defend against Coronary Heart Disease by performing various exercises. We also provide the benefits and how much to perform each day.
+                                    <br>
+                                    <?php echo $this->Html->link("View Exercises", ['controller' => 'pages', 'action' => 'exercise'], ['class' => 'btn btn-red']); ?>
                                 </div>
                             </div>
                         </div>
@@ -200,7 +207,9 @@ use Cake\Http\Exception\NotFoundException;
                                 <div class="el__title">Calories Calculator</div>
                                 <div class="el__close-btn"></div>
                                 <div class="el__text">
-                                    Write content here
+                                    Obesity can increase the risk of coronary heart disease by change your cholesterol level and blood pressure. Record and calculate the total calories of each meal to help you balance your daily nutrition intake.
+                                    <br>
+                                    <?php echo $this->Html->link("Calories Calculator", ['controller' => 'foods', 'action' => 'calculator'], ['class' => 'btn btn-red']); ?>
                                 </div>
                             </div>
                         </div>
@@ -219,13 +228,15 @@ use Cake\Http\Exception\NotFoundException;
                         <div class="el__inner">
                             <div class="el__bg"></div>
                             <div class="el__preview-cont">
-                                <h2 class="el__heading">Exercise Calculator</h2>
+                                <h2 class="el__heading">Exercise Calories Calculator</h2>
                             </div>
                             <div class="el__content">
-                                <div class="el__title">Exercise Calculator</div>
+                                <div class="el__title">Exercise Calories Calculator</div>
                                 <div class="el__close-btn"></div>
                                 <div class="el__text">
-                                    Write content here
+                                    Help you calculate calories burning through exercises to increase body fitness to reduce the risk of coronary heart disease.
+                                    <br>
+                                    <?php //echo $this->Html->link("Exercise", ['controller' => 'pages', 'action' => 'calculator'], ['class' => 'btn btn-red']); ?>
                                 </div>
                             </div>
                         </div>
