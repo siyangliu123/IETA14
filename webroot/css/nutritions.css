@@ -175,7 +175,7 @@ b {
 @media only screen and (min-width: 600px) {
     .nav-div {
         position: fixed;
-        top: 20vh;
+        top: 25vh;
         left: 0;
         background: lightgrey;
         width: 20vw;

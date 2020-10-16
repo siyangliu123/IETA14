@@ -211,7 +211,7 @@
             <div id="tabs-3" class="row">
                 <div class="col-md-3 col-lg-3 left">
                     <?php
-                    echo $this->Html->image("jogging.png");
+                    echo $this->Html->image("Jogging.png");
                     ?>
                 </div>
                 <div class="col-md-9 col-lg-9 right widget">
