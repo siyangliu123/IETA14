@@ -926,12 +926,14 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
+    padding-bottom: 20px;
 }
 .el__index-back {
     color: #2f3840;
     opacity: 0;
     -webkit-transition: opacity 0.25s 0.25s;
     transition: opacity 0.25s 0.25s;
+
 }
 .el:hover .el__index-back {
     -webkit-transition: opacity 0.25s;
@@ -948,6 +950,7 @@ body {
     transition: transform 0.5s 0.1s;
     transition: transform 0.5s 0.1s, -webkit-transform 0.5s 0.1s;
     color: transparent;
+    padding-bottom: 20px;
 }
 .el__index-overlay:before {
     content: attr(data-index);
