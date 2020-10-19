@@ -64,8 +64,6 @@ use Cake\Http\Exception\NotFoundException;
                 <option value="2">Currently suffering from CHD</option>
                 <option value="3">Looking for diet suggestion</option>
                 <option value="4">Looking for exercise suggestion</option>
-                <option value="5">Daily food calories calculator/exercise planner</option>
-
             </select>
             <a type="submit" class="btn btn-red">Submit</a>
         </div>
@@ -353,9 +351,6 @@ use Cake\Http\Exception\NotFoundException;
         }
         else if (selection === "4") {
             window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'pages', 'action' => 'exercise']) ?>"
-        }
-        else if (selection === "5") {
-            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'foods', 'action' => 'calculator']) ?>"
         }
     });
 
