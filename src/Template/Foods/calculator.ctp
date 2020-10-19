@@ -114,6 +114,10 @@
             var lifestyle = $("input[name=lifestyle]:checked").val();
             var total = $(".total-cal").html();
             var calorie = findCalorie(age, lifestyle);
+            var difference = parseFloat(total) - calorie;
+            if(difference > 0){
+                localStorage.setItem("calorie", difference.toFixed(2));
+            }
             $("#lifestyle").text(lifestyle);
             $("#result-span").text(calorie);
             $("#total-span").text(total);
@@ -141,7 +145,7 @@
 <div class="calculator-container">
     <div class="inner">
         <div class="title">
-            <h1>Calories Calculator</h1>
+            <h1>Food Calories Calculator</h1>
             <h5>Assess your lifestyle to reduce your risk of Heart Disease</h5>
         </div>
         <h5 style="text-align: left">Progress: </h5>
@@ -307,7 +311,9 @@
                             echo $this->Html->link("this", ['controller' => 'foods', 'action' => 'index']);
                             ?> food list.
                         </li>
-                        <li>Or you could perform suggested exercises using <a href="#">this</a> calculator here to burn
+                        <li>Or you could perform suggested exercises using this <?php
+                            echo $this->Html->link("Exercises Calories Calculator", ['controller' => 'pages', 'action' => 'exercise_calculator']);
+                            ?>  to burn
                             down the calories
                         </li>
                     </ul>
@@ -316,11 +322,13 @@
                     <h3>Your result is <b class="green">perfect</b> in comparison with the average.</h3>
                         <div>However, we still suggest you to know more about <?php
                             echo $this->Html->link("food", ['controller' => 'foods', 'action' => 'healthy_nutrition']);
-                            ?>and <?php
+                            ?> and <?php
                             echo $this->Html->link("exercise", ['controller' => 'pages', 'action' => 'exercise']);
                             ?> suggestion we provided to reduce the risk of CHD
                         </div>
-
+                        <div>You could also use our <?php
+                            echo $this->Html->link("exercise calories calculator", ['controller' => 'pages', 'action' => 'exercise_calculator']);
+                            ?> to plan for your exercise.</div>
                 </div>
                 <div class="result below">
                     <h3>Your result is <b class="orange">Lower</b> than the average.</h3>
@@ -385,7 +393,6 @@
             var caloriesField = clicked.parent().parent().find(".calories");
             var total;
             var totalField = clicked.parent().parent().find(".total");
-            console.log(quantity.val());
             if (clicked.attr("operation") === "plus") {
                 quantity.val(parseInt(quantity.val()) + 1);
             }

@@ -69,6 +69,8 @@ Router::scope('/', function (RouteBuilder $routes) {
      * ...and connect the rest of 'Pages' controller's URLs.
      */
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+    $routes->connect('/SufferingCHD', ['controller' => 'Pages', 'action' => 'chd_nav']);
+
 
     $routes->connect('/HealthyNutrition',['controller' => 'Foods', 'action' => 'healthy_nutrition']);
     $routes->connect(
@@ -86,8 +88,10 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/Exercises',['controller' => 'pages', 'action' => 'exercise']);
     $routes->connect('/Exercises/Cardiovascular',['controller' => 'pages', 'action' => 'cardio']);
     $routes->connect('/Exercises/Strength',['controller' => 'pages', 'action' => 'strength']);
+    $routes->connect('/Exercises/Calculator',['controller' => 'pages', 'action' => 'exercise_calculator']);
 
     $routes->connect('/HospitalLocation',['controller' => 'HospitalLocations', 'action' => 'list_hospitals']);
+
 
 
 

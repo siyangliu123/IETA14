@@ -97,6 +97,11 @@ class PagesController extends AppController
     public function questionnaire(){
 
     }
+    public function exerciseCalculator(){
 
+    }
+    public function chdNav(){
+
+    }
 
 }

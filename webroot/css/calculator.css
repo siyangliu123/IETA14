@@ -82,6 +82,10 @@
     display: inline-block;
 }
 
+.quantity .wide{
+    width: 50px;
+}
+
 .remove-row{
     cursor: pointer;
     margin-top: 5px;
@@ -126,6 +130,9 @@ a.mover {
     white-space: pre-line;
 }
 
+.tabs-content a{
+    color: #007bff;
+}
 
 
 .food-name{
@@ -187,4 +194,12 @@ a.mover {
 
 .orange{
     color: orange;
+}
+
+.blue{
+    color: #007bff;
+}
+
+#previous a{
+    color: #007bff;
 }

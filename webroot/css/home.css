@@ -426,65 +426,6 @@ body {
     border-bottom: 1px silver solid;
 }
 
-.card{
-    text-align: center;
-    padding: 2vw !important;
-    margin: 2vw;
-    height: 250px;
-    vertical-align: center;
-    align-items: center;
-    border-radius: 25px;
-}
-
-.card:hover{
-    filter: brightness(80%);
-}
-
-.card h3{
-    margin: 0;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.6);
-    padding: 1vw;
-    border-radius: 25px;
-    width: 80%;
-}
-
-.card .btn{
-    margin: 0;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-.card.one{
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../img/fruits.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
-.card.two{
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../img/exercises.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
-.card.three{
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../img/numbers.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
-.card.four{
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../img/diet.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
 .visualisation-container {
     background: white no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -1146,3 +1087,5 @@ body {
 .el__content .btn-red{
     margin: 5vh 0;
 }
+
+

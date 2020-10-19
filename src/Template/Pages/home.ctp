@@ -60,10 +60,12 @@ use Cake\Http\Exception\NotFoundException;
         <div id="select-div">
             <span>Are you</span>
             <select class="form-control" id="selection" name="selection">
-                <option value="1">Having concerns about develop CHD</option>
-                <option value="2">Currently having CHD</option>
+                <option value="1">Having concerns about developing CHD</option>
+                <option value="2">Currently suffering from CHD</option>
                 <option value="3">Looking for diet suggestion</option>
                 <option value="4">Looking for exercise suggestion</option>
+                <option value="5">Daily food calories calculator/exercise planner</option>
+
             </select>
             <a type="submit" class="btn btn-red">Submit</a>
         </div>
@@ -344,13 +346,16 @@ use Cake\Http\Exception\NotFoundException;
             window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'pages', 'action' => 'questionnaire']) ?>"
         }
         else if (selection === "2") {
-            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'foods', 'action' => 'healthy_nutrition']) ?>"
+            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'pages', 'action' => 'chd_nav']) ?>"
         }
         else if (selection === "3") {
-            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'pages', 'action' => 'questionnaire']) ?>"
+            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'foods', 'action' => 'healthy_nutrition']) ?>"
         }
         else if (selection === "4") {
-            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'foods', 'action' => 'healthy_nutrition']) ?>"
+            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'pages', 'action' => 'exercise']) ?>"
+        }
+        else if (selection === "5") {
+            window.location.href = "<?= \Cake\Routing\Router::url(['controller' => 'foods', 'action' => 'calculator']) ?>"
         }
     });
 

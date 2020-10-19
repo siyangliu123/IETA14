@@ -95,18 +95,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     </ul>
                 </li>
                 <li><?php
-                    echo $this->Html->link("Exercises", ['controller' => 'pages', 'action' => 'exercise']);
-                    ?>
-                    <ul>
-                        <li><?php
-                            echo $this->Html->link("Cardiovascular Exercises", ['controller' => 'pages', 'action' => 'cardio']);
-                            ?></li>
-                        <li><?php
-                            echo $this->Html->link("Strength Exercises", ['controller' => 'pages', 'action' => 'strength']);
-                            ?></li>
-                    </ul>
-                </li>
-                <li><?php
                     echo $this->Html->link("Diet", ['controller' => 'foods', 'action' => 'healthy_nutrition']);
                     ?>
                     <ul>
@@ -135,11 +123,27 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                             ?>
                         </li>
                         <li><?php
-                            echo $this->Html->link("Calories Calculator", ['controller' => 'foods', 'action' => 'calculator']);
+                            echo $this->Html->link("Food Calories Calculator", ['controller' => 'foods', 'action' => 'calculator']);
                             ?>
                         </li>
                     </ul>
                 </li>
+                <li><?php
+                    echo $this->Html->link("Exercises", ['controller' => 'pages', 'action' => 'exercise']);
+                    ?>
+                    <ul>
+                        <li><?php
+                            echo $this->Html->link("Cardiovascular Exercises", ['controller' => 'pages', 'action' => 'cardio']);
+                            ?></li>
+                        <li><?php
+                            echo $this->Html->link("Strength Exercises", ['controller' => 'pages', 'action' => 'strength']);
+                            ?></li>
+                        <li><?php
+                            echo $this->Html->link("Exercise Calories Calculator", ['controller' => 'pages', 'action' => 'exercise_calculator']);
+                            ?></li>
+                    </ul>
+                </li>
+
             </ul>
 
         </div>
