@@ -97,9 +97,9 @@ div.overlay-blue {
 }
 
 .arrows {
-    width: 3.5vw;
+    width: 10vw;
     margin-top: -5.8vw;
-    margin-left: 72vw;
+    margin-left: 65vw;
     position: relative;
 }
 .arrow {
@@ -109,15 +109,15 @@ div.overlay-blue {
     height: 2vw;
     background: transparent;
     text-indent: -9999px;
-    border-top: 0.15vw solid #000;
-    border-left: 0.15vw solid #000;
+    border-top: 0.3vw solid #000;
+    border-left: 0.3vw solid #000;
     transition: all 0.1s ease-in-out;
     text-decoration: none;
     color: transparent;
 }
 .arrow:hover {
     border-color: red;
-    border-width: 0.25vw;
+    border-width: 0.45vw;
 }
 .arrow:before {
     display: block;
