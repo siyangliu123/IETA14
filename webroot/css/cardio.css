@@ -34,19 +34,19 @@
 }
 .slider-wrapper {
     margin-top: 5vw;
-    margin-left: 11vw;
+    margin-left: 5vw;
 }
 .slide-image {
-    height: 24vw;
+    height: 35vw;
 }
 .slide-image img {
-    width: 24vw;
+    width: 35vw;
     cursor: pointer;
 }
 .slide-content {
     width: 60vw;
     color: black;
-    padding: 0vw 18vw 3vw 9vw;
+    padding: 0vw 18vw 3vw 3vw;
 }
 .slide-date {
     color: deepskyblue;
@@ -105,8 +105,8 @@ div.overlay-blue {
 .arrow {
     display: inline-block;
     position: absolute;
-    width: 2vw;
-    height: 2vw;
+    width: 3vw;
+    height: 3vw;
     background: transparent;
     text-indent: -9999px;
     border-top: 0.3vw solid #000;
