@@ -114,8 +114,8 @@
                             <a class="btn btn-primary btn-quantity btn-sm" operation="minus" number="1">-1</a>
                             <a class="btn btn-primary btn-quantity btn-sm" operation="minus" number="0.5">-0.5</a>
                             <input type="text" value="1" class="quantity wide" readonly="readonly"/>
-                            <a class="btn btn-primary btn-quantity btn-sm" operation="plus" number="1">+1</a>
                             <a class="btn btn-primary btn-quantity btn-sm" operation="plus" number="0.5">+0.5</a>
+                            <a class="btn btn-primary btn-quantity btn-sm" operation="plus" number="1">+1</a>
 
                         </td>
                         <td><span class="total">0</span></td>
