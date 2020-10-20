@@ -191,7 +191,7 @@ b {
 @media only screen and (max-width: 600px) {
     .nav-div {
         color: black;
-        background: white;
+        background: lightgrey;
         z-index: 200;
     }
 
