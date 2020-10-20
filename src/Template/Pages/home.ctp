@@ -306,7 +306,7 @@ use Cake\Http\Exception\NotFoundException;
         anime.timeline({loop: false})
             .add({
                 targets: '.ml12 .letter',
-                translateX: [0, 40],
+                translateX: 0,
                 translateZ: 0,
                 opacity: [0, 1],
                 easing: "easeOutExpo",
