@@ -101,7 +101,7 @@
                         <th>Calories</th>
                         <th>Suggested Time
                             <a id="tooltip1"
-                                             title="Calculated base on your previous Food Calories Calculation result"><i
+                                             title="Calculated base on your previous Food Calories Calculation result(in Hours)."><i
                                         class="fas fa-question-circle"></i></th>
                         <th>Time (Hours)</th>
                         <th>Total</th>
