@@ -1,6 +1,19 @@
 <?= $this->Html->css('calculator.css'); ?>
 <script type="text/javascript">
     $(function () {
+
+        $("#tooltip1").tooltip({
+            html: true,
+            show: {
+                effect: "slideDown",
+                delay: 250
+            },
+            hide: {
+                effect: "slideUp",
+                delay: 250
+            }
+        });
+
         var $tabs = $('#tabs').tabs({
             disabled: [1]
         });
@@ -77,7 +90,8 @@
                 <table class="table table-bordered">
                     <colgroup>
                         <col style="width:45%">
-                        <col style="width:10%">
+                        <col style="width:5%">
+                        <col style="width:5%">
                         <col style="width:35%">
                         <col style="width:10%">
                     </colgroup>
@@ -85,8 +99,11 @@
                     <tr>
                         <th>Exercise</th>
                         <th>Calories</th>
-                        <th>Time (Hours)
-                        </th>
+                        <th>Suggested Time
+                            <a id="tooltip1"
+                                             title="Calculated base on your previous Food Calories Calculation result"><i
+                                        class="fas fa-question-circle"></i></th>
+                        <th>Time (Hours)</th>
                         <th>Total</th>
                     </tr>
                     </thead>
@@ -111,6 +128,9 @@
                             <span class="calories">0</span>
                         </td>
                         <td>
+                            <span class="suggested">0</span>
+                        </td>
+                        <td>
                             <a class="btn btn-primary btn-quantity btn-sm" operation="minus" number="1">-1</a>
                             <a class="btn btn-primary btn-quantity btn-sm" operation="minus" number="0.5">-0.5</a>
                             <input type="text" value="1" class="quantity wide" readonly="readonly"/>
@@ -129,7 +149,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td id="previous" colspan="3">
+                        <td id="previous" colspan="4">
 
                         </td>
                         <td class="total-cal">0</td>
@@ -182,6 +202,11 @@
                 caloriesField.html(calories);
                 totalField.html(total);
                 updateTotal();
+                var foodCalorie = localStorage.getItem("calorie");
+                if (foodCalorie !== null) {
+                    var suggested = parseFloat(foodCalorie)/calories;
+                    select.parent().parent().find(".suggested").html(suggested.toFixed(1));
+                }
                 select.parent().parent().find(".remove-row").after("<span class='exercise-name'>" + select.find(":selected").text() + "</span>");
                 select.parent().parent().find(".select2").remove();
                 select.parent().parent().find("select").remove();
