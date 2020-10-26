@@ -209,7 +209,7 @@ use Cake\Http\Exception\NotFoundException;
                                 <div class="el__text">
                                     Obesity can increase the risk of coronary heart disease by change your cholesterol level and blood pressure. Record and calculate the total calories of each meal to help you balance your daily nutrition intake.
                                     <br>
-                                    <?php echo $this->Html->link("Start calculate calories", ['controller' => 'foods', 'action' => 'calculator'], ['class' => 'btn btn-red']); ?>
+                                    <?php echo $this->Html->link("Food Calories Calculator", ['controller' => 'foods', 'action' => 'calculator'], ['class' => 'btn btn-red']); ?>
                                 </div>
                             </div>
                         </div>
@@ -236,7 +236,7 @@ use Cake\Http\Exception\NotFoundException;
                                 <div class="el__text">
                                     Help you calculate calories burning through exercises to increase body fitness to reduce the risk of coronary heart disease.
                                     <br>
-                                    <?php //echo $this->Html->link("Exercise", ['controller' => 'pages', 'action' => 'calculator'], ['class' => 'btn btn-red']); ?>
+                                    <?php echo $this->Html->link("Exercise Calories Calculator", ['controller' => 'pages', 'action' => 'exercise_calculator'], ['class' => 'btn btn-red']); ?>
                                 </div>
                             </div>
                         </div>
