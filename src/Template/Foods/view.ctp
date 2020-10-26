@@ -91,7 +91,16 @@
                 <td><?= $this->Number->format($food->food_cholesterol) ?></td>
             </tr>
         </table>
-        <?= $this->Html->link(__('Return to list'), ['action' => 'index'], ['class' => 'btn btn-primary']) ?>
+        <button class="btn btn-primary" onclick="goBack()">Return to list</button>
     </div>
 </div>
+
+<script>
+    $(document).ready(function(){
+        $(".last").html("<?= h($food->food_name) ?>");
+    });
+    function goBack() {
+        window.history.back();
+    }
+</script>
 

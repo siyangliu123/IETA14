@@ -23,7 +23,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         Heart's Healthy Habits
-        <?= $this->fetch('title') ?>
     </title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
@@ -164,9 +163,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         foreach ($path AS $x => $crumb) {
             $title = ucwords(str_replace(Array('.php', '_'), Array('', ' '), $crumb));
             if ($x != $last)
-                $breadcrumbs[] = "<a href=\"$base$crumb\">&nbsp;$title&nbsp;</a>";
+                $breadcrumbs[] = "&nbsp;<a href=\"$base$crumb\">$title</a>&nbsp;";
             else
-                $breadcrumbs[] = $title;
+                $breadcrumbs[] = "&nbsp;<span class='last'>".$title."</span>";
         }
         return implode($separator, $breadcrumbs);
     }
