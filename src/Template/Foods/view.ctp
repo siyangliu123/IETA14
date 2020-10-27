@@ -91,7 +91,7 @@
                 <td><?= $this->Number->format($food->food_cholesterol) ?></td>
             </tr>
         </table>
-        <button class="btn btn-primary" onclick="goBack()">Return to list</button>
+        <button class="btn btn-primary" onclick="goBack()">Return</button>
     </div>
 </div>
 
