@@ -92,7 +92,8 @@ Router::scope('/', function (RouteBuilder $routes) {
 
     $routes->connect('/HospitalLocation',['controller' => 'HospitalLocations', 'action' => 'list_hospitals']);
 
-
+    $routes->connect('/Foods/Calculator',['controller' => 'foods', 'action' => 'calculator']);
+    $routes->connect('/Foods/*',['controller' => 'foods', 'action' => 'index']);
 
 
 
@@ -118,7 +119,7 @@ Router::scope('/', function (RouteBuilder $routes) {
      * You can remove these routes once you've connected the
      * routes you want in your application.
      */
-    $routes->fallbacks(DashedRoute::class);
+    $routes->fallbacks(Route::class);
 });
 
 /*

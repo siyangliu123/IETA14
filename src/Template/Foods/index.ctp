@@ -8,7 +8,7 @@
 <div class="nutritions-container">
     <div class="nutritions-list-container">
         <h1 style="text-transform: capitalize">Diet Nutrition</h1>
-        <div class="select sort">
+        <div class="selection sort">
             <label for="sort">Order by: </label>
             <select class="form-control" id="sort">
                 <option value="0">Food Name</option>
@@ -26,7 +26,7 @@
                 <option value="14">Cholesterol</option>
             </select>
         </div>
-        <div class="select category">
+        <div class="selection category">
             <label for="category">Category:</label>
             <select class="form-control" id="category">
                 <option>All Categories</option>

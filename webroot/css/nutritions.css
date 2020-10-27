@@ -307,16 +307,16 @@ b {
     font-size: medium;
 }
 
-.select {
+.selection {
     display: inline;
 }
 
-.select label {
+.selection label {
     font-weight: bold;
     margin: 5vh 0;
 }
 
-.select .form-control {
+.selection .form-control {
     display: inline;
     width: 30vw;
     margin: 5vh 0;
@@ -336,7 +336,7 @@ b {
     border-radius: 5px;
 }
 
-.select.category {
+.selection.category {
     float: right;
 }
 
