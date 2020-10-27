@@ -91,6 +91,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                         <li><?php
                             echo $this->Html->link("CHD Questionnaire", ['controller' => 'Pages', 'action' => 'questionnaire']);
                             ?></li>
+                        <li><?php
+                            echo $this->Html->link("Nearby Hospitals", ['controller' => 'HospitalLocations', 'action' => 'list_hospitals']);
+                            ?></li>
                     </ul>
                 </li>
                 <li><?php
