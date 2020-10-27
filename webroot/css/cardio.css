@@ -24,7 +24,7 @@
 }
 
 .slider{
-    height: 100vh;
+    height: 150vh;
     padding-top: 5vh;
     scroll-behavior: smooth;
 }
@@ -55,16 +55,15 @@
     letter-spacing: 0.1vw;
     padding-bottom: 1.4vw;
 }
+
 .slide-title {
     font-size: 1.5vw;
     font-weight: 400;
     letter-spacing: 1px;
-    line-height: 1.55vw;
     padding-bottom: 1.8vw;
 }
 .slide-text {
     font-size: 1.2vw;
-    line-height: 1.2vw;
     opacity: 0.8;
     letter-spacing: 1px;
     padding-bottom: 4vw;
@@ -144,18 +143,19 @@ a:not([href]).btn-primary{
 .slider-wrapper .read-more{
     display: none;
     background: silver;
-    width: 30vw;
+    width: 35vw;
     padding: 5vh;
     margin-bottom: 15vh;
 }
 
 .slider-wrapper .read-more div,p{
-    font-size: 1.2vw;
+    font-size: 1.5vw;
 }
 
 .slider-wrapper .read-more ul{
     margin: 10px 0;
     padding: 0;
+    font-size: 1.5vw;
 }
 
 .slider-wrapper .read-more div h5{

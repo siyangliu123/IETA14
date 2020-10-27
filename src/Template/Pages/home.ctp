@@ -58,8 +58,8 @@ use Cake\Http\Exception\NotFoundException;
         </h1>
         <h1 class="ml12">Coronary Heart Disease</h1>
         <div id="select-div">
-            <span>Are you</span>
-            <select class="form-control" id="selection" name="selection">
+            <label id="are-you">Are you</label>
+            <select id="selection" name="selection">
                 <option value="1">Having concerns about developing CHD</option>
                 <option value="2">Currently suffering from CHD</option>
                 <option value="3">Looking for diet suggestion</option>
