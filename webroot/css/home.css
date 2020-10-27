@@ -1176,7 +1176,8 @@ body {
 }
 .select-options li:hover {
     color: red;
-    background: #fff;
+    background: white;
+    border: 2px solid grey;
 }
 .select-options li[rel="hide"] {
     display: none;
