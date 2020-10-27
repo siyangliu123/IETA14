@@ -1121,7 +1121,7 @@ body {
     bottom: 0;
     left: 0;
     background-color: transparent;
-    padding: 5px 15px;
+    padding: 0 15px;
     -moz-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-in;
@@ -1162,7 +1162,7 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
-    background-color: #e6232d;
+    background-color: #cf0000;
 }
 .select-options li {
     margin: 0;
