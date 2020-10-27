@@ -271,7 +271,7 @@
                                 }
                                 ?>
                             </select>
-                            <?= $this->Html->link(__('View'), ['action' => 'view'], ['class' => 'btn btn-primary btn-sm btn-view', 'style' => 'display:none']) ?>
+                            <a class="btn btn-primary btn-sm btn-view" style="display: none">View</a>
                         </td>
                         <td>
                             <span class="calories">0</span>
@@ -353,8 +353,6 @@
             updateTotal();
         });
     });
-    var viewLink = $(".btn-view").attr('href');
-
 
     $(".btn-add").on("click", function () {
         cloneRow();
@@ -377,7 +375,7 @@
             var totalField = select.parent().parent().find(".total");
             var btnView = $(".btn-view");
             var id = select.find(":selected").attr("id");
-            btnView.attr('href', viewLink + "/" + id);
+            btnView.attr('href', window.location.hostname + "/Foods/" + id);
             btnView.show();
             total = calories * quantity;
             caloriesField.html(calories);
