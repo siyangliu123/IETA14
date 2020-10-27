@@ -165,7 +165,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         $last = end(array_keys($path));
         foreach ($path AS $x => $crumb) {
             $title = ucwords(str_replace(Array('.php', '_'), Array('', ' '), $crumb));
-            if ($x != $last)
+            if ($x != $last && $title!="View")
                 $breadcrumbs[] = "&nbsp;<a href=\"$base$crumb\">$title</a>&nbsp;";
             else
                 $breadcrumbs[] = "&nbsp;<span class='last'>".$title."</span>";
