@@ -167,7 +167,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             $title = ucwords(str_replace(Array('.php', '_'), Array('', ' '), $crumb));
             if ($x != $last && $title!="View")
                 $breadcrumbs[] = "&nbsp;<a href=\"$base$crumb\">$title</a>&nbsp;";
-            else
+            elseif ($x == $last)
                 $breadcrumbs[] = "&nbsp;<span class='last'>".$title."</span>";
         }
         return implode($separator, $breadcrumbs);
