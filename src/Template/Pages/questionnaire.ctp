@@ -367,7 +367,7 @@
                             ?>.</li>
                         <li>If you are smoker, please consider <a href="https://www.health.gov.au/health-topics/smoking-and-tobacco/how-to-quit-smoking" target="_blank">quit smoking</a>.</li>
                         <li>If you drink over <?php
-                            echo $this->Html->link("limit", ['controller' => 'foods', 'action' => 'healthy_nutrition/#section6']);
+                            echo $this->Html->link("limit", ['controller' => 'foods', 'action' => 'healthy_nutrition']);
                             ?>, set yourself a limit and count your standard drinks, plan regular
                             alcohol-free days each week.</li>
                     </ul>
